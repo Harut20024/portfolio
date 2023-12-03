@@ -1,25 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import imageProfil from '../Images/profil.jpeg';
 import Experience from '../Experience/Experience';
 import { images } from '../Images/Images';
 import data from '../../data.json';
 import Carousel from '../Carusel/Carousel'
 import Modal from '../Modal/Modal';
-import { AnimateOnChange } from 'react-animation'
 import './Main.css';
 import Gif from '../Images/hello.gif'
 
 function Mainer({ isVisible }) {
-    const [animate, setAnimate] = useState(false);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            // Toggle the state to trigger animation
-            setAnimate(prev => !prev);
-        }, 2500); // Change every 1000ms (1 second)
-
-        return () => clearInterval(interval);
-    }, []);
     const [selectedProject, setSelectedProject] = useState(null);
 
     const openModal = (project) => {
@@ -52,12 +41,9 @@ function Mainer({ isVisible }) {
                 </div>
 
                 <Experience />
-                <AnimateOnChange
-                    animationIn="custom-animation-in 500ms ease-out forwards"
-                    animationOut="custom-animation-out 500ms ease-out forwards"
-                >
-                    <h1 key={animate ? 'animated1' : 'animated2'}>PROJECTS👌</h1>
-                </AnimateOnChange>
+                <h1>
+                    PROJECTS👌
+                </h1>
 
                 <div id="carusello">
                     <Carousel items={data.map((item, index) => ({
