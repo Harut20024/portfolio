@@ -32,43 +32,16 @@
     overflow: hidden;
     background-color: #161820;
     border-radius: 4%;
-    padding: 2%;
     margin: auto;
     width: 80%;
     text-align: center;
     border: 1.2px solid #3f8a89;
-    padding: 15px;
     box-sizing: border-box;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s ease-in-out;
   }
 
-  #main::before {
-    content: '';
-    position: absolute;
-    top: -100%;
-    /* Start above the element */
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1.2px solid #3f8a89;
-    border-bottom: 1.2px solid #3f8a89;
-    animation: fillBorderVertical 0.5s forwards;
-    /* Start the animation */
-  }
-
-  #main::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    right: 0;
-    bottom: 0;
-    border-left: 1.2px solid #3f8a89;
-    border-right: 1.2px solid #3f8a89;
-    animation: fillBorderHorizontal 1s 1s forwards;
-  }
 
   @keyframes fillBorderVertical {
     to {
@@ -80,6 +53,18 @@
     to {
       left: 0;
       /* End with the left border inside the element */
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
@@ -133,6 +118,48 @@
     overflow: hidden;
     max-width: 300px;
     animation: float var(--float-duration) ease-in-out infinite alternate;
+    animation: fadeIn 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .project:nth-child(1) {
+    animation-delay: 1s;
+  }
+
+  .project:nth-child(2) {
+    animation-delay: 2s;
+  }
+
+  .project:nth-child(3) {
+    animation-delay: 3s;
+  }
+
+  .project:nth-child(4) {
+    animation-delay: 4s;
+  }
+
+  .project:nth-child(5) {
+    animation-delay: 5s;
+  }
+
+  .project:nth-child(6) {
+    animation-delay: 6s;
+  }
+
+  .project:nth-child(7) {
+    animation-delay: 7s;
+  }
+
+  .project:nth-child(8) {
+    animation-delay: 8s;
+  }
+
+  .project:nth-child(9) {
+    animation-delay: 9s;
+  }
+
+  .project:nth-child(10) {
+    animation-delay: 10s;
   }
 
   @keyframes float {
@@ -175,4 +202,51 @@
     margin: 0;
     color: #666;
     font-size: 1em;
+  }
+
+  .link {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 5px 0;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .link:hover,
+  .link:focus {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: white;
+  }
+
+  footer {
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    color: black;
+    height: auto;
+    width: auto;
+    background-color: #F2EFEA;
+    margin-top: 60px;
+    border-top: 2px solid #3f8a89;
+  }
+
+  footer img {
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  #gif {
+    height: 300px;
+    width: 300px;
+  }
+  #gmail{
+    padding: 10px;
   }

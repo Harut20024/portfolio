@@ -1,17 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import imageProfil from '../Images/profil.jpeg';
 import Experience from '../Experience/Experience';
 import { images } from '../Images/Images';
 import data from '../../data.json';
 import Carousel from '../Carusel/Carousel'
 import Modal from '../Modal/Modal';
+import { AnimateOnChange } from 'react-animation'
 import './Main.css';
+import Gif from '../Images/hello.gif'
 
-function Main({ isVisible }) {
+function Mainer({ isVisible }) {
+    const [animate, setAnimate] = useState(false);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            // Toggle the state to trigger animation
+            setAnimate(prev => !prev);
+        }, 2500); // Change every 1000ms (1 second)
+
+        return () => clearInterval(interval);
+    }, []);
     const [selectedProject, setSelectedProject] = useState(null);
 
-    // This function will be called when a project is clicked
     const openModal = (project) => {
         setSelectedProject(project);
     };
@@ -41,11 +51,14 @@ function Main({ isVisible }) {
                     </p>
                 </div>
 
-                {/* Experience Section */}
                 <Experience />
+                <AnimateOnChange
+                    animationIn="custom-animation-in 500ms ease-out forwards"
+                    animationOut="custom-animation-out 500ms ease-out forwards"
+                >
+                    <h1 key={animate ? 'animated1' : 'animated2'}>PROJECTS👌</h1>
+                </AnimateOnChange>
 
-                {/* Carousel */}``
-                <h1>PROJECTS</h1>
                 <div id="carusello">
                     <Carousel items={data.map((item, index) => ({
                         id: item.id,
@@ -55,6 +68,8 @@ function Main({ isVisible }) {
                 </div>
 
                 {/* Projects Section */}
+
+
                 <div className="projects-container">
                     {data.map((project, index) => (
                         <div key={project.id} className="project" onClick={() => openModal({ ...project, src: images[index] })}>
@@ -65,16 +80,14 @@ function Main({ isVisible }) {
                                 <h2>{project.name}</h2>
                                 <p>{project.descriptionl}</p>
                                 {/* Stop propagation on click to allow the URL to be clickable */}
-                                <a href={project.url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                                <a href={project.url} className="link" target="_blank" rel="noopener noreferrer">
                                     View Project
                                 </a>
-
                             </div>
                         </div>
                     ))}
                 </div>
 
-                {/* Modal for Project Details */}
                 {selectedProject && (
                     <Modal
                         show={!!selectedProject}
@@ -82,9 +95,19 @@ function Main({ isVisible }) {
                         project={selectedProject}
                     />
                 )}
+                <footer>
+                    <img id='gif' src={Gif} alt="Example" />
+                    <h1>Thank you</h1>
+                    <h3> for exploring my portfolio! I'm grateful for your interest in my work and would love to hear your thoughts. Feedback is invaluable to my professional growth, so please feel free to share any comments or suggestions you might have.
+                        Reach out to me at
+                        <a href={"https://mail.google.com/mail/?view=cm&fs=1&to=htarzyanh@gmail.com"} id="gmail" target="_blank" rel="noopener noreferrer">
+                            Contact me
+                        </a>
+                        your insights are much appreciated!</h3>
+                </footer>
             </div>
         </main>
     );
 }
 
-export default Main;
+export default Mainer;

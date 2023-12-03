@@ -1,11 +1,12 @@
 /* Modal.css */
 .modal-backdrop {
+    color: black;
     position: fixed;
-    top: 0;
+    top: 50%;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,13 +14,46 @@
 }
 
 .modal-content {
-    background: white;
+    background: #c6c7c9;
+    border: 2px solid #65e7e0;
     border-radius: 15px;
     padding: 20px;
     max-width: 600px;
     max-height: 90vh;
     overflow-y: auto;
     z-index: 11;
+}
+
+.link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #007bff;
+    /* Primary blue color */
+    color: white;
+    /* White text */
+    text-decoration: none;
+    /* Removes underline */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-weight: bold;
+    /* Bold text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Smooth transitions for hover effects */
+}
+
+.link:hover,
+.link:focus {
+    background-color: #0056b3;
+    /* Darker blue on hover/focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Larger shadow on hover/focus */
+    text-decoration: none;
+    /* Keeps underline removed on hover/focus */
+    color: white;
+    /* Ensures text remains white */
 }
 
 .modal-close-btn {

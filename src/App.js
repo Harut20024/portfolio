@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import SCanvas from './Componets/Scanvas';
-import Main from './Componets/Main/Main';
+import Mainer from './Componets/Main/Main';
 
 function App() {
   const [showMain, setShowMain] = useState(false);
@@ -20,10 +20,12 @@ function App() {
   }, []);
 
   return (
-    <main className="Canvas">
-      <SCanvas />
-      <Main isVisible={showMain} />
-    </main>
+    <div className="Canvas">
+      <main>
+        <SCanvas />
+      </main>
+      <Mainer isVisible={showMain} />
+    </div>
   );
 }
 
