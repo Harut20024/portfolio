@@ -1,0 +1,135 @@
+#mainDiv {
+    display: flex;
+    height: 1000px;
+    width: 80%;
+    border: 1px solid #191C20;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 4%;
+    background-color: #282A36;
+    font-family: Arial, sans-serif;
+    margin-bottom: 100px;
+
+}
+
+#leftDiv {
+    display: flex;
+    flex: 0 0 300px;
+    height: 100%;
+    background-color: #21222C;
+}
+
+#leftSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profileContainer {
+    background-color: #343746;
+}
+
+#rightSection {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-bar {
+    max-width: 80%;
+    height: auto;
+}
+
+#rightSection {
+    flex-direction: column;
+}
+
+.folder {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #ccc;
+    cursor: pointer;
+    border-bottom: 1px solid #191C20;
+}
+
+#foldersContainer {
+    margin-top: 3%;
+}
+
+.under {
+    margin-left: 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    padding-left: 60px;
+
+}
+
+.about p {
+    color: orange;
+    margin-right: 4px;
+}
+
+#rightDiv {
+    padding: 0px;
+    text-align: left;
+    flex-grow: 1;
+    background-color: #282A36;
+    height: 100%;
+}
+
+
+
+#rightDiv {
+    flex-grow: 1; /* Take up remaining space */
+    overflow: auto; /* Add scroll if content is too long */
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 20px;
+    font-size: 25px; /* Adjust to match your needs */
+}
+
+pre {
+    white-space: pre-wrap;
+    tab-size: 4;
+    margin: 0;
+}
+
+.keyword {
+    color: #c678dd;
+}
+
+.className {
+    color: #e06c75;
+}
+
+.method {
+    color: #dcdcaa;
+    margin: 40px;
+}
+
+.property {
+    color: #56b6c2;
+    margin-left: 60px;
+}
+
+.propertyName {
+    color: #e5c07b;
+}
+#skills{
+    margin-left: 60px;
+}
+.string {
+    color: #98c379;
+}
+
+.number {
+    color: #d19a66;
+}

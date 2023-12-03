@@ -1,0 +1,40 @@
+/* Modal.css */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 11;
+}
+
+.modal-close-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
