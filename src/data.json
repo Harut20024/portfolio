@@ -12,7 +12,6 @@
             "descriptionl": "Doodle Jump is an engaging and addictive platformer game where players guide a whimsical doodler character through a series of challenging platforms, aiming to reach as high as possible. With dynamic obstacles, various power-ups, and interactive sound effects, this game offers a delightful blend of challenge and fun, perfect for players of all ages.     ",
             "descriptionm": "Doodle Jump is a captivating platform game that has charmed a wide range of players. The game's central character is a whimsical doodler who jumps from one platform to another, ascending higher with each leap. The challenge lies in the ever-changing platform heights and positions, requiring players to be quick and precise. The game is peppered with dynamic obstacles that add to the excitement. Players can discover and use various power-ups that enhance the gameplay, such as springs for higher jumps or jetpacks for swift ascents. The interactive sound effects and charming graphics contribute to its delightful atmosphere. Doodle Jump's intuitive controls make it easy to start but hard to master, appealing to both casual and serious gamers. It’s a game of endurance and skill, where the goal is to reach as high as possible, setting new records. The game’s simplicity, combined with its addictive nature, makes it a favorite among players of all ages.",
             "url": "https://harut20024.github.io/DoodleJump/"
-
         },
         {
             "id": 2,
@@ -52,7 +51,7 @@
         {
             "id": 7,
             "name": "Mermaid",
-            "descriptionl": "Immerse yourself in the grandeur of chess with my online Chess Game. Challenge your strategic thinking on a virtual board that encapsulates the solemn tradition and intellectual rigor of this timeless game.       ",
+            "descriptionl": "Here's another game I've developed. It's similar to Candy Crush, where you can move objects. When three or more objects are in the same line, they will be deleted. You must collect the necessary score within the time limit, or you will lose.            ",
             "descriptionm": "Mermaid is a vibrant and entertaining match-three puzzle game. It resembles the popular Candy Crush, with its own unique undersea theme. Players move various sea-themed objects to align them in rows or columns of three or more. Successful alignments result in the objects being cleared from the board. The game has multiple levels, each with its own challenges and objectives. Players must achieve a specific score within a time limit to progress. Power-ups and special items add an extra layer of strategy and excitement. The game features colorful graphics and enchanting sound effects, enhancing the underwater adventure. It’s not just about matching objects; it’s about planning moves and adapting strategies. Mermaid is an addictive and enjoyable game, suitable for all ages, offering hours of fun and mental stimulation.",
             "url": "https://harut20024.github.io/Mermaid/"
         },

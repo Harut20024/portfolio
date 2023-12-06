@@ -33,16 +33,10 @@ function Mainer({ isVisible }) {
                     <img src={imageProfil} alt="Profile" className="profile-image" />
                     <h1>👋Greetings</h1>
                     <p id='paragraph'>
-                        🌟 I am Harut. My experience transcends mere coding, as I also serve as a learning coach at TUMO.
-                        In this role, I guide students through the intricacies of programming, imparting fundamental
-                        concepts and fostering their creative problem-solving skills.<br></br>
-                        🔍 What truly distinguishes me is my unwavering commitment to staying abreast of industry advancements.
-                        I am dedicated to exploring emerging trends and technologies, ensuring that my expertise remains up-to-date
-                        and relevant.<br></br>
-                        🚀 If you are in pursuit of a programming enthusiast who possesses not only technical prowess but also a
-                        passion for mentoring and innovation, I invite us to connect. I am eager to delve into how I can contribute
-                        to your projects and deliver meaningful results.
-                    </p>
+    🌟 Hi there! I'm Harut. My world isn't just about coding; it's a lot more. At TUMO, I wear two hats – one as a coder and another as a learning coach. It's an exciting journey, teaching students the ropes of programming and helping them think out of the box to solve problems.<br /><br />
+    🔍 My passion for programming keeps me on my toes. I'm always up for learning more, diving deeper into coding, and soaking up new experiences. When I'm coding, it feels like freedom; it's where my ideas take flight. This enthusiasm spills over into the projects I work on too – it's all about bringing creativity to life.<br /><br />
+    🚀 Are you on the lookout for someone who's not just good with codes but also loves to share knowledge and innovate? Let's get in touch! I'm all about exploring how I can bring something special to your projects and make a real difference.
+</p>
                 </div>
 
                 <Experience />

@@ -43,13 +43,15 @@ function Experience() {
                         <span className="string">"JS"</span>, <span className="string">"TeamWork"</span>, <span className="string">"Communication"</span>,
                         <span className="string">"OOP"</span>, <span className="string">"C"</span>, <span className="string">"C++"</span>, <span className="string">"CSS"</span>, <span className="string">"Git"</span>,
                         <span className="string">"GitHub"</span>, <span className="string">"Express.js"</span>, <span className="string">"Linux"</span>, <span className="string">"Coaching"</span>, <span className="string">"Network"</span>,
-                        <span className="string">"React.js"</span>, <span className="string">"learning coach"</span>, <span className="string">"Front-End"</span>,
-                        <span className="string">"Back-End"</span>, <span className="string">"Mathematical skills"</span>,
+                        <span className="string">"React.js"</span>,<span className="string">"Problem Solving"</span>, <span className="string">"Front-End"</span>,
+                        <span className="string">"Creativity"</span>,
+                        <span className="string">"React.js"</span>,
+                        <span className="string">"Back-End"</span>,
                         <br />
                         <span className="string">"Self-motivation"</span>,
-                        <span className="string">"React.js"</span>, <br />
                         <span className="string">"Mathematical skills"</span>,
-                        <span className="string">"Attention to details"</span>,
+                        <br />
+                        <span className="string">"Attention to details"</span>
                         <br />
                         ];
                         <br />

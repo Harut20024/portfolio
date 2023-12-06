@@ -126,7 +126,7 @@
   .project {
     background-color: #f0f0f0;
     border-radius: 25px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 8px 16px rgba(115, 107, 107, 0.1);
     overflow: hidden;
     max-width: 300px;
     animation: float var(--float-duration) ease-in-out infinite alternate;
