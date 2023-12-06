@@ -12,7 +12,7 @@
   }
 
   #main.show {
-    transform: scaleY(1);
+    animation: horizontalOpen 0.5s ease-in-out forwards;
   }
 
   #carusello {
@@ -24,9 +24,12 @@
     background-color: #0b0c10;
     height: auto;
     width: auto;
+    transform-origin: center;
   }
-
+  
   #main {
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
     color: white;
     position: relative;
     overflow: hidden;
@@ -40,6 +43,16 @@
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s ease-in-out;
+  }
+
+  @keyframes horizontalOpen {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
   }
 
 
@@ -236,17 +249,29 @@
     background-color: #F2EFEA;
     margin-top: 60px;
     border-top: 2px solid #3f8a89;
+    text-align: center;
   }
 
-  footer img {
+  
+  #gif {
     border: 1px solid black;
     border-radius: 50%;
+    height: 250px;
+    width: 300px;
+    display: block;
+    margin: auto;
   }
 
-  #gif {
-    height: 300px;
-    width: 300px;
-  }
-  #gmail{
+  #gmail {
     padding: 10px;
   }
+.Media{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.Media img {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    margin: 0 10px; /* Space out the icons */
+    display: inline-block; /* Align icons in a row */
+}
