@@ -31,6 +31,8 @@ function Experience() {
                         <br />
                         <span className="property">this.</span><span className="propertyName">profession</span> = <span className="string">"software engineer"</span>;
                         <br />
+                        <span className="property">this.</span><span className="propertyName">number</span> = <span className="number">+(374)94-472-452</span>;
+                        <br />
                         {'}'}
                     </div>
                     <br />
