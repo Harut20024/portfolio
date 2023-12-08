@@ -5,7 +5,7 @@ import Mainer from './Componets/Main/Main';
 
 function App() {
   const [showMain, setShowMain] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,29 +17,32 @@ function App() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+    const handleOrientationChange = () => {
+      setIsLandscape(window.innerWidth > window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', handleOrientationChange);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleOrientationChange);
+    };
   }, []);
 
   return (
-    windowWidth > 640 ?
+    isLandscape ? (
       <div className="Canvas">
         <main>
           <SCanvas />
         </main>
         <Mainer isVisible={showMain} />
-      </div> : 
-      <div style={{ textAlign: 'center', margin: 'auto', padding: '20px',color: "#65e7e0" }}>
+      </div>
+    ) : (
+      <div style={{ textAlign: 'center', margin: 'auto', padding: '20px', color: "#65e7e0" }}>
         Please rotate your device to landscape mode to use this site.
       </div>
+    )
   );
 }
 
