@@ -1,6 +1,6 @@
 #mainDiv {
     display: flex;
-    height: 1000px;
+    height: 900px;
     width: 80%;
     border: 1px solid #191C20;
     border-radius: 40px;
@@ -77,23 +77,19 @@
     margin-right: 4px;
 }
 
-#rightDiv {
-    padding: 0px;
-    text-align: left;
-    flex-grow: 1;
-    background-color: #282A36;
-    height: 100%;
-}
+
 
 
 
 #rightDiv {
     flex-grow: 1; /* Take up remaining space */
     overflow: auto; /* Add scroll if content is too long */
-    background-color: #1e1e1e;
-    color: #d4d4d4;
     padding: 20px;
-    font-size: 25px; /* Adjust to match your needs */
+    font-size: 23px; 
+    padding: 0px;
+    text-align: left;
+    background-color: #282A36;
+    height: 100%;
 }
 
 pre {

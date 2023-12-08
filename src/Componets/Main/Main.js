@@ -12,6 +12,7 @@ import facebook from '../Images/media/facebook.png'
 import github from '../Images/media/github.png'
 import linkdin from '../Images/media/linkedin.png'
 import gmail from '../Images/media/gmail.png'
+import FlashlightEffect from '../FlashlightEffect/FlashlightEffect';
 
 function Mainer({ isVisible }) {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -33,12 +34,12 @@ function Mainer({ isVisible }) {
                     <img src={imageProfil} alt="Profile" className="profile-image" />
                     <h1>👋Greetings</h1>
                     <p id='paragraph'>
-    🌟 Hi there! I'm Harut. My world isn't just about coding; it's a lot more. At TUMO, I wear two hats – one as a coder and another as a learning coach. It's an exciting journey, teaching students the ropes of programming and helping them think out of the box to solve problems.<br /><br />
-    🔍 My passion for programming keeps me on my toes. I'm always up for learning more, diving deeper into coding, and soaking up new experiences. When I'm coding, it feels like freedom; it's where my ideas take flight. This enthusiasm spills over into the projects I work on too – it's all about bringing creativity to life.<br /><br />
-    🚀 Are you on the lookout for someone who's not just good with codes but also loves to share knowledge and innovate? Let's get in touch! I'm all about exploring how I can bring something special to your projects and make a real difference.
-</p>
+                        🌟 Hi there! I'm Harut. My world isn't just about coding; it's a lot more. At TUMO, I wear two hats – one as a coder and another as a learning coach. It's an exciting journey, teaching students the ropes of programming and helping them think out of the box to solve problems.<br /><br />
+                        🔍 My passion for programming keeps me on my toes. I'm always up for learning more, diving deeper into coding, and soaking up new experiences. When I'm coding, it feels like freedom; it's where my ideas take flight. This enthusiasm spills over into the projects I work on too – it's all about bringing creativity to life.<br /><br />
+                        🚀 Are you on the lookout for someone who's not just good with codes but also loves to share knowledge and innovate? Let's get in touch! I'm all about exploring how I can bring something special to your projects and make a real difference.
+                    </p>
                 </div>
-
+                <FlashlightEffect />
                 <Experience />
                 <h1>
                     PROJECTS👌

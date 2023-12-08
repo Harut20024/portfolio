@@ -29,6 +29,19 @@ class Carousel extends React.Component {
         };
         this.moveLeft = this.moveLeft.bind(this);
         this.moveRight = this.moveRight.bind(this);
+        this.autoMove = this.autoMove.bind(this);
+    }
+
+    componentDidMount() {
+        this.autoMoveInterval = setInterval(this.autoMove, 3000); // Change image every 0.5 seconds
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.autoMoveInterval); // Clear the interval when the component is unmounted
+    }
+
+    autoMove() {
+        this.moveRight(); // You can change this to moveLeft if you want it to move in the other direction
     }
 
     moveLeft() {
@@ -58,14 +71,12 @@ class Carousel extends React.Component {
             let index = ((i % itemCount) + itemCount) % itemCount; // Correctly wraps the index
             let item = this.state.items[index];
 
-            // Check if the item is defined before pushing it to the array
             if (item) {
                 items.push(<Item key={item.id} item={item} level={this.state.active - i} />);
             }
         }
         return items;
     }
-
 
     render() {
         return (
@@ -81,3 +92,5 @@ class Carousel extends React.Component {
 }
 
 export default Carousel;
+
+

@@ -39,9 +39,23 @@ function App() {
         <Mainer isVisible={showMain} />
       </div>
     ) : (
-      <div style={{ textAlign: 'center', margin: 'auto', padding: '20px', color: "#65e7e0" }}>
+      <div style={{ 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        textAlign: 'center',
+        margin: 'auto',
+        padding: '20px',
+        color: "#65e7e0",
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+      }}>
+        <i className="fas fa-undo" style={{ marginRight: '10px' }}></i>
         Please rotate your device to landscape mode to use this site.
       </div>
+      
+      
     )
   );
 }
