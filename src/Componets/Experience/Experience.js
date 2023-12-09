@@ -22,7 +22,6 @@ function Experience() {
                     <span className="method">constructor() {'{'}</span>
                     <br />
                     <div id='skills'>
-
                         <span className="property">this.</span><span className="propertyName">name</span> = <span className="string">"Harut"</span>;
                         <br />
                         <span className="property">this.</span><span className="propertyName">surname</span> = <span className="string">"Tharzyan"</span>;
@@ -30,6 +29,16 @@ function Experience() {
                         <span className="property">this.</span><span className="propertyName">profession</span> = <span className="string">"software engineer"</span>;
                         <br />
                         <span className="property">this.</span><span className="propertyName">number</span> = <span className="number">(+374)94-472-452</span>;
+                        <br />
+                        <span className="property">this.</span><span className="propertyName">languages</span> = {'['}
+                        <br />
+                        <span className="property"></span> <span className="string">"Armenian - (★★★★★★)"</span>,
+                        <br />
+                        <span className="property"></span> <span className="string">"Russian - (★★★★★☆)"</span>,
+                        <br />
+                        <span className="property"></span> <span className="string">"English - (★★★★☆☆)"</span>
+                        <br />
+                        <span className="property"></span>  {']'}
                         <br />
                         {'}'}
                     </div>
@@ -45,7 +54,6 @@ function Experience() {
                         <span className="string">"Creativity"</span>,
                         <span className="string">"React.js"</span>,
                         <span className="string">"Back-End"</span>,
-                        <br />
                         <span className="string">"Self-motivation"</span>,
                         <span className="string">"Mathematical skills"</span>,
                         <br />
@@ -60,10 +68,11 @@ function Experience() {
                     <br />
                     <div id='skills'>
                         <span className="keyword">return {'['}</span> <br />
-
-                        <span className="property">this.</span><span className="propertyName">Job</span> = <span className="string">"'TUMO' </span>- <span className="string">"Time":</span>(<span className="number">2023</span>-<span className="string">Present</span>);
+                        <span className="property">this.</span><span className="propertyName">Job</span> = <span className="string"> ' TUMO ' </span>  <br />
+                        <span className="property"></span> <span className="propertyName">Time : </span> 
+                        ( <span className="number">2023</span> - <span className="string">"Present"</span> )
                         <br />
-                        <span className="property">           </span> <span className="string">position</span>:<span className="string">"learning coach""</span>;
+                        <span className="property"></span> <span className="propertyName">Position : </span>( <span className="string">'learning coach' </span>) ;
                         <br />
                         <span className="keyword">{']'}</span> <br />
 

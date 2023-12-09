@@ -19,7 +19,7 @@ const FlashlightEffect = () => {
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
             <input
                 type="text"
-                placeholder="Please write your name"
+                placeholder="Please write your name`"
                 onChange={handleNameChange}
                 style={{ padding: '10px', fontSize: '16px', MozMarginEnd: '20px' }}
             />
