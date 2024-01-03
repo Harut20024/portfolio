@@ -47,9 +47,9 @@ main {
 
 @media (max-width: 600px) {
   #main {
-    width: 90%; 
-    margin: 10px auto; 
-    border-radius: 2%; 
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 2%;
   }
 }
 
@@ -81,45 +81,27 @@ main {
   max-height: 500px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .profile-image {
-    max-width: 90%; 
-    height: auto; 
-    margin: 0 auto; 
-  }
-  #paragraph {
-    font-size: 4vw;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
   }
   #about h1 {
-    font-size: 8vw;
+    font-size: 5vw;
+  }
+  #paragraph {
+    font-size: 0.8em;
   }
 }
 
 #paragraph {
-  font-size: 1.8vw;
+  /* font-size: 1vw; */
   padding: 5%;
   border-radius: 40px;
   box-shadow: 20px 40px 30px 4px rgba(137, 135, 135, 0.1);
 }
 
-@media (min-width: 1000px) {
-  #about h1 {
-    font-size: 40px;
-  }
-
-  #paragraph {
-    font-size: 20px;
-  }
-}
-.wave-emoji {
-  font-size: 0.7em;
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
-}
-
-.wave-emoji:hover {
-  transform: rotate(20deg); 
-}
 
 /* ///////////////////////// */
 .projects-container {
@@ -144,12 +126,17 @@ main {
 }
 
 @media (max-width: 900px) {
-  
   .project {
-      width: calc(100% / 2 - 10px); 
+    font-size: 1em;
+    width: calc(100% / 2 - 10px);
   }
 }
-
+@media (max-width: 700px) {
+  .project {
+    font-size: 0.7em;
+    width: calc(100% / 2 - 10px);
+  }
+}
 
 .project:nth-child(1) {
   animation-delay: 1s;
@@ -191,12 +178,6 @@ main {
   animation-delay: 10s;
 }
 
-
-
-
-
-
-
 /* ///////////////////////////// */
 @keyframes float {
   0% {
@@ -214,7 +195,7 @@ main {
 
 .project-image {
   width: auto;
-  height: 300px;
+  height: 12em;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   overflow: hidden;
@@ -222,7 +203,7 @@ main {
 
 .project-image img {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
 }
 
@@ -247,12 +228,12 @@ main {
   font-size: 1em;
   padding: 10px 30px;
   line-height: 1.5;
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
   height: auto;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .link:hover,
@@ -312,19 +293,18 @@ footer {
     border-radius: 10%;
     padding: 10%;
     width: auto;
-    height: 4em; 
-}
+    height: 4em;
+  }
   #gif {
-    height: 200px; 
-    width: 200px; 
+    height: 200px;
+    width: 200px;
   }
 
   .Media img {
-    width: 40px; 
-    height: 40px; 
+    width: 40px;
+    height: 40px;
   }
 }
-
 
 /* //////////////////////////// */
 

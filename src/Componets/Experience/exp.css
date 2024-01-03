@@ -83,24 +83,6 @@
     font-size: 0.8em; 
 }
 
-@media (max-width: 700px) {
-    .folder {
-        font-size: 0.7em; 
-    }
-
-    .under {
-        margin-left: 5%; 
-    }
-
-    .about {
-        margin-left: 10%;
-    }
-}
-
-
-
-
-
 
 #rightDiv {
     flex-grow: 1; 
@@ -152,10 +134,14 @@ pre {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    #mainDiv {
+        height: 500px;
+    }
     #rightDiv {
         padding: 5px;
-        font-size: 1em; 
+        font-size: 0.75em; 
+        height: 500px;
     }
 
     pre {
@@ -168,5 +154,16 @@ pre {
 
     #skills {
         margin-left: 10px;
+    }
+    .folder {
+        font-size: 0.7em; 
+    }
+
+    .under {
+        margin-left: 5%; 
+    }
+
+    .about {
+        margin-left: 10%;
     }
 }
