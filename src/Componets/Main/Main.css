@@ -144,6 +144,7 @@ main {
 }
 
 @media (max-width: 900px) {
+  
   .project {
       width: calc(100% / 2 - 10px); 
   }
@@ -243,16 +244,15 @@ main {
 }
 
 .link {
-  display: inline-block;
-  padding: 3px 5px;
-  margin: 5px 0;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  font-size: 1em;
+  padding: 10px 30px;
+  line-height: 1.5;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: auto;
+  height: auto;
+  white-space: nowrap; 
 }
 
 .link:hover,
@@ -280,7 +280,7 @@ footer {
 #gif {
   border: 1px solid black;
   border-radius: 50%;
-  height: 250px; /* Consider making this responsive as well */
+  height: 300px; /* Consider making this responsive as well */
   width: 300px; /* Consider making this responsive as well */
   display: block;
   margin: auto;
@@ -302,20 +302,26 @@ footer {
 }
 
 /* Adjustments for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   footer {
     padding-left: 10px;
     padding-right: 10px;
   }
-
+  .link {
+    font-size: 0.7em;
+    border-radius: 10%;
+    padding: 10%;
+    width: auto;
+    height: 4em; 
+}
   #gif {
-    height: 200px; /* Smaller size for smaller screens */
-    width: 250px; /* Smaller size for smaller screens */
+    height: 200px; 
+    width: 200px; 
   }
 
   .Media img {
-    width: 40px; /* Slightly smaller icons for small screens */
-    height: 40px; /* Slightly smaller icons for small screens */
+    width: 40px; 
+    height: 40px; 
   }
 }
 
