@@ -10,47 +10,48 @@ const Sketch = () => {
         canvas.width = window.innerWidth;
 
         let scrollY = 0;
+        const baseCanvasWidth = 800; 
+        const scaleFactor = canvas.width / baseCanvasWidth;
 
         const drawCanvas = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height); 
-
+        
             ctx.fillStyle = '#0b0c10';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+        
+            let textY = canvas.height / 5;
+        
             // Drawing the welcome text
             ctx.fillStyle = '#65e7e0';
-            ctx.font = "90px serif";
-            const welcomeText = "Welcome";
-            let textWidth = ctx.measureText(welcomeText).width;
-            let textX = (canvas.width / 2) - (textWidth / 2);
-            let textY = canvas.height / 4;
-            ctx.fillText(welcomeText, textX, textY);
-
-            const portfolioText = "to My Portfolio";
-            ctx.font = "32px serif";
-            textWidth = ctx.measureText(portfolioText).width;
-            textX = (canvas.width / 2) - (textWidth / 2);
-            textY += 50; 
-            ctx.fillText(portfolioText, textX, textY);
-
-            const scrollText = "↓ Scroll Down to Discover More ↓";
-            ctx.font = "32px serif";
-            textWidth = ctx.measureText(scrollText).width;
-            textX = (canvas.width / 2) - (textWidth / 2);
-            textY += 60; 
-            ctx.fillText(scrollText, textX, textY);
-
+            ctx.font = `${60 * scaleFactor}px serif`; 
+            drawTextCentered(ctx, "Welcome", canvas.width / 2, textY);
+            textY += scaleFactor; 
+        
+            // Drawing the "to My Portfolio" text
+            ctx.font = `${22 * scaleFactor}px serif`; 
+            drawTextCentered(ctx, "to My Portfolio", canvas.width / 2, textY + 50 * scaleFactor);
+            textY += 30 * scaleFactor; 
+        
+            // Drawing the "↓ Scroll Down to Discover More ↓" text
+            ctx.font = `${22 * scaleFactor}px serif`; 
+            drawTextCentered(ctx, "↓ Scroll Down to Discover More ↓", canvas.width / 2, textY + 60 * scaleFactor);
+            textY += 60 * scaleFactor; // Increment textY
+        
+            // Drawing line
             const startX = canvas.width / 2;
-            const startY = textY + 20; 
-
             ctx.beginPath();
-            ctx.moveTo(startX, startY);
-            ctx.lineTo(startX, startY + scrollY); 
+            ctx.moveTo(startX, textY + 20); // Starting position of the line
+            ctx.lineTo(startX, textY + 20 + scrollY); 
             ctx.strokeStyle = "#3f8a89";
             ctx.lineWidth = 2;
             ctx.stroke();
         };
-
+        
+        const drawTextCentered = (ctx, text, x, y) => {
+            let textWidth = ctx.measureText(text).width;
+            let textX = x - (textWidth / 2);
+            ctx.fillText(text, textX, y);
+        };
         const handleScroll = () => {
             scrollY = window.scrollY; 
             drawCanvas(); 
@@ -58,10 +59,10 @@ const Sketch = () => {
 
         window.addEventListener('scroll', handleScroll);
 
-        drawCanvas(); // Initial canvas drawing
+        drawCanvas(); 
 
         return () => {
-            window.removeEventListener('scroll', handleScroll); // Cleanup
+            window.removeEventListener('scroll', handleScroll); 
         };
     }, []);
 

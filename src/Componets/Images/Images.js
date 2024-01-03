@@ -7,8 +7,9 @@ import imag6 from './6.png';
 import imag7 from './7.png';
 import imag8 from './8.png';
 import imag9 from './9.png';
+import imag10 from './10.png';
 
-const images = [imag1,imag2,imag3,imag4,imag5,imag6,imag7,imag8,imag9];
+const images = [imag1,imag2,imag3,imag4,imag5,imag6,imag7,imag8,imag9,imag10];
 
 function ImageCollect() {
     return null;

@@ -8,55 +8,62 @@
         },
         {
             "id": 1,
+            "name": "Skyway Survivor",
+            "descriptionl": "Welcome to the Skyway Survivor Game, an exciting and fun platformer game that promises to keep your fun! This game, developed a game where you can Survive in space,and reach to  victory",
+            "descriptionm": "Welcome to the Skyway Survivor Game, an exciting and fun platformer game that promises to keep you fun! This game, developed Game where you can Survive in space,and react to you victory In Skyway Survivor game you are pilot of Planes of World war 2,witch are in space,and you must survive and react the End to win,here you can choose your Plane and fly.there are 4 levels witch are harder in every level.",
+            "url": "https://harut20024.github.io/Skyway-Survivor/"
+        },
+        {
+            "id": 2,
             "name": "Doodle Jump",
             "descriptionl": "Doodle Jump is an engaging and addictive platformer game where players guide a whimsical doodler character through a series of challenging platforms, aiming to reach as high as possible. With dynamic obstacles, various power-ups, and interactive sound effects, this game offers a delightful blend of challenge and fun, perfect for players of all ages.     ",
             "descriptionm": "Doodle Jump is a captivating platform game that has charmed a wide range of players. The game's central character is a whimsical doodler who jumps from one platform to another, ascending higher with each leap. The challenge lies in the ever-changing platform heights and positions, requiring players to be quick and precise. The game is peppered with dynamic obstacles that add to the excitement. Players can discover and use various power-ups that enhance the gameplay, such as springs for higher jumps or jetpacks for swift ascents. The interactive sound effects and charming graphics contribute to its delightful atmosphere. Doodle Jump's intuitive controls make it easy to start but hard to master, appealing to both casual and serious gamers. It’s a game of endurance and skill, where the goal is to reach as high as possible, setting new records. The game’s simplicity, combined with its addictive nature, makes it a favorite among players of all ages.",
             "url": "https://harut20024.github.io/DoodleJump/"
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "GetMovie",
             "descriptionl": "GetMovie is an inviting online platform where movie buffs can effortlessly navigate through a diverse selection of films, tailored to suit any taste. It's your perfect destination for discovering hidden cinematic gems or revisiting timeless classics, all within a few clicks.",
             "descriptionm": "GetMovie is a comprehensive online platform designed for movie enthusiasts. It features a wide array of films, ranging from the latest blockbusters to classic cinema. The platform is user-friendly, allowing easy navigation and film selection. Users can explore movies based on genres, release dates, or popularity. Each film comes with detailed descriptions, ratings, and reviews, helping users make informed choices. The site also offers personalized recommendations based on viewing history. GetMovie is ideal for discovering new releases or revisiting beloved classics. It integrates social features, allowing users to share their favorite movies or create watchlists. The platform is updated regularly with new content, ensuring there’s always something new to explore. Whether it’s a cozy movie night or a cinematic exploration, GetMovie caters to all movie preferences.",
             "url": "https://harut20024.github.io/GetMovie/"
         },
         {
-            "id": 3,
+            "id": 4,
             "name": "Durak Game",
             "descriptionl": "Explore the dynamic world of card gaming with our latest digital card game. This engaging game combines strategy, skill, and a dash of luck, offering an immersive experience for players of all levels.",
             "descriptionm": "The Durak Game is a digital adaptation of the popular card game. It’s designed to offer both beginners and seasoned players an engaging experience. The game incorporates traditional rules with modern digital features. Players can choose from various difficulty levels, making it accessible to all skill levels. The interface is intuitive, with clear graphics and easy-to-understand controls. Durak Game offers a multiplayer mode, allowing players to compete against friends or online opponents. It includes a tutorial for beginners, explaining the rules and strategies. The game’s AI is sophisticated, providing a challenging experience even in single-player mode. Durak Game is more than just a card game; it’s a test of strategy, memory, and adaptability. With its blend of traditional gameplay and digital enhancements, it’s a must-try for card game enthusiasts.",
             "url": "https://harut20024.github.io/Durak-/"
         },
         {
-            "id": 4,
+            "id": 5,
             "name": "Game Of Life",
             "descriptionl": " Explore the Game of Life, an automated world where entities move, grow, and adapt without your control. Witness the cycle of life as you observe grass, GrassEaters, Predators, and Bombs. Play now and let the game unfold on its own.        ",
             "descriptionm": "The Game of Life is a fascinating simulation that showcases the complexities of an automated ecosystem. Players observe as various entities, including grass, GrassEaters, Predators, and Bombs, interact in a virtual world. The game operates autonomously, with each entity following specific behavior patterns. Grass grows and spreads, GrassEaters consume it for survival, and Predators hunt GrassEaters. Bombs add an element of unpredictability, creating dynamic changes in the ecosystem. The game’s interface allows players to view the interactions in real-time. Players can adjust certain parameters to see how it affects the ecosystem. The Game of Life is not just a game but an educational tool that demonstrates the balance of nature. It’s a unique experience where players can learn about ecological relationships and survival strategies. The game’s simplicity is deceptive, as it reveals intricate patterns and dependencies within the ecosystem.",
             "url": "https://harut20024.github.io/Game-Of-Life/"
         },
         {
-            "id": 5,
+            "id": 6,
             "name": "Translator",
             "descriptionl": "The HTML code creates a webpage with a form to choose languages and enter text for translation. JavaScript then sends the text to a translation service and shows the result.",
             "descriptionm": "This project involved creating a webpage that serves as a language translator. The main feature is a form where users can select languages and input text to be translated. Upon submission, the JavaScript code processes the request, sending the text to a translation service. The result is then displayed on the same webpage, providing a seamless user experience. The translator supports multiple languages, catering to a global audience. The interface is clean and user-friendly, with clear instructions and responsive design. It’s a useful tool for quick translations, especially for travelers or students. The project showcases efficient integration of front-end and back-end technologies. It demonstrates practical application of APIs and JavaScript in creating a functional web application. The Translator is not just a utility tool; it’s a bridge connecting different languages and cultures.",
             "url": "https://harut20024.github.io/Translator/"
         },
         {
-            "id": 6,
+            "id": 7,
             "name": "Chess Game ",
             "descriptionl": " Immerse yourself in the grandeur of chess with my online Chess Game. Challenge your strategic thinking on a virtual board that encapsulates the solemn tradition and intellectual rigor of this timeless game.",
             "descriptionm": "The online Chess Game is a digital rendition of the classic board game. It offers a virtual chess experience, maintaining the essence and complexity of the traditional game. The platform is designed to cater to both beginners and chess experts. It features an interactive tutorial for newcomers, explaining the rules and strategies. Players can choose to play against the computer or challenge other players online. The game’s AI is programmed to offer various levels of difficulty. The interface is clean and intuitive, with well-designed pieces and a clear board layout. Players have access to game history and can undo moves if needed. The Chess Game also includes a timer, adding an element of urgency to the gameplay. It’s a perfect blend of intellectual challenge and digital convenience, appealing to chess enthusiasts of all ages.",
             "url": "https://harut20024.github.io/Chess/"
         },
         {
-            "id": 7,
+            "id": 8,
             "name": "Mermaid",
             "descriptionl": "Here's another game I've developed. It's similar to Candy Crush, where you can move objects. When three or more objects are in the same line, they will be deleted. You must collect the necessary score within the time limit, or you will lose.            ",
             "descriptionm": "Mermaid is a vibrant and entertaining match-three puzzle game. It resembles the popular Candy Crush, with its own unique undersea theme. Players move various sea-themed objects to align them in rows or columns of three or more. Successful alignments result in the objects being cleared from the board. The game has multiple levels, each with its own challenges and objectives. Players must achieve a specific score within a time limit to progress. Power-ups and special items add an extra layer of strategy and excitement. The game features colorful graphics and enchanting sound effects, enhancing the underwater adventure. It’s not just about matching objects; it’s about planning moves and adapting strategies. Mermaid is an addictive and enjoyable game, suitable for all ages, offering hours of fun and mental stimulation.",
             "url": "https://harut20024.github.io/Mermaid/"
         },
         {
-            "id": 8,
+            "id": 9,
             "name": "Fullstack Web-Site:",
             "descriptionl": "I've also worked on this project. It's a website that consists of both front-end and back-end components. I used Node.js and React to create it.",
             "descriptionm": "This project involved developing a comprehensive full-stack website. The front-end is designed using React, creating a dynamic and responsive user interface. The back-end is powered by Node.js, ensuring efficient server-side operations. The website features a combination of static and interactive pages. It showcases various web technologies, including HTML, CSS, and JavaScript. Users can navigate through different sections, each meticulously designed for optimal user experience. The back-end integration allows for functionalities like user authentication, data storage, and API interactions. The project demonstrates the synergy between front-end and back-end development. It’s a testament to the versatility and power of modern web development frameworks. This Fullstack Web-Site is not just a project; it’s a showcase of technical proficiency and design acumen.",

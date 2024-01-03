@@ -1,6 +1,6 @@
 #mainDiv {
     display: flex;
-    height: 1000px;
+    height: 900px;
     width: 80%;
     border: 1px solid #191C20;
     border-radius: 40px;
@@ -14,7 +14,7 @@
 
 #leftDiv {
     display: flex;
-    flex: 0 0 300px;
+    flex: 0 0 30%; 
     height: 100%;
     background-color: #21222C;
 }
@@ -27,8 +27,10 @@
 }
 
 #profileContainer {
+    flex: 0 0 20%;
     background-color: #343746;
 }
+
 
 #rightSection {
     flex: 3;
@@ -46,47 +48,65 @@
     flex-direction: column;
 }
 
-.folder {
+#foldersContainer {
+    flex: 0 0 80%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10%;
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    color: #ccc;
-    cursor: pointer;
-    border-bottom: 1px solid #191C20;
 }
 
-#foldersContainer {
-    margin-top: 3%;
+.folder {
+    width: 100%;
+    text-align: left; 
+    padding: 5px 0;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 1em; 
 }
 
 .under {
-    margin-left: 20px;
+    margin-left: 10%; 
+    font-size: 0.9em; 
 }
 
 .about {
     display: flex;
-    justify-content: start;
     align-items: center;
-    padding: 10px;
-    padding-left: 60px;
-
+    margin-left: 20%; 
 }
 
 .about p {
     color: orange;
     margin-right: 4px;
+    font-size: 0.8em; 
 }
+
+@media (max-width: 700px) {
+    .folder {
+        font-size: 0.7em; 
+    }
+
+    .under {
+        margin-left: 5%; 
+    }
+
+    .about {
+        margin-left: 10%;
+    }
+}
+
 
 
 
 
 
 #rightDiv {
-    flex-grow: 1; /* Take up remaining space */
-    overflow: auto; /* Add scroll if content is too long */
-    padding: 20px;
-    font-size: 23px; 
-    padding: 0px;
+    flex-grow: 1; 
+    overflow: auto; 
+    padding: 20px; /* Base padding */
+    font-size: 1.4em; /* Base font size, adjust as needed */
     text-align: left;
     background-color: #282A36;
     height: 100%;
@@ -96,36 +116,57 @@ pre {
     white-space: pre-wrap;
     tab-size: 4;
     margin: 0;
+    font-size: 0.9em; /* Adjust the font size for 'pre' content */
+    word-wrap: break-word; /* Ensure long words do not cause horizontal scroll */
 }
 
-.keyword {
-    color: #c678dd;
+/* Retain original colors but adjust for dynamic sizing and margin */
+.keyword { color: #c678dd; }
+.className { color: #e06c75; }
+.method { color: #dcdcaa; }
+.property { color: #56b6c2; }
+.propertyName { color: #e5c07b; }
+.string { color: #98c379; }
+.number { color: #d19a66; }
+
+/* Additional CSS for responsive layout */
+@media (max-width: 1300px) {
+    #rightDiv {
+        padding: 10px;
+        font-size: 1.2em; /* Slightly smaller font size */
+    }
+    #mainDiv {
+        height: 750px;
+    }
+
+    pre {
+        font-size: 0.8em; /* Smaller font size for 'pre' content */
+    }
+
+    .method, .property, .propertyName {
+        margin-left: 20px; 
+    }
+
+    #skills {
+        margin-left: 20px;
+    }
 }
 
-.className {
-    color: #e06c75;
-}
+@media (max-width: 768px) {
+    #rightDiv {
+        padding: 5px;
+        font-size: 1em; 
+    }
 
-.method {
-    color: #dcdcaa;
-    margin: 40px;
-}
+    pre {
+        font-size: 0.75em; 
+    }
 
-.property {
-    color: #56b6c2;
-    margin-left: 60px;
-}
+    .method, .property, .propertyName {
+        margin-left: 10px; /* Reduced indentation */
+    }
 
-.propertyName {
-    color: #e5c07b;
-}
-#skills{
-    margin-left: 60px;
-}
-.string {
-    color: #98c379;
-}
-
-.number {
-    color: #d19a66;
+    #skills {
+        margin-left: 10px;
+    }
 }
