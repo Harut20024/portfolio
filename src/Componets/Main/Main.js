@@ -45,9 +45,7 @@ function Mainer({ isVisible }) {
         {/* Profile Section */}
         <div id="about">
           <img src={imageProfil} alt="Profile" className="profile-image" />
-          <h1>
-            <span className="wave-emoji">👋</span>Greetings
-          </h1>
+          <h1>Greetings</h1>
           <p id="paragraph">
             🌟 Hi there! I'm Harut. My world isn't just about coding; it's a lot
             more. At TUMO, I wear two hats – one as a coder and another as a
@@ -56,17 +54,19 @@ function Mainer({ isVisible }) {
             problems.
             <br />
             <br />
-            🔍 My passion for programming keeps me on my toes. I'm always up for
-            learning more, diving deeper into coding, and soaking up new
-            experiences. When I'm coding, it feels like freedom; it's where my
-            ideas take flight. This enthusiasm spills over into the projects I
-            work on too – it's all about bringing creativity to life.
+            🔍 I began my journey in programming at 15, and it's been an
+            intriguing adventure ever since. Creating things that can help and
+            be useful is incredibly rewarding. I never stop learning, and the
+            more I delve into it, the more fascinating it becomes. Each new
+            project is a chance to explore and bring useful ideas to life.
             <br />
             <br />
-            🚀 Are you on the lookout for someone who's not just good with codes
-            but also loves to share knowledge and innovate? Let's get in touch!
-            I'm all about exploring how I can bring something special to your
-            projects and make a real difference.
+            🚀 Are you searching for someone who excels in coding and thrives on
+            sharing knowledge ? Let's connect! I bring more than just coding
+            skills to the table. With a strong background in teamwork and
+            problem-solving, I'm equipped to find creative solutions and
+            contribute significantly to your projects. Let’s explore how we can
+            make a meaningful impact together.
           </p>
         </div>
         {windowWidth > 1100 && <FlashlightEffect />}
