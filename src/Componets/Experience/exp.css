@@ -54,6 +54,8 @@
     flex-direction: column;
     align-items: flex-start;
     margin-top: 10%;
+    padding-right: 30px;
+    font-size: 1em;
     width: 100%;
 }
 
@@ -137,6 +139,9 @@ pre {
 @media (max-width: 800px) {
     #mainDiv {
         height: 500px;
+    }
+    #foldersContainer {
+        font-size: 0.75em;
     }
     #rightDiv {
         padding: 5px;

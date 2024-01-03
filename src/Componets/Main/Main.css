@@ -70,7 +70,7 @@ main {
   font-size: 3vw;
 }
 .profile-image {
-  width: 50vw;
+  width: 600px;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
@@ -79,6 +79,13 @@ main {
   margin-bottom: 20px;
   max-width: 30vw;
   max-height: 500px;
+}
+
+#paragraph {
+  font-size: 1vw;
+  padding: 5%;
+  border-radius: 40px;
+  box-shadow: 20px 40px 30px 4px rgba(137, 135, 135, 0.1);
 }
 
 @media (max-width: 650px) {
@@ -91,17 +98,9 @@ main {
     font-size: 5vw;
   }
   #paragraph {
-    font-size: 0.8em;
+    font-size: 2.5vw;
   }
 }
-
-#paragraph {
-  /* font-size: 1vw; */
-  padding: 5%;
-  border-radius: 40px;
-  box-shadow: 20px 40px 30px 4px rgba(137, 135, 135, 0.1);
-}
-
 
 /* ///////////////////////// */
 .projects-container {
