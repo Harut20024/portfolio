@@ -20,25 +20,26 @@ function Mainer({ isVisible }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [workshopAssistantCount, setWorkshopAssistantCount] = useState(0);
   const [numberOfStudentsCount, setNumberOfStudentsCount] = useState(0);
-  const [internationalAssistantsCount, setInternationalAssistantsCount] = useState(0);
+  const [internationalAssistantsCount, setInternationalAssistantsCount] =
+    useState(0);
   const [startCounting, setStartCounting] = useState(false);
 
   const checkIfCircleContainerInView = () => {
-    const circleContainer = document.querySelector('.circle-container');
+    const circleContainer = document.querySelector(".circle-container");
     const rect = circleContainer.getBoundingClientRect();
     return rect.top >= 0 && rect.bottom <= window.innerHeight;
   };
 
-useEffect(() => {
+  useEffect(() => {
     const onScroll = () => {
       if (checkIfCircleContainerInView()) {
         setStartCounting(true);
-        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener("scroll", onScroll);
       }
     };
 
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   // Increment workshopAssistantCount
@@ -47,7 +48,7 @@ useEffect(() => {
       const maxWorkshopCount = 10;
       const workshopInterval = setInterval(() => {
         if (workshopAssistantCount < maxWorkshopCount) {
-          setWorkshopAssistantCount(prevCount => prevCount + 1);
+          setWorkshopAssistantCount((prevCount) => prevCount + 1);
         } else {
           clearInterval(workshopInterval);
         }
@@ -63,7 +64,7 @@ useEffect(() => {
       const maxStudentCount = 260;
       const studentInterval = setInterval(() => {
         if (numberOfStudentsCount < maxStudentCount) {
-          setNumberOfStudentsCount(prevCount => prevCount + 1);
+          setNumberOfStudentsCount((prevCount) => prevCount + 1);
         } else {
           clearInterval(studentInterval);
         }
@@ -79,7 +80,7 @@ useEffect(() => {
       const maxInternationalCount = 3;
       const internationalInterval = setInterval(() => {
         if (internationalAssistantsCount < maxInternationalCount) {
-          setInternationalAssistantsCount(prevCount => prevCount + 1);
+          setInternationalAssistantsCount((prevCount) => prevCount + 1);
         } else {
           clearInterval(internationalInterval);
         }
@@ -135,7 +136,10 @@ useEffect(() => {
           </div>
           <div className="circle circle2">
             <div className="circle-text">Number of students</div>
-            <div className="circle-number">{numberOfStudentsCount}+</div>
+            <div className="circle-number">
+              {numberOfStudentsCount}
+              {numberOfStudentsCount === 260 ? "+" : ""}
+            </div>
           </div>
           <div className="circle circle3">
             <div className="circle-text">International workshop assistant</div>
