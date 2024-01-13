@@ -105,7 +105,7 @@ function Mainer({ isVisible }) {
           <img src={imageProfil} alt="Profile" className="profile-image" />
           <h1>Greetings</h1>
           <p id="paragraph">
-            🌟 Hi there! I'm Harut. My world isn't just about coding; it's a lot
+            🌟 I'm Harut. My world isn't just about coding; it's a lot
             more. At TUMO, I wear two hats – one as a coder and another as a
             learning coach. It's an exciting journey, teaching students the
             ropes of programming and helping them think out of the box to solve
