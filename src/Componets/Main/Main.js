@@ -123,7 +123,19 @@ function Mainer({ isVisible }) {
       },
     },
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
+    // Set up the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   useEffect(() => {
     const onScroll = () => {
       if (checkIfCircleContainerInView()) {
@@ -233,6 +245,13 @@ function Mainer({ isVisible }) {
           </h4>
           <div className="chart-container">
             <Line data={dataGraph} options={options} />
+            {windowWidth < 400 && (
+              <p
+                style={{ color: "white", textAlign: "center", padding: "10px" }}
+              >
+                Turn device to see more information
+              </p>
+            )}
           </div>
           <div className="circle-container">
             <div className="circle circle1">

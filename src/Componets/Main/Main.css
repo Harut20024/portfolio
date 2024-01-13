@@ -132,8 +132,8 @@ main {
   align-items: center;
 }
 .chart-container {
-  width: 50vw; /* 80% of the viewport width */
-  height: 45vw; /* height is set relative to the width to maintain aspect ratio */
+  width: 50vw;  
+  height: 45vw;  
   margin: auto;
   margin-bottom: -10%;
 }
@@ -331,7 +331,7 @@ main {
     height: 50vw;
   }
   .circle-container {
-    height: 15vh;
+    height: 25vh;
   }
   .circle {
     margin: 0 10px;
