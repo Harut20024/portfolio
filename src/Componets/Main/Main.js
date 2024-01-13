@@ -138,7 +138,7 @@ function Mainer({ isVisible }) {
             <div className="circle-text">Number of students</div>
             <div className="circle-number">
               {numberOfStudentsCount}
-              {numberOfStudentsCount === 260 ? "+" : ""}
+              {numberOfStudentsCount >= 260 ? "+" : ""}
             </div>
           </div>
           <div className="circle circle3">
