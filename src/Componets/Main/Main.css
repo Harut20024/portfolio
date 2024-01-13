@@ -359,6 +359,10 @@ footer {
   border-top: 2px solid #3f8a89;
   text-align: center;
 }
+footer h3{
+  padding-left: 10%; 
+  padding-right: 10%;
+}
 
 #gif {
   border: 1px solid black;
