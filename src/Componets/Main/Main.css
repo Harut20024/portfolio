@@ -348,9 +348,9 @@ main {
 /* /////////////////////////// */
 footer {
   padding-top: 20px;
-  padding-left: 5%; /* Use percentage for responsive padding */
-  padding-right: 5%; /* Use percentage for responsive padding */
-  padding-bottom: 50px;
+  padding-left: 5%; 
+  padding-right: 5%;
+  padding-bottom: 30px;
   color: black;
   height: auto;
   width: auto;
@@ -389,6 +389,14 @@ footer {
   footer {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  footer h3{
+    padding-left: 7%; 
+    padding-right: 7%;
+    font-size: 0.9em;
+  }
+  footer h1{
+    font-size: 1.3em;
   }
   .link {
     font-size: 0.7em;
