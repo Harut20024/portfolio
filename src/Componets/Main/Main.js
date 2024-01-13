@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import imageProfil from "../Images/profil.jpeg";
 import Experience from "../Experience/Experience";
-import { images } from "../Images/Images";
+import { images, recImg } from "../Images/Images";
 import data from "../../data.json";
 import Carousel from "../Carusel/Carousel";
 import Modal from "../Modal/Modal";
@@ -13,6 +13,28 @@ import github from "../Images/media/github.png";
 import linkdin from "../Images/media/linkedin.png";
 import gmail from "../Images/media/gmail.png";
 import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
+import recommendations from "../../recomend.json";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 function Mainer({ isVisible }) {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -27,6 +49,79 @@ function Mainer({ isVisible }) {
     const circleContainer = document.querySelector(".circle-container");
     const rect = circleContainer.getBoundingClientRect();
     return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  };
+
+  const dataGraph = {
+    labels: [
+      "30 Jul,",
+      "30 Aug",
+      "30 Sep",
+      "30 Oct",
+      "30 Nov",
+      "30 Dec",
+      "30 Jan",
+    ],
+    datasets: [
+      {
+        label: "Contributions",
+        data: [36, 166, 30, 5, 59, 45, 41],
+        borderColor: "#3f8a89",
+        backgroundColor: "#65e7e0",
+      },
+    ],
+  };
+
+  const options = {
+    plugins: {
+      legend: {
+        labels: {
+          color: "white",
+          font: {
+            size: 14,
+            family: "Helvetica, Arial, sans-serif",
+            style: "normal",
+          },
+        },
+      },
+      title: {
+        display: true,
+        text: "Monthly Contributions in Projects",
+        color: "white",
+        font: {
+          size: 18,
+          family: "Helvetica, Arial, sans-serif",
+        },
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        grid: {
+          color: "rgba(255, 255, 255, 0.1)",
+        },
+        ticks: {
+          color: "white",
+        },
+      },
+      x: {
+        grid: {
+          color: "rgba(255, 255, 255, 0.1)",
+        },
+        ticks: {
+          color: "white",
+        },
+      },
+    },
+    elements: {
+      line: {
+        borderColor: "white",
+        borderWidth: 2,
+      },
+      point: {
+        borderColor: "white",
+        backgroundColor: "white",
+      },
+    },
   };
 
   useEffect(() => {
@@ -51,7 +146,7 @@ function Mainer({ isVisible }) {
         } else {
           clearInterval(workshopInterval);
         }
-      }, 700);
+      }, 1000);
 
       return () => clearInterval(workshopInterval);
     }
@@ -67,7 +162,7 @@ function Mainer({ isVisible }) {
         } else {
           clearInterval(studentInterval);
         }
-      }, 30);
+      }, 50);
 
       return () => clearInterval(studentInterval);
     }
@@ -83,7 +178,7 @@ function Mainer({ isVisible }) {
         } else {
           clearInterval(internationalInterval);
         }
-      }, 1000);
+      }, 1300);
 
       return () => clearInterval(internationalInterval);
     }
@@ -105,11 +200,10 @@ function Mainer({ isVisible }) {
           <img src={imageProfil} alt="Profile" className="profile-image" />
           <h1>Greetings</h1>
           <p id="paragraph">
-            🌟 I'm Harut. My world isn't just about coding; it's a lot
-            more. At TUMO, I wear two hats – one as a coder and another as a
-            learning coach. It's an exciting journey, teaching students the
-            ropes of programming and helping them think out of the box to solve
-            problems.
+            🌟 I'm Harut. My world isn't just about coding; it's a lot more. At
+            TUMO, I wear two hats – one as a coder and another as a learning
+            coach. It's an exciting journey, teaching students the ropes of
+            programming and helping them think out of the box to solve problems.
             <br />
             <br />
             🔍 I began my journey in programming at 15, and it's been an
@@ -128,26 +222,67 @@ function Mainer({ isVisible }) {
           </p>
         </div>
 
-        <div className="circle-container">
-          <div className="circle circle1">
-            <div className="circle-text">Workshop assistant</div>
-            <div className="circle-number">{workshopAssistantCount}</div>
+        <div id="statistic">
+          <h1>Statistics Overview</h1>
+          <h4>
+            This section presents a snapshot of my contributions and
+            collaborations. You can see statistics of workshop assistant, the
+            number of students I've reached, and my involvement in international
+            workshops. The figures reflect my commitment to education and
+            mentorship.
+          </h4>
+          <div className="chart-container">
+            <Line data={dataGraph} options={options} />
           </div>
-          <div className="circle circle2">
-            <div className="circle-text">Number of students</div>
-            <div className="circle-number">
-              {numberOfStudentsCount}
-              {numberOfStudentsCount >= 260 ? "+" : ""}
+          <div className="circle-container">
+            <div className="circle circle1">
+              <div className="circle-text">Workshop assistant</div>
+              <div className="circle-number">{workshopAssistantCount}</div>
+            </div>
+            <div className="circle circle2">
+              <div className="circle-text">Number of students</div>
+              <div className="circle-number">
+                {numberOfStudentsCount}
+                {numberOfStudentsCount >= 260 ? "+" : ""}
+              </div>
+            </div>
+            <div className="circle circle3">
+              <div className="circle-text">
+                International workshop assistant
+              </div>
+              <div className="circle-number">
+                {internationalAssistantsCount}
+              </div>
             </div>
           </div>
-          <div className="circle circle3">
-            <div className="circle-text">International workshop assistant</div>
-            <div className="circle-number">{internationalAssistantsCount}</div>
+          <div id="recommendations">
+            <h1>What People Say About Me</h1>
+            <div className="recommendation-container">
+              {recommendations.map((recommendation, index) => (
+                <div key={recommendation.id} className="recommendation">
+                  <div className="recommender-info">
+                    <img
+                      src={recImg[index]} // Replace with your image path or recommendation.image if available
+                      alt={recommendation.name}
+                      className="recommendation-image"
+                    />
+                    <div className="recommender-name">
+                      <strong>{recommendation.name}</strong>
+                      <span>{recommendation.position}</span>
+                    </div>
+                  </div>
+                  <p className="recommendation-text">
+                    {recommendation.recommendation}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {windowWidth > 1100 && <FlashlightEffect />}
         <Experience />
+        {windowWidth > 1100 && <FlashlightEffect />}
+
         <h1>PROJECTS👌</h1>
         <div id="carusello">
           <Carousel
@@ -160,6 +295,7 @@ function Mainer({ isVisible }) {
           />
         </div>
         {/* Projects Section */}
+
         <div className="projects-container">
           {data.map((project, index) => (
             <div
