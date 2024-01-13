@@ -57,7 +57,7 @@ main {
 #about {
   margin: 15px;
   box-sizing: border-box;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
   border-radius: 4%;
   padding: 20px;
   padding-left: 15%;
@@ -83,7 +83,7 @@ main {
 }
 
 #paragraph {
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   padding: 5%;
   border-radius: 40px;
   box-shadow: 20px 40px 30px 4px rgba(137, 135, 135, 0.1);
