@@ -20,6 +20,7 @@ body {
 }
 
 main {
+  margin-top: -10px;
   font-family: Arial, sans-serif;
   background-color: #0b0c10;
   height: auto;
@@ -88,17 +89,20 @@ main {
   box-shadow: 20px 40px 30px 4px rgba(137, 135, 135, 0.1);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   .profile-image {
     max-width: 90%;
     height: auto;
     margin: 0 auto;
   }
+  #about{
+    padding: 5px;
+  }
   #about h1 {
     font-size: 5vw;
   }
   #paragraph {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
 }
 /* //////////////////////////// */
