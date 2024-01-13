@@ -52,7 +52,7 @@ function Mainer({ isVisible }) {
         } else {
           clearInterval(workshopInterval);
         }
-      }, 400);
+      }, 700);
 
       return () => clearInterval(workshopInterval);
     }
@@ -68,7 +68,7 @@ function Mainer({ isVisible }) {
         } else {
           clearInterval(studentInterval);
         }
-      }, 40);
+      }, 30);
 
       return () => clearInterval(studentInterval);
     }
@@ -84,7 +84,7 @@ function Mainer({ isVisible }) {
         } else {
           clearInterval(internationalInterval);
         }
-      }, 800);
+      }, 1000);
 
       return () => clearInterval(internationalInterval);
     }
