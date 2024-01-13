@@ -18,18 +18,76 @@ import SmileyFace from "../SmileyFace/SmileyFace";
 function Mainer({ isVisible }) {
   const [selectedProject, setSelectedProject] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [workshopAssistantCount, setWorkshopAssistantCount] = useState(0);
+  const [numberOfStudentsCount, setNumberOfStudentsCount] = useState(0);
+  const [internationalAssistantsCount, setInternationalAssistantsCount] = useState(0);
+  const [startCounting, setStartCounting] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+  const checkIfCircleContainerInView = () => {
+    const circleContainer = document.querySelector('.circle-container');
+    const rect = circleContainer.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  };
+
+useEffect(() => {
+    const onScroll = () => {
+      if (checkIfCircleContainerInView()) {
+        setStartCounting(true);
+        window.removeEventListener('scroll', onScroll);
+      }
     };
 
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // Increment workshopAssistantCount
+  useEffect(() => {
+    if (startCounting) {
+      const maxWorkshopCount = 10;
+      const workshopInterval = setInterval(() => {
+        if (workshopAssistantCount < maxWorkshopCount) {
+          setWorkshopAssistantCount(prevCount => prevCount + 1);
+        } else {
+          clearInterval(workshopInterval);
+        }
+      }, 400);
+
+      return () => clearInterval(workshopInterval);
+    }
+  }, [workshopAssistantCount, startCounting]);
+
+  // Increment numberOfStudentsCount
+  useEffect(() => {
+    if (startCounting) {
+      const maxStudentCount = 260;
+      const studentInterval = setInterval(() => {
+        if (numberOfStudentsCount < maxStudentCount) {
+          setNumberOfStudentsCount(prevCount => prevCount + 1);
+        } else {
+          clearInterval(studentInterval);
+        }
+      }, 40);
+
+      return () => clearInterval(studentInterval);
+    }
+  }, [numberOfStudentsCount, startCounting]);
+
+  // Increment internationalAssistantsCount
+  useEffect(() => {
+    if (startCounting) {
+      const maxInternationalCount = 3;
+      const internationalInterval = setInterval(() => {
+        if (internationalAssistantsCount < maxInternationalCount) {
+          setInternationalAssistantsCount(prevCount => prevCount + 1);
+        } else {
+          clearInterval(internationalInterval);
+        }
+      }, 800);
+
+      return () => clearInterval(internationalInterval);
+    }
+  }, [internationalAssistantsCount, startCounting]);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -69,6 +127,22 @@ function Mainer({ isVisible }) {
             make a meaningful impact together.
           </p>
         </div>
+
+        <div className="circle-container">
+          <div className="circle circle1">
+            <div className="circle-text">Workshop assistant</div>
+            <div className="circle-number">{workshopAssistantCount}</div>
+          </div>
+          <div className="circle circle2">
+            <div className="circle-text">Number of students</div>
+            <div className="circle-number">{numberOfStudentsCount}+</div>
+          </div>
+          <div className="circle circle3">
+            <div className="circle-text">International workshop assistant</div>
+            <div className="circle-number">{internationalAssistantsCount}</div>
+          </div>
+        </div>
+
         {windowWidth > 1100 && <FlashlightEffect />}
         <Experience />
         <h1>PROJECTS👌</h1>
