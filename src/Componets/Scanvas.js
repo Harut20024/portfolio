@@ -11,7 +11,6 @@ const Sketch = () => {
 
     let scrollY = 0;
     const baseCanvasWidth = 800;
-    // Use a limited scaleFactor for larger screens
     const scaleFactor = Math.min(canvas.width / baseCanvasWidth, 1);
 
     const drawCanvas = () => {
@@ -22,8 +21,8 @@ const Sketch = () => {
       let textY = canvas.height / 5;
 
       // Text sizes with a maximum limit
-      const primaryFontSize = Math.min(Math.max(30, 60 * scaleFactor), 40); // Max size 40px
-      const secondaryFontSize = Math.min(Math.max(16, 22 * scaleFactor), 24); // Max size 24px
+      const primaryFontSize = Math.min(Math.max(30, 80 * scaleFactor), 100); 
+      const secondaryFontSize = Math.min(Math.max(16, 32 * scaleFactor), 44); 
 
       // Drawing the welcome text
       ctx.fillStyle = "#65e7e0";

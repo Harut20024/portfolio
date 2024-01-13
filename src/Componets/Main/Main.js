@@ -13,7 +13,6 @@ import github from "../Images/media/github.png";
 import linkdin from "../Images/media/linkedin.png";
 import gmail from "../Images/media/gmail.png";
 import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
-import SmileyFace from "../SmileyFace/SmileyFace";
 
 function Mainer({ isVisible }) {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -150,7 +149,6 @@ function Mainer({ isVisible }) {
         {windowWidth > 1100 && <FlashlightEffect />}
         <Experience />
         <h1>PROJECTS👌</h1>
-        {windowWidth > 1100 && <SmileyFace />}
         <div id="carusello">
           <Carousel
             items={data.map((item, index) => ({
