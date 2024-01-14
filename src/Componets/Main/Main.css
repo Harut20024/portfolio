@@ -35,7 +35,7 @@ main {
   position: relative;
   overflow: hidden;
   background-color: #161820;
-  border-radius: 4%;
+  border-radius: 1em;
   margin: auto;
   width: 80%;
   text-align: center;
