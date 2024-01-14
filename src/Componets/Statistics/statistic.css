@@ -239,11 +239,11 @@
     height: 25vh;
   }
   .circle {
-    margin: 0 5%;
+    margin: 0 2.5%;
     animation-duration: 5s;
   }
   .circle-text {
-    font-size: 1.3vw;
+    font-size: 1.7vw;
     margin-bottom: 8px;
   }
 
