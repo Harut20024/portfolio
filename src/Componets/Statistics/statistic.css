@@ -118,7 +118,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #007bff;
+  background-color: #4ec9e1;
   color: white;
   border: none;
   padding: 8px;
@@ -145,7 +145,7 @@
   margin-right: auto;
   padding: 4%;
   border-radius: 8px;
-  border: 1px solid #007bff;
+  border: 1px solid #4ec9e1;
   box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
 }
