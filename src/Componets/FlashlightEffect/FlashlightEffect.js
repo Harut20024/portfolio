@@ -32,9 +32,7 @@ const FlashlightEffect = () => {
         }}
       >
         <div style={{ marginTop: "20px" }}>
-          <h1>Welcome o my website!</h1>
-          <br />
-          <h3>Let me show you more about me and my works</h3>
+          <h2> Now Let me show you more about my works</h2>
           <br />
           <h3>So let's start</h3>
         </div>

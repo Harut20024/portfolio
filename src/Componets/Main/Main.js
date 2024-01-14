@@ -14,6 +14,7 @@ import linkdin from "../Images/media/linkedin.png";
 import gmail from "../Images/media/gmail.png";
 import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
 import recommendations from "../../recomend.json";
+import Statistics from "../Statistics/Statistics";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -129,11 +130,11 @@ function Mainer({ isVisible }) {
     };
 
     // Set up the event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up the event listener
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   useEffect(() => {
@@ -234,72 +235,17 @@ function Mainer({ isVisible }) {
           </p>
         </div>
 
-        <div id="statistic">
-          <h1>Statistics Overview</h1>
-          <h4>
-            This section presents a snapshot of my contributions and
-            collaborations. You can see statistics of workshop assistant, the
-            number of students I've reached, and my involvement in international
-            workshops. The figures reflect my commitment to education and
-            mentorship.
-          </h4>
-          <div className="chart-container">
-            <Line data={dataGraph} options={options} />
-            {windowWidth < 400 && (
-              <p
-                style={{ color: "white", textAlign: "center", padding: "10px" }}
-              >
-                Turn device to see more information
-              </p>
-            )}
-          </div>
-          <div className="circle-container">
-            <div className="circle circle1">
-              <div className="circle-text">Workshop assistant</div>
-              <div className="circle-number">{workshopAssistantCount}</div>
-            </div>
-            <div className="circle circle2">
-              <div className="circle-text">Number of students</div>
-              <div className="circle-number">
-                {numberOfStudentsCount}
-                {numberOfStudentsCount >= 260 ? "+" : ""}
-              </div>
-            </div>
-            <div className="circle circle3">
-              <div className="circle-text">
-                International workshop assistant
-              </div>
-              <div className="circle-number">
-                {internationalAssistantsCount}
-              </div>
-            </div>
-          </div>
-          <div id="recommendations">
-            <h1>What People Say About Me</h1>
-            <div className="recommendation-container">
-              {recommendations.map((recommendation, index) => (
-                <div key={recommendation.id} className="recommendation">
-                  <div className="recommender-info">
-                    <img
-                      src={recImg[index]} // Replace with your image path or recommendation.image if available
-                      alt={recommendation.name}
-                      className="recommendation-image"
-                    />
-                    <div className="recommender-name">
-                      <strong>{recommendation.name}</strong>
-                      <span>{recommendation.position}</span>
-                    </div>
-                  </div>
-                  <p className="recommendation-text">
-                    {recommendation.recommendation}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         <Experience />
+        <Statistics
+          windowWidth={windowWidth}
+          dataGraph={dataGraph}
+          options={options}
+          workshopAssistantCount={workshopAssistantCount}
+          numberOfStudentsCount={numberOfStudentsCount}
+          internationalAssistantsCount={internationalAssistantsCount}
+          recommendations={recommendations}
+          recImg={recImg}
+        />
         {windowWidth > 1100 && <FlashlightEffect />}
 
         <h1>PROJECTS👌</h1>
