@@ -6,7 +6,7 @@ const Sketch = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight * 2;
+    canvas.height = window.innerHeight * 1.2;
     canvas.width = window.innerWidth;
 
     let scrollY = 0;
@@ -21,14 +21,14 @@ const Sketch = () => {
       let textY = canvas.height / 5;
 
       // Text sizes with a maximum limit
-      const primaryFontSize = Math.min(Math.max(30, 80 * scaleFactor), 100); 
-      const secondaryFontSize = Math.min(Math.max(16, 32 * scaleFactor), 44); 
+      const primaryFontSize = Math.min(Math.max(40, 80 * scaleFactor), 85); 
+      const secondaryFontSize = Math.min(Math.max(12, 32 * scaleFactor), 24); 
 
       // Drawing the welcome text
       ctx.fillStyle = "#65e7e0";
       ctx.font = `${primaryFontSize}px serif`;
       drawTextCentered(ctx, "Welcome", canvas.width / 2, textY);
-      textY += primaryFontSize + 15 * scaleFactor;
+      textY += primaryFontSize/1.5 + scaleFactor;
 
       // Drawing the "to My Portfolio" text
       ctx.font = `${secondaryFontSize}px serif`;
@@ -44,7 +44,7 @@ const Sketch = () => {
       const startX = canvas.width / 2;
       ctx.beginPath();
       ctx.moveTo(startX, textY + 20);
-      ctx.lineTo(startX, textY + 20 + scrollY);
+      ctx.lineTo(startX, textY + 20 + scrollY/1.66);
       ctx.strokeStyle = "#3f8a89";
       ctx.lineWidth = 2;
       ctx.stroke();

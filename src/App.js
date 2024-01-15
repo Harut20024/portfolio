@@ -5,6 +5,7 @@ import Mainer from "./Componets/Main/Main";
 
 function App() {
   const [showMain, setShowMain] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +23,22 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="Canvas">
       <main>
-        <SCanvas />
+        <SCanvas key={windowWidth} />
       </main>
       <Mainer isVisible={showMain} />
     </div>

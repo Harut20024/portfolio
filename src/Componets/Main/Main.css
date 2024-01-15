@@ -69,15 +69,13 @@ main {
   font-size: 3vw;
 }
 .profile-image {
-  width: auto;
+  width: 30vw;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #3f8a89;
+  border: 1.3px solid #3f8a89;
   box-shadow: 0 0 10px rgba(198, 199, 201, 0.1);
   margin-bottom: 20px;
-  max-width: 30vw;
-  max-height: 500px;
 }
 
 #paragraph {
@@ -88,8 +86,8 @@ main {
 
 @media (max-width: 800px) {
   .profile-image {
+    width: 40vw;
     height: auto;
-    margin: 0 auto;
   }
   #about {
     padding: 5px;
@@ -263,26 +261,23 @@ footer h3 {
 }
 
 #gif {
-  border: 1px solid black;
-  border-radius: 50%;
-  height: 300px; /* Consider making this responsive as well */
-  width: 300px; /* Consider making this responsive as well */
-  display: block;
+  height: 21vw;
+  width: auto;
   margin: auto;
 }
 
 .Media {
   margin-top: 20px;
   margin-bottom: 20px;
-  display: flex; /* Use flexbox for better alignment */
-  justify-content: center; /* Center the media icons */
-  flex-wrap: wrap; /* Allow icons to wrap on small screens */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .Media img {
-  width: 50px; /* Responsive size, or consider using em */
-  height: 50px; /* Responsive size, or consider using em */
-  margin: 5px; /* Adjust margin for better spacing */
+  width: 4vw;
+  height: auto;
+  margin: 5px;
   display: inline-block;
 }
 
@@ -307,14 +302,24 @@ footer h3 {
     width: auto;
     height: 4em;
   }
-  #gif {
-    height: 200px;
-    width: 200px;
-  }
-
   .Media img {
-    width: 40px;
-    height: 40px;
+    width: 6vw;
+  }
+}
+
+@media (max-width: 490px) {
+  footer h3 {
+    font-size: 0.71em;
+  }
+  footer h1 {
+    font-size: 1.3em;
+  }
+  #gif {
+    width: 45vw;
+    height: auto;
+  }
+  .Media img {
+    width: 8vw;
   }
 }
 
