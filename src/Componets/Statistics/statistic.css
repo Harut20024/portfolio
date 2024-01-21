@@ -1,7 +1,7 @@
 #statistic {
   text-align: center;
   color: white;
-  margin: 50px 0;
+  margin: 40px 0;
   padding: 20px;
   border-radius: 40px;
   box-shadow: 4px 0 0 8px rgba(0, 0, 0, 0.1);
@@ -237,10 +237,10 @@
   .chart-container {
     width: 75vw;
     height: 50vw;
-    margin-bottom: 4%;
+    margin-bottom: 14%;
   }
   .circle-container {
-    height: 25vh;
+    height: 15vh;
   }
   .circle {
     margin: 0 4%;
