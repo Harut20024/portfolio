@@ -16,6 +16,7 @@ import gmail from "../Images/media/gmail.png";
 import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
 import recommendations from "../../recomend.json";
 import Statistics from "../Statistics/Statistics";
+import Jumpbox from "../JumpBox/Jumpbox";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import {
   Chart as ChartJS,
@@ -58,15 +59,7 @@ function Mainer({ isVisible }) {
   };
 
   const dataGraph = {
-    labels: [
-      "Jul,",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-      "Jan",
-    ],
+    labels: ["Jul,", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan"],
     datasets: [
       {
         label: "Contributions",
@@ -215,7 +208,6 @@ function Mainer({ isVisible }) {
       <main>
         <div id="main" className={isVisible ? "show" : ""}>
           {/* Profile Section */}
-          <Parallax speed={-4.2}>
             <div id="about">
               <img src={imageProfil} alt="Profile" className="profile-image" />
               <h1>Greetings</h1>
@@ -243,7 +235,8 @@ function Mainer({ isVisible }) {
                 explore how we can make a meaningful impact together.
               </p>
             </div>
-          </Parallax>
+
+          <Jumpbox windowWidth={windowWidth} />
           <Parallax speed={-4}>
             <Experience />
           </Parallax>
