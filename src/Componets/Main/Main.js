@@ -16,8 +16,6 @@ import gmail from "../Images/media/gmail.png";
 import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
 import recommendations from "../../recomend.json";
 import Statistics from "../Statistics/Statistics";
-import Jumpbox from "../JumpBox/Jumpbox";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -204,7 +202,6 @@ function Mainer({ isVisible }) {
   };
 
   return (
-    <ParallaxProvider>
       <main>
         <div id="main" className={isVisible ? "show" : ""}>
           {/* Profile Section */}
@@ -236,10 +233,7 @@ function Mainer({ isVisible }) {
               </p>
             </div>
 
-          <Jumpbox windowWidth={windowWidth} />
-          <Parallax speed={-4}>
             <Experience />
-          </Parallax>
           <Statistics
             windowWidth={windowWidth}
             dataGraph={dataGraph}
@@ -366,7 +360,6 @@ function Mainer({ isVisible }) {
           </footer>
         </div>
       </main>
-    </ParallaxProvider>
   );
 }
 

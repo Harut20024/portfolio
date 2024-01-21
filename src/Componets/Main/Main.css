@@ -55,9 +55,8 @@ main {
 }
 
 #about {
-  margin: 15px;
+  margin: 10px;
   box-sizing: border-box;
-  margin-bottom: 3%;
   border-radius: 4%;
   padding: 20px;
   padding-left: 15%;
