@@ -44,7 +44,7 @@ const Sketch = () => {
       // Drawing line
       ctx.beginPath();
       ctx.moveTo(canvas.width / 2, textY);
-      ctx.lineTo(canvas.width / 2, textY + scrollY * 0.5); // Scroll effect on line length
+      ctx.lineTo(canvas.width / 2, textY + scrollY * 0.62); // Scroll effect on line length
       ctx.strokeStyle = "#3f8a89";
       ctx.lineWidth = 2;
       ctx.stroke();
