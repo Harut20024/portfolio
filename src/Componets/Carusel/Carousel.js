@@ -11,8 +11,6 @@ class Item extends React.Component {
             <CSSTransition key={src} classNames="item" timeout={{ enter: 500, exit: 300 }}>
                 <div className={className}>
                     <img src={src} alt={alt} />
-                    {/* Uncomment below line to add a caption to the image */}
-                    {/* <div className="item-caption">Caption Text Here</div> */}
                 </div>
             </CSSTransition>
         );

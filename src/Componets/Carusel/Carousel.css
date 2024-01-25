@@ -3,14 +3,12 @@
 :root {
   --carousel-height: 500px;
   --carousel-width: 100%;
-
   --item-height-small: 200px;
   --item-width-small: 270px;
   --item-height-medium: 300px;
   --item-width-medium: 300px;
   --item-height-large: 400px;
   --item-width-large: 500px;
-
   --transition-duration: 1s;
 }
 
@@ -140,13 +138,26 @@ body {
   transition: opacity var(--transition-duration) ease;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   :root {
-    --item-height-small: 150px;
-    --item-width-small: 200px;
-    --item-height-medium: 200px;
-    --item-width-medium: 250px;
-    --item-height-large: 300px;
-    --item-width-large: 350px;
+    --carousel-width: 95%;
+    --item-height-small: 100px;
+    --item-width-small: 150px;
+    --item-height-medium: 150px;
+    --item-width-medium: 200px;
+    --item-height-large: 250px;
+    --item-width-large: 300px;
+  }
+  .arrow-left {
+    left: 2px;
+  }
+  
+  .arrow-right {
+    right: 2px;
+  }
+  .arrow {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
   }
 }
