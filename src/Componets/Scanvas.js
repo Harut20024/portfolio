@@ -6,18 +6,14 @@ const Sketch = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight * 1.2;
-    canvas.width = window.innerWidth;
 
-    let scrollY = 0;
-    const baseCanvasWidth = 800;
+    const setCanvasSize = () => {
+      canvas.height = window.innerHeight * 1.2;
+      canvas.width = window.innerWidth;
+    };
+    setCanvasSize();
 
-    // Adjust the scale factor to be less aggressive
-    const scaleFactor = Math.sqrt(canvas.width / baseCanvasWidth);
-
-     const basePrimaryFontSize = 40; 
-    const baseSecondaryFontSize = 16;  
-
+    let scrollY = window.scrollY;
     const drawCanvas = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#0b0c10";
@@ -25,31 +21,30 @@ const Sketch = () => {
 
       let textY = canvas.height / 5;
 
-      // Calculate scaled font sizes - increased min and max sizes
-      const primaryFontSize = Math.max(26, Math.min(basePrimaryFontSize * scaleFactor, 52)); // Increased Min: 26, Max: 42
-      const secondaryFontSize = Math.max(14, Math.min(baseSecondaryFontSize * scaleFactor, 28)); // Increased Min: 14, Max: 28
+      // Calculate scaled font size for "Welcome" text, making it less aggressive
+      const primaryFontSize = Math.max(28, Math.min(35, canvas.width / 800 * 40)); // Welcome text min: 24px, max: 30px
+      const secondaryFontSize = 12; // Secondary text fixed at 16px
 
-      // Drawing the welcome text
+      // Drawing the "Welcome" text
       ctx.fillStyle = "#65e7e0";
-      ctx.font = `${primaryFontSize}px serif`;
+      ctx.font = `bold ${primaryFontSize}px Arial`;
       drawTextCentered(ctx, "Welcome", canvas.width / 2, textY);
-      textY += primaryFontSize / 1.5 + 10;
+      textY += primaryFontSize;
 
       // Drawing the "to My Portfolio" text
-      ctx.font = `${secondaryFontSize}px serif`;
+      ctx.font = `bold ${secondaryFontSize}px Arial`;
       drawTextCentered(ctx, "to My Portfolio", canvas.width / 2, textY);
-      textY += secondaryFontSize + 10;
+      textY += secondaryFontSize * 2;
 
       // Drawing the "↓ Scroll Down to Discover More ↓" text
-      ctx.font = `${secondaryFontSize}px serif`;
+      ctx.font = `bold ${secondaryFontSize}px Arial`;
       drawTextCentered(ctx, "↓ Scroll Down to Discover More ↓", canvas.width / 2, textY);
-      textY += secondaryFontSize + 10;
+      textY += secondaryFontSize * 2;
 
       // Drawing line
-      const startX = canvas.width / 2;
       ctx.beginPath();
-      ctx.moveTo(startX, textY + 20);
-      ctx.lineTo(startX, textY + 20 + scrollY / 1.66);
+      ctx.moveTo(canvas.width / 2, textY);
+      ctx.lineTo(canvas.width / 2, textY + scrollY * 0.5); // Scroll effect on line length
       ctx.strokeStyle = "#3f8a89";
       ctx.lineWidth = 2;
       ctx.stroke();
@@ -57,8 +52,7 @@ const Sketch = () => {
 
     const drawTextCentered = (ctx, text, x, y) => {
       const textWidth = ctx.measureText(text).width;
-      const textX = x - textWidth / 2;
-      ctx.fillText(text, textX, y);
+      ctx.fillText(text, x - textWidth / 2, y);
     };
 
     const handleScroll = () => {
@@ -66,19 +60,23 @@ const Sketch = () => {
       drawCanvas();
     };
 
+    // Set up the event listeners
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", setCanvasSize);
+
+    // Initial draw
     drawCanvas();
 
+    // Clean up the event listeners
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", setCanvasSize);
     };
   }, []);
 
-  return (
-    <div style={{ position: "relative", height: "200vh" }}>
-      <canvas ref={canvasRef} />
-    </div>
-  );
+  return <div style={{ position: "relative", height: "200vh" }}>
+    <canvas ref={canvasRef} />
+  </div>;
 };
 
 export default Sketch;
