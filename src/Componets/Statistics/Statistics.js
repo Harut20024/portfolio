@@ -14,6 +14,11 @@ const Statistics = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const chartOptions = {
+    ...options, // spread in your existing options
+    responsive: true,
+    maintainAspectRatio: false, // Important for responsiveness
+  };
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? recommendations.length - 1 : prevIndex - 1
@@ -36,12 +41,7 @@ const Statistics = ({
         reflect my commitment to education and mentorship.
       </p>
       <div className="chart-container">
-        <Line data={dataGraph} options={options} />
-        {windowWidth < 400 && (
-          <p style={{ color: "white", textAlign: "center", padding: "10px" }}>
-            Turn device to see more information
-          </p>
-        )}
+        <Line data={dataGraph} options={chartOptions} />
       </div>
       <h4>Statistics from my work</h4>
       <div className="circle-container">
@@ -62,7 +62,7 @@ const Statistics = ({
         </div>
       </div>
       <div id="testimonial-slider">
-      <h4>What People Say About Me</h4>
+        <h4>What People Say About Me</h4>
         <div className="slider-nav">
           <button className="nav-button prev" onClick={handlePrevClick}>
             &lt;

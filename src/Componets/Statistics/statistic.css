@@ -30,10 +30,10 @@
   margin-bottom: 5%;
 }
 .chart-container {
-  width: 50vw;
+  width: 100%;
   height: 45vw;
   margin: auto;
-  margin-bottom: -10%;
+  padding: 10% 20%;
 }
 
 .circle {
@@ -236,8 +236,10 @@
   }
   .chart-container {
     width: 75vw;
-    height: 50vw;
-    margin-bottom: 14%;
+    height: 72vw;
+    margin-bottom: 20%;
+    padding: 0;
+
   }
   .circle-container {
     height: 15vh;
@@ -257,6 +259,9 @@
   }
 }
 @media (max-width: 800px) {
+  #statistic h1 {
+    font-size: 1.3em;
+  }
   .testimonial-item {
     width: 90%;
   }
@@ -265,7 +270,7 @@
   }
   #parag {
     padding: 0 2%;
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-bottom: 5%;
   }
 }
@@ -277,20 +282,25 @@
   .testimonial-text {
     font-size: 0.75em;
   }
+  
 }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .circle-text {
     font-size: 1.6vw;
     margin-bottom: 8px;
   }
 
-  .circle{
+  .circle {
     min-width: 60px;
     min-height: 60px;
-  
   }
   .testimonial-item {
     font-size: 0.78em;
     width: auto;
+  }
+  #parag {
+    padding: 0 1%;
+    font-size: 0.75em;
+    margin-bottom: 5%;
   }
 }

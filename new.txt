@@ -12,13 +12,3 @@ Harutyun Tarzyan	մերսի շատ ամեն ինչի համար
 Harutyun Tarzyan	Իմ սիրելի ընկեր Հարութը շատ հիասքանչ մարդ է, շատ լավ օրինակ է իր ուսանողների համար իմ համար նույնպես և ես շատ ուրախ եմ որ նա իմ մարզիչն է:
 Harutyun Tarzyan	ՈՒնի անուն ազգանուն :
 Harutyun Tarzyan	Իմ մարզիչը շատ լավն է,բարի և միշտ ճիշտ խորհուրդներ է տալիս, օգնում է կատարել վարժանքները
-
-          {/* <div className="box">
-            <Parallax
-              translateX={["-500px", "500px"]}
-              scale={[1, 1]}
-              rotate={[-180, 0]}
-              easing="easeInQuad"
-              className="jumping-box"
-            ></Parallax>
-          </div> */}
