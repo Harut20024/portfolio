@@ -85,8 +85,8 @@
 #rightDiv {
   flex-grow: 1;
   overflow: auto;
-  padding: 20px; /* Base padding */
-  font-size: 1.4em; /* Base font size, adjust as needed */
+  padding: 20px;
+  font-size: 1.3em;
   text-align: left;
   background-color: #282a36;
   height: 100%;
@@ -100,7 +100,14 @@ pre {
   word-wrap: break-word; /* Ensure long words do not cause horizontal scroll */
 }
 
-/* Retain original colors but adjust for dynamic sizing and margin */
+.method,
+.property,
+.propertyName {
+  margin-left: 20px;
+}
+#skills {
+  margin-left: 20px;
+}
 .keyword {
   color: #c678dd;
 }
@@ -123,18 +130,17 @@ pre {
   color: #d19a66;
 }
 
-/* Additional CSS for responsive layout */
 @media (max-width: 1300px) {
   #rightDiv {
     padding: 10px;
-    font-size: 1.2em; /* Slightly smaller font size */
+    font-size: 1.2em;
   }
   #mainDiv {
     height: 740px;
   }
 
   pre {
-    font-size: 0.8em; /* Smaller font size for 'pre' content */
+    font-size: 0.8em;
   }
 
   .method,
@@ -150,7 +156,7 @@ pre {
 
 @media (max-width: 900px) {
   #rightDiv {
-    font-size: 1em;
+    font-size: 1.15em;
   }
 }
 @media (max-width: 800px) {
@@ -212,6 +218,15 @@ pre {
   #mainDiv {
     font-size: 0.76em;
     height: 400px;
+  }
+  #rightDiv {
+    padding: 5px;
+    height: auto;
+  }
+}
+@media (max-width: 330px) {
+  #mainDiv {
+    font-size: 0.7em;
   }
   #rightDiv {
     padding: 5px;
