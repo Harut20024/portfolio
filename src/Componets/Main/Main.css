@@ -5,10 +5,10 @@
 }
 
 body {
-  background-color: #0b0c10;
   font-family: "Lobster", cursive;
   margin: 0;
   padding: 0;
+  background-color: #110f37;
 }
 
 #main.show {
@@ -20,9 +20,8 @@ body {
 }
 
 main {
-  margin-top: -10px;
+  margin-top: 100px;
   font-family: Arial, sans-serif;
-  background-color: #0b0c10;
   height: auto;
   width: auto;
   transform-origin: center;
@@ -34,12 +33,11 @@ main {
   color: white;
   position: relative;
   overflow: hidden;
-  background-color: #161820;
+  background-color: #0d0c2b;
   border-radius: 1em;
   margin: auto;
   width: 80%;
   text-align: center;
-  border: 1.2px solid #3f8a89;
   box-sizing: border-box;
   transform: scaleY(0);
   transform-origin: top;
@@ -82,15 +80,13 @@ main {
   height: auto;
   border-radius: 50%;
   object-fit: cover;
-
-  /* Border and Box-Shadow */
-  border: 3px solid transparent; /* Make border transparent */
-  background-image: linear-gradient(#3f8a89, #3f8a89),
+  border: 3px solid transparent;
+  background-image: linear-gradient(#2b2850, #2b2850),
     linear-gradient(
       to right,
-      rgba(101, 231, 224, 0.2),
-      rgba(101, 231, 224, 0.5) 50%,
-      rgba(101, 231, 224, 0.2)
+      rgba(17, 15, 54, 0.2),
+      rgba(50, 52, 93, 0.5) 50%,
+      rgba(17, 15, 44, 0.2)
     );
 
   background-origin: border-box;
@@ -269,9 +265,8 @@ footer {
   color: black;
   height: auto;
   width: auto;
-  background-color: #f2efea;
+  background-color: #957290;
   margin-top: 60px;
-  border-top: 2px solid #3f8a89;
   text-align: center;
 }
 footer h3 {
@@ -280,7 +275,7 @@ footer h3 {
 }
 
 #gif {
-  height: 16vw;
+  height: 11vw;
   width: auto;
   margin: auto;
 }
@@ -303,7 +298,6 @@ footer h3 {
 .Media img:hover {
   transform: translateY(-10px);
 }
-
 
 @media (max-width: 1100px) {
   .textAnim-container {

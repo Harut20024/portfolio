@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./style.css"
 const FlashlightEffect = () => {
   const [lightPosition, setLightPosition] = useState({
     x: window.innerWidth / 2.5,
@@ -15,7 +15,7 @@ const FlashlightEffect = () => {
 
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <div id="fleshback" style={{  textAlign: "center", marginTop: "20px" }}>
       <div
         onMouseMove={handleMouseMove}
         style={{
@@ -44,7 +44,7 @@ const FlashlightEffect = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            background: `radial-gradient(circle at ${lightPosition.x}px ${lightPosition.y}px, rgba(255, 255, 255, 0.8) 100px, #161820 200px)`,
+            background: `radial-gradient(circle at ${lightPosition.x}px ${lightPosition.y}px, rgba(255, 255, 255, 0.8) 100px, #0d0c2b 200px)`,
             pointerEvents: "none",
           }}
         />

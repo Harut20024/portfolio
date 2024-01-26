@@ -203,7 +203,7 @@ function Mainer({ isVisible }) {
 
   return (
     <main>
-      <div id="main" className={isVisible ? "show" : ""}>
+      <div id="main" className="show">
         {/* Profile Section */}
         <div id="about">
           <img src={imageProfil} alt="Profile" className="profile-image" />
