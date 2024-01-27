@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ParallaxScroll = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    let speed = 100;
+    let speed = 80;
 
     let scene1 = gsap.timeline();
     ScrollTrigger.create({

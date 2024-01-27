@@ -15,9 +15,9 @@ const Statistics = ({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const chartOptions = {
-    ...options, // spread in your existing options
+    ...options, 
     responsive: true,
-    maintainAspectRatio: false, // Important for responsiveness
+    maintainAspectRatio: false,  
   };
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) =>
@@ -53,7 +53,7 @@ const Statistics = ({
           <div className="circle-text">Number of students</div>
           <div className="circle-number">
             {numberOfStudentsCount}
-            {numberOfStudentsCount >= 260 ? "+" : ""}
+            {numberOfStudentsCount >= 290 ? "+" : ""}
           </div>
         </div>
         <div className="circle circle3">

@@ -100,11 +100,6 @@ pre {
   word-wrap: break-word; /* Ensure long words do not cause horizontal scroll */
 }
 
-.method,
-.property,
-.propertyName {
-  margin-left: 20px;
-}
 #skills {
   margin-left: 20px;
 }
@@ -143,11 +138,6 @@ pre {
     font-size: 0.8em;
   }
 
-  .method,
-  .property,
-  .propertyName {
-    margin-left: 20px;
-  }
 
   #skills {
     margin-left: 20px;
@@ -176,11 +166,6 @@ pre {
     font-size: 0.75em;
   }
 
-  .method,
-  .property,
-  .propertyName {
-    margin-left: 10px; /* Reduced indentation */
-  }
 
   #skills {
     margin-left: 10px;

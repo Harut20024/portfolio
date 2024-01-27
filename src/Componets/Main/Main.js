@@ -45,11 +45,11 @@ function Mainer({ isVisible }) {
   const [internationalAssistantsCount, setInternationalAssistantsCount] =
     useState(0);
   const [startCounting, setStartCounting] = useState(false);
+
   const checkIfCircleContainerInView = () => {
     const circleContainer = document.querySelector(".circle-container");
     const rect = circleContainer.getBoundingClientRect();
-
-    const isTopVisible = rect.top >= 0 && rect.top <= window.innerHeight * 4;
+    const isTopVisible = rect.top >= 0 && rect.top <= window.innerHeight * 4  ;
     const isBottomVisible =
       rect.bottom <= window.innerHeight && rect.bottom >= 0;
 
@@ -57,7 +57,7 @@ function Mainer({ isVisible }) {
   };
 
   const dataGraph = {
-    labels: ["Jul,", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan"],
+    labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan"],
     datasets: [
       {
         label: "Contributions",
