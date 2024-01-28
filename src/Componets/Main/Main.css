@@ -98,26 +98,11 @@ main {
 }
 
 #paragraph {
-  font-size: 1.3vw;
+  font-size: 1.6em;
   padding: 5%;
-  border-radius: 40px;
 }
 
-@media (max-width: 800px) {
-  .profile-image {
-    width: 40vw;
-    height: auto;
-  }
-  #about {
-    padding: 5px;
-  }
-  #about h1 {
-    font-size: 5vw;
-  }
-  #paragraph {
-    font-size: 1.9vw;
-  }
-}
+
 /* //////////////////////////// */
 
 .projects-container {
@@ -138,16 +123,41 @@ main {
   max-width: 300px;
   animation: float 4s ease-in-out infinite, fadeIn 0.6s ease-out;
 }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  #paragraph {
+    font-size: 1.2em;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
   .project {
     font-size: 1em;
     width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 900px) {
+  .profile-image {
+    width: 35vw;
+    height: auto;
+  }
+  #about {
+    padding: 5px;
+  }
+  #about h1 {
+    font-size: 5vw;
+  }
+  #paragraph {
+    font-size: 0.9em;
   }
 }
 @media (max-width: 700px) {
   .project {
     font-size: 0.7em;
     width: calc(100% / 2 - 10px);
+  }
+  #paragraph {
+    font-size: 0.75em;
+    padding: 1%;
+    padding-top: 6px;
   }
 }
 

@@ -155,7 +155,7 @@ function Mainer({ isVisible }) {
         } else {
           clearInterval(workshopInterval);
         }
-      }, 1000);
+      }, 200);
 
       return () => clearInterval(workshopInterval);
     }
@@ -164,14 +164,14 @@ function Mainer({ isVisible }) {
   // Increment numberOfStudentsCount
   useEffect(() => {
     if (startCounting) {
-      const maxStudentCount = 260;
+      const maxStudentCount = 290;
       const studentInterval = setInterval(() => {
         if (numberOfStudentsCount < maxStudentCount) {
           setNumberOfStudentsCount((prevCount) => prevCount + 1);
         } else {
           clearInterval(studentInterval);
         }
-      }, 50);
+      }, 1);
 
       return () => clearInterval(studentInterval);
     }
@@ -187,7 +187,7 @@ function Mainer({ isVisible }) {
         } else {
           clearInterval(internationalInterval);
         }
-      }, 1300);
+      }, 700);
 
       return () => clearInterval(internationalInterval);
     }
