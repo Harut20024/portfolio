@@ -1,7 +1,7 @@
 #mainDiv {
   display: flex;
   height: 900px;
-  width: 70%;
+  width: 95%;
   border: 1px solid #191c20;
   margin: auto;
   margin-top: 1%;
@@ -144,9 +144,12 @@ pre {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   #rightDiv {
     font-size: 1.15em;
+  }
+  #mainDiv {
+    height: 680px;
   }
 }
 @media (max-width: 800px) {

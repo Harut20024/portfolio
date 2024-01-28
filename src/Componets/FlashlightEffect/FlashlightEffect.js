@@ -44,7 +44,7 @@ const FlashlightEffect = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            background: `radial-gradient(circle at ${lightPosition.x}px ${lightPosition.y}px, rgba(255, 255, 255, 0.8) 100px, #0d0c2b 200px)`,
+            background: `radial-gradient(circle at ${lightPosition.x}px ${lightPosition.y}px, rgba(255, 255, 255, 0.5) 160px, #0d0c2b 300px)`,
             pointerEvents: "none",
           }}
         />

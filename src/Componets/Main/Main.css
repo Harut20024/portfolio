@@ -100,6 +100,7 @@ main {
 #paragraph {
   font-size: 1.6em;
   padding: 5%;
+  margin-bottom: 4%;
 }
 
 
@@ -136,7 +137,7 @@ main {
 }
 @media (max-width: 900px) {
   .profile-image {
-    width: 35vw;
+    width: 40vw;
     height: auto;
   }
   #about {
@@ -275,7 +276,7 @@ footer {
   color: black;
   height: auto;
   width: auto;
-  background-color: #957290;
+  background-color: #5f485b;
   margin-top: 60px;
   text-align: center;
 }
