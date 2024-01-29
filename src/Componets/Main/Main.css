@@ -55,7 +55,6 @@ main {
 #about {
   margin: 10px;
   box-sizing: border-box;
-  border-radius: 4%;
   padding: 20px;
   padding-left: 15%;
   padding-right: 15%;
@@ -141,7 +140,8 @@ main {
     height: auto;
   }
   #about {
-    padding: 5px;
+    padding-left: 11%;
+    padding-right: 11%;
   }
   #about h1 {
     font-size: 5vw;
@@ -156,7 +156,7 @@ main {
     width: calc(100% / 2 - 10px);
   }
   #paragraph {
-    font-size: 0.75em;
+    font-size: 0.68em;
     padding: 1%;
     padding-top: 6px;
   }
@@ -276,7 +276,7 @@ footer {
   color: black;
   height: auto;
   width: auto;
-  background-color: #5f485b;
+  background-color: #d2b6d2;
   margin-top: 60px;
   text-align: center;
 }

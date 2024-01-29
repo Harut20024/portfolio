@@ -1,13 +1,12 @@
 #mainDiv {
   display: flex;
   height: 900px;
-  width: 95%;
+  width: 93%;
   border: 1px solid #191c20;
   margin: auto;
   margin-top: 1%;
   background-color: #282a36;
   font-family: Arial, sans-serif;
-  margin-bottom: 100px;
 }
 
 #leftDiv {
@@ -128,7 +127,7 @@ pre {
 @media (max-width: 1300px) {
   #rightDiv {
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 1.19em;
   }
   #mainDiv {
     height: 740px;
@@ -146,7 +145,7 @@ pre {
 
 @media (max-width: 960px) {
   #rightDiv {
-    font-size: 1.15em;
+    font-size: 1.1em;
   }
   #mainDiv {
     height: 680px;
@@ -205,7 +204,7 @@ pre {
 @media (max-width: 370px) {
   #mainDiv {
     font-size: 0.76em;
-    height: 400px;
+    height: 380px;
   }
   #rightDiv {
     padding: 5px;
@@ -214,7 +213,7 @@ pre {
 }
 @media (max-width: 330px) {
   #mainDiv {
-    font-size: 0.7em;
+    font-size: 0.74em;
   }
   #rightDiv {
     padding: 5px;
