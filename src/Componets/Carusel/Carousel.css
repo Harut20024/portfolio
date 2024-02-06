@@ -23,7 +23,7 @@ body {
   width: var(--carousel-width);
   margin: auto;
   overflow: hidden;
-  padding: 20px; 
+  padding: 20px;
 }
 
 .arrow {
@@ -130,12 +130,33 @@ body {
 .item-enter,
 .item-exit {
   opacity: 0;
+  transform: scale(0.95); /* Start slightly smaller to give a grow effect */
 }
 
 .item-enter-active,
 .item-exit-active {
   opacity: 1;
-  transition: opacity var(--transition-duration) ease;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+  transform: scale(1); /* Scale back to normal size */
+}
+
+/* New CSS for moving items dynamically */
+.item-moving-right-enter {
+  transform: translateX(100%);
+}
+
+.item-moving-right-enter-active {
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+
+.item-moving-right-exit {
+  transform: translateX(0);
+}
+
+.item-moving-right-exit-active {
+  transform: translateX(-100%);
+  transition: transform 500ms ease-in-out;
 }
 
 @media (max-width: 850px) {
@@ -151,7 +172,7 @@ body {
   .arrow-left {
     left: 2px;
   }
-  
+
   .arrow-right {
     right: 2px;
   }

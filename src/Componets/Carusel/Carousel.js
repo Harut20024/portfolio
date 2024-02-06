@@ -31,15 +31,15 @@ class Carousel extends React.Component {
     }
 
     componentDidMount() {
-        this.autoMoveInterval = setInterval(this.autoMove, 3000); // Change image every 0.5 seconds
+        this.autoMoveInterval = setInterval(this.autoMove, 3000);
     }
 
     componentWillUnmount() {
-        clearInterval(this.autoMoveInterval); // Clear the interval when the component is unmounted
+        clearInterval(this.autoMoveInterval);
     }
 
     autoMove() {
-        this.moveRight(); // You can change this to moveLeft if you want it to move in the other direction
+        this.moveRight(); 
     }
 
     moveLeft() {
