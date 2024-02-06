@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style.css"
+import "./style.css";
 const FlashlightEffect = () => {
   const [lightPosition, setLightPosition] = useState({
     x: window.innerWidth / 2.5,
@@ -13,9 +13,11 @@ const FlashlightEffect = () => {
     setLightPosition({ x, y });
   };
 
-
   return (
-    <div id="fleshback" style={{  textAlign: "center", marginTop: "20px" }}>
+    <div
+      id="fleshback"
+      style={{ textAlign: "center", marginTop: "10%", marginBottom: "10%" }}
+    >
       <div
         onMouseMove={handleMouseMove}
         style={{
@@ -23,12 +25,13 @@ const FlashlightEffect = () => {
           position: "relative",
           overflow: "hidden",
           zIndex: 10,
-          color: "black",
+          color: "white",
           padding: "20px",
           fontSize: "20px",
-          backgroundColor: "#F9EEDC",
+          backgroundColor: "#110f37",
           marginTop: "20px",
           height: "400px",
+          textShadow: "2px 2px 4px #000000",
         }}
       >
         <div style={{ marginTop: "20px" }}>
