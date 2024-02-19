@@ -57,11 +57,11 @@ function Mainer({ isVisible }) {
   };
 
   const dataGraph = {
-    labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan"],
+    labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
     datasets: [
       {
         label: "Contributions",
-        data: [36, 166, 30, 5, 59, 45, 41],
+        data: [36, 166, 30, 5, 59, 45, 59, 28],
         borderColor: "#3f8a89",
         backgroundColor: "#65e7e0",
       },
