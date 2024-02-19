@@ -10,6 +10,11 @@
         "name": "Emil Khashadourian",
         "position": "Sr. Cloud Solution Architect",
         "recommendation": "Harut is a diligent student who actively participated in the Transact-SQL class I taught at Tumo. Harut’s engaged nature stood out throughout the course. He consistently asked thoughtful and meaningful questions, demonstrating a genuine curiosity and eagerness to learn. His dedication to understanding the intricacies of Transact-SQL and his desire to delve deeper into the subject were commendable. I have no doubt that Harut will continue to excel in his pursuit of database knowledge and application."
-    
+    },
+    {
+        "id": 2,
+        "name": "Andronik Mkrtychev",
+        "position": "Artificial Intelligence Research Engineer at Lockheed Martin",
+        "recommendation": "Harut was a key component to my generative AI workshop at TUMO. He helped convey complex topics from English to Armenian and worked diligently to make sure all of the students in the workshop understood the material. I was impresses with Harut's ability to learn quickly and teach material to other students. Harut did a phenomenal job coordinating the learning lab and making sure all of the students had everything they needed to succeed. He helped set up development environments, help with programming syntax and supported project demos and presentations. I would happily take the opportunity to work with Harut in the future."
     }
 ]

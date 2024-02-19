@@ -11,9 +11,10 @@ import imag10 from './10.png';
 import imag11 from './11.png';
 import imagRec11 from './recomendImg/0.jpeg'
 import imagRec12 from './recomendImg/1.jpeg'
+import imagRec13 from './recomendImg/2.jpeg'
 
 const images = [imag1,imag2,imag3,imag4,imag5,imag6,imag7,imag8,imag9,imag10,imag11];
-const recImg = [imagRec11,imagRec12]
+const recImg = [imagRec11,imagRec12,imagRec13]
 
 function ImageCollect() {
     return null;
