@@ -15,9 +15,9 @@ const Statistics = ({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const chartOptions = {
-    ...options, 
+    ...options,
     responsive: true,
-    maintainAspectRatio: false,  
+    maintainAspectRatio: false,
   };
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) =>
@@ -35,10 +35,9 @@ const Statistics = ({
     <div id="statistic">
       <h1>Statistics Overview</h1>
       <p id="parag">
-        This section presents a snapshot of my contributions and collaborations.
-        You can see statistics of workshop assistant, the number of students
-        I've reached, and my involvement in international workshops. The figures
-        reflect my commitment to education and mentorship.
+        This section showcases my coding achievements,statistics on my role as a
+        workshop assistant, detailing the number of students I've supported, and
+        highlights my participation in international workshops.
       </p>
       <div className="chart-container">
         <Line data={dataGraph} options={chartOptions} />

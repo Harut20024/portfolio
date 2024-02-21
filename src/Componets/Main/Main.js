@@ -209,25 +209,11 @@ function Mainer({ isVisible }) {
           <img src={imageProfil} alt="Profile" className="profile-image" />
           <h1>Greetings</h1>
           <p id="paragraph">
-            🌟 I'm Harut. My world isn't just about coding; it's a lot more. At
-            TUMO, I wear two hats – one as a coder and another as a learning
-            coach. It's an exciting journey, teaching students the ropes of
-            programming and helping them think out of the box to solve problems.
-            <br />
-            <br />
-            🔍 I began my journey in programming at 15, and it's been an
-            intriguing adventure ever since. Creating things that can help and
-            be useful is incredibly rewarding. I never stop learning, and the
-            more I delve into it, the more fascinating it becomes. Each new
-            project is a chance to explore and bring useful ideas to life.
-            <br />
-            <br />
-            🚀 Are you searching for someone who excels in coding and thrives on
-            sharing knowledge ? Let's connect! I bring more than just coding
-            skills to the table. With a strong background in teamwork and
-            problem-solving, I'm equipped to find creative solutions and
-            contribute significantly to your projects. Let’s explore how we can
-            make a meaningful impact together.
+            🌟 Hi, I'm Harut, a software engineer.I found my interest in
+            coding when I was 15. I've worked at Tumo, assisting students to
+            discover and pursue their preferred areas of study. My experience in
+            technology is marked by an early engagement with coding and a
+            dedication to supporting others in exploring the field.
           </p>
           <Experience />
         </div>
@@ -279,7 +265,6 @@ function Mainer({ isVisible }) {
               <div className="project-info">
                 <h2>{project.name}</h2>
                 <p>{project.descriptionl}</p>
-                {/* Stop propagation on click to allow the URL to be clickable */}
                 <a
                   href={project.url}
                   className="link"
