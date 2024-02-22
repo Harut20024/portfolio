@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import "./statistic.css";
 
@@ -30,6 +30,14 @@ const Statistics = ({
       prevIndex === recommendations.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  useEffect(() => {
+    recImg.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, [recImg]);
+  
 
   return (
     <div id="statistic">

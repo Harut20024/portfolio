@@ -67,10 +67,12 @@ function Experience() {
             <span className="string">"Mathematical skills"</span>, {}
             <span className="string">"TeamWork"</span>, {}
             <span className="string">"Communication"</span>, {}
+            <span className="string">"debugging"</span>, {}
             <span className="string">"Self-motivation"</span>, {}
             <span className="string">"Creativity"</span>, {}
             <span className="string">"Coaching"</span>, {}
             <span className="string">"OOP"</span>, {}
+            <span className="string">"REST API"</span>, {}
             <span className="string">"C"</span>, {}
             <span className="string">"C++"</span>, {}
             <span className="string">"Java Script"</span>, {}
@@ -83,8 +85,6 @@ function Experience() {
             <span className="string">"CSS"</span>, {}
             <span className="string">"Linux"</span>, {}
             <span className="string">"Network"</span>, {}
-            <span className="string">"Front-End"</span>, {}
-            <span className="string">"Back-End"</span>, {}
             <span className="string">"Git"</span>, {}
             <span className="string">"GitHub"</span>
             <br />

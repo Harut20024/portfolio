@@ -37,7 +37,7 @@ ChartJS.register(
   Legend
 );
 
-function Mainer({ isVisible }) {
+function Mainer() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [workshopAssistantCount, setWorkshopAssistantCount] = useState(0);
@@ -52,9 +52,23 @@ function Mainer({ isVisible }) {
     const isTopVisible = rect.top >= 0 && rect.top <= window.innerHeight * 4;
     const isBottomVisible =
       rect.bottom <= window.innerHeight && rect.bottom >= 0;
-
     return isTopVisible && isBottomVisible;
   };
+
+  const preloadImages = () => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+    recImg.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  };
+
+  useEffect(() => {
+    preloadImages();
+  }, []);
 
   const dataGraph = {
     labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
@@ -124,11 +138,7 @@ function Mainer({ isVisible }) {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
-    // Set up the event listener
     window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -177,7 +187,6 @@ function Mainer({ isVisible }) {
     }
   }, [numberOfStudentsCount, startCounting]);
 
-  // Increment internationalAssistantsCount
   useEffect(() => {
     if (startCounting) {
       const maxInternationalCount = 3;
@@ -209,9 +218,9 @@ function Mainer({ isVisible }) {
           <img src={imageProfil} alt="Profile" className="profile-image" />
           <h1>Greetings</h1>
           <p id="paragraph">
-            🌟 Hi, I'm Harut, a software engineer.I found my interest in
-            coding when I was 15. I've worked at Tumo, assisting students to
-            discover and pursue their preferred areas of study. My experience in
+            🌟 Hi, I'm Harut, a software engineer.I found my interest in coding
+            when I was 15. I've worked at Tumo, assisting students to discover
+            and pursue their preferred areas of study. My experience in
             technology is marked by an early engagement with coding and a
             dedication to supporting others in exploring the field.
           </p>
