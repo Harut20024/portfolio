@@ -46,6 +46,16 @@ function Mainer() {
     useState(0);
   const [startCounting, setStartCounting] = useState(false);
 
+  const [expandedProjectId, setExpandedProjectId] = useState(null);
+
+  const toggleDescription = (id) => {
+    if (expandedProjectId === id) {
+      setExpandedProjectId(null); // Collapse if already expanded
+    } else {
+      setExpandedProjectId(id); // Expand the clicked one
+    }
+  };
+
   const checkIfCircleContainerInView = () => {
     const circleContainer = document.querySelector(".circle-container");
     const rect = circleContainer.getBoundingClientRect();
@@ -273,7 +283,24 @@ function Mainer() {
               </div>
               <div className="project-info">
                 <h2>{project.name}</h2>
-                <p>{project.descriptionl}</p>
+                <p>
+                  {expandedProjectId === project.id
+                    ? project.descriptionl
+                    : project.descriptionl
+                    ? `${project.descriptionl.substring(0, 130)}...`
+                    : "No description available."}
+                  <span
+                    className="read-more"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleDescription(project.id);
+                    }}
+                  >
+                    {expandedProjectId === project.id
+                      ? " Read Less"
+                      : " Read More"}
+                  </span>
+                </p>
                 <a
                   href={project.url}
                   className="link"
