@@ -295,7 +295,7 @@ function Mainer() {
                     ? project.descriptionl
                     : `${
                         project.descriptionl?.substring(0, 120) ?? ""
-                      }...`}{" "}
+                      }... `}{" "}
                   <span
                     className="read-more"
                     onClick={(e) => {
