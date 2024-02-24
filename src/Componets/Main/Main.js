@@ -50,9 +50,9 @@ function Mainer() {
 
   const toggleDescription = (id) => {
     if (expandedProjectId === id) {
-      setExpandedProjectId(null); // Collapse if already expanded
+      setExpandedProjectId(null);
     } else {
-      setExpandedProjectId(id); // Expand the clicked one
+      setExpandedProjectId(id);
     }
   };
 
@@ -277,18 +277,25 @@ function Mainer() {
               key={project.id}
               className="project"
               onClick={() => openModal({ ...project, src: images[index] })}
+              style={{
+                height: expandedProjectId === project.id ? "auto" : "31em",
+              }}
             >
               <div className="project-image">
                 <img src={images[index]} alt={`Project ${project.id}`} />
               </div>
               <div className="project-info">
                 <h2>{project.name}</h2>
-                <p>
+                <p
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
                   {expandedProjectId === project.id
                     ? project.descriptionl
-                    : project.descriptionl
-                    ? `${project.descriptionl.substring(0, 130)}...`
-                    : "No description available."}
+                    : `${
+                        project.descriptionl?.substring(0, 130) ?? ""
+                      }...`}{" "}
                   <span
                     className="read-more"
                     onClick={(e) => {
@@ -297,8 +304,8 @@ function Mainer() {
                     }}
                   >
                     {expandedProjectId === project.id
-                      ? " Read Less"
-                      : " Read More"}
+                      ? "Read Less"
+                      : "Read More"}
                   </span>
                 </p>
                 <a
