@@ -278,7 +278,7 @@ function Mainer() {
               className="project"
               onClick={() => openModal({ ...project, src: images[index] })}
               style={{
-                height: expandedProjectId === project.id ? "auto" : "31em",
+                height: expandedProjectId === project.id ? "auto" : "32.5em",
               }}
             >
               <div className="project-image">
@@ -294,7 +294,7 @@ function Mainer() {
                   {expandedProjectId === project.id
                     ? project.descriptionl
                     : `${
-                        project.descriptionl?.substring(0, 130) ?? ""
+                        project.descriptionl?.substring(0, 120) ?? ""
                       }...`}{" "}
                   <span
                     className="read-more"

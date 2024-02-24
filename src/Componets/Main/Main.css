@@ -202,7 +202,7 @@ main {
 }
 
 .project-info h2 {
-  margin: 0 0 10px 0;
+  margin: 0 0 2px 0;
   color: #333;
   font-weight: bold;
 }
@@ -220,7 +220,7 @@ main {
 .project-info p {
   margin: 0;
   color: #666;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .link {
@@ -324,6 +324,9 @@ footer h3 {
   }
 }
 @media (max-width: 700px) {
+  .project-info h2 {
+    font-size: 1.35em;
+  }
   .project {
     font-size: 0.7em;
     width: calc(100% / 2 - 10px);
