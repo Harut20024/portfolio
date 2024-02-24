@@ -325,7 +325,7 @@ footer h3 {
 }
 @media (max-width: 700px) {
   .project-info h2 {
-    font-size: 1.35em;
+    font-size: 1.38em;
   }
   .project {
     font-size: 0.7em;
@@ -386,6 +386,9 @@ footer h3 {
   }
 }
 @media (max-width: 500px) {
+  .project-info {
+    padding: 0.8em;
+  }
   .textAnim-container {
     margin-bottom: -20%;
     font-size: 5vw;
