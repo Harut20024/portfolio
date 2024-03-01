@@ -260,7 +260,6 @@
     word-spacing: -1px;
   }
   .testimonial-text {
-    word-spacing: 0;
     font-size: 3.5vw;
   }
   .testimonial-author strong {
@@ -281,7 +280,7 @@
     height: 30px;
   }
   .testimonial-text {
-    padding: 0%;
+    padding: 1%;
   }
   .testimonial-info {
     margin-bottom: 5px;

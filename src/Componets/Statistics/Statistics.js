@@ -13,6 +13,11 @@ const Statistics = ({
   recImg,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpanded = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   const chartOptions = {
     ...options,
@@ -37,7 +42,6 @@ const Statistics = ({
       img.src = image;
     });
   }, [recImg]);
-  
 
   return (
     <div id="statistic">
@@ -92,7 +96,18 @@ const Statistics = ({
               </div>
             </div>
             <p className="testimonial-text">
-              {recommendations[currentIndex].recommendation}
+              {expandedIndex === currentIndex
+                ? recommendations[currentIndex].recommendation
+                : `${recommendations[currentIndex].recommendation.substring(
+                    0,
+                    322
+                  )}...`}
+              <span
+                className="read-more"
+                onClick={() => toggleExpanded(currentIndex)}
+              >
+                {expandedIndex === currentIndex ? "Read less" : "Read more"}
+              </span>
             </p>
           </div>
         </div>
