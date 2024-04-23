@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+:root {
+  --carousel-height: 500px;
+  --carousel-width: 100%;
+  --item-height-small: 200px;
+  --item-width-small: 270px;
+  --item-height-medium: 300px;
+  --item-width-medium: 300px;
+  --item-height-large: 400px;
+  --item-width-large: 500px;
+  --transition-duration: 1s;
+}
+
+body {
+  background-color: #0b0c10;
+  font-family: "Lobster", cursive;
+}
+
+#carousel {
+  position: relative;
+  height: var(--carousel-height);
+  width: var(--carousel-width);
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #957290;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.item {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: all var(--transition-duration) ease;
+  background: #ffffff; /* Fallback color */
+  background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%);
+}
+
+.level-2 {
+  height: var(--item-height-small);
+  width: var(--item-width-small);
+  z-index: 1;
+}
+
+.level-1 {
+  height: var(--item-height-medium);
+  width: var(--item-width-medium);
+  z-index: 2;
+}
+
+.level0 {
+  height: var(--item-height-large);
+  width: var(--item-width-large);
+  z-index: 3;
+}
+
+.level1 {
+  height: var(--item-height-medium);
+  width: var(--item-width-medium);
+  z-index: 2;
+}
+
+.level2 {
+  height: var(--item-height-small);
+  width: var(--item-width-small);
+  z-index: 1;
+}
+
+/* Dynamically calculate left position based on size */
+.item.level-2 {
+  left: calc(15% - var(--item-width-small) / 2);
+}
+.item.level-1 {
+  left: calc(30% - var(--item-width-medium) / 2);
+}
+.item.level0 {
+  left: calc(50% - var(--item-width-large) / 2);
+}
+.item.level1 {
+  left: calc(70% - var(--item-width-medium) / 2);
+}
+.item.level2 {
+  left: calc(85% - var(--item-width-small) / 2);
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item-enter,
+.item-exit {
+  opacity: 0;
+  transform: scale(0.95); /* Start slightly smaller to give a grow effect */
+}
+
+.item-enter-active,
+.item-exit-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+  transform: scale(1); /* Scale back to normal size */
+}
+
+/* New CSS for moving items dynamically */
+.item-moving-right-enter {
+  transform: translateX(100%);
+}
+
+.item-moving-right-enter-active {
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+
+.item-moving-right-exit {
+  transform: translateX(0);
+}
+
+.item-moving-right-exit-active {
+  transform: translateX(-100%);
+  transition: transform 500ms ease-in-out;
+}
+
+@media (max-width: 850px) {
+  :root {
+    --carousel-width: 95%;
+    --item-height-small: 100px;
+    --item-width-small: 150px;
+    --item-height-medium: 150px;
+    --item-width-medium: 200px;
+    --item-height-large: 250px;
+    --item-width-large: 300px;
+  }
+  .arrow-left {
+    left: 2px;
+  }
+
+  .arrow-right {
+    right: 2px;
+  }
+  .arrow {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}

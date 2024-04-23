@@ -1,0 +1,33 @@
+.box {
+    width: auto;
+    height: 5vw;
+    display: flex;  
+    align-items: flex-end;  
+    justify-content: center;  
+  }
+  
+  @keyframes rotateAndChangeColor {
+    0% {
+      background-color: #3f8a89; /* Base color */
+    }
+    25% {
+      background-color: #376a76; /* Darker shade */
+    }
+    50% {
+      background-color: #2e5b63; /* Darkest shade */
+    }
+    75% {
+      background-color: #57a0a1; /* Lighter tint */
+    }
+    100% {
+      background-color: #6eb1b8; /* Lightest tint */
+    }
+  }
+  
+  .jumping-box {
+    display: inline-block;
+    width: 6vw;
+    height: 6vw;
+    animation: rotateAndChangeColor 5s linear infinite; /* Adjust time as needed */
+  }
+  

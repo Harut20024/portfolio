@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "Aram Dovlatyan",
+    "position": "Backend Software Engineer | Java, Spring Boot, Flink, Python, REST APIs, Streaming, LLMs, Prompt Engineering",
+    "recommendation": "Harut supported my 2-week workshop on backend Java development that I taught at TUMO in July 2023 during my time as a volunteer at Birthright Armenia. Harut helped me on multiple fronts, he supported translations from English to Armenian, he also helped me with logistics and coordination for my class schedule and he also gave advice on how to structure my workshop. He is also an eager student when it comes to software engineering and programming. He is curious and I find that a great trait to have. I look forward to seeing Harut's near future. I would be happy to have the ability to work with him again."
+  },
+  {
+    "id": 1,
+    "name": "Emil Khashadourian",
+    "position": "Sr. Cloud Solution Architect",
+    "recommendation": "Harut is a diligent student who actively participated in the Transact-SQL class I taught at Tumo. Harut’s engaged nature stood out throughout the course. He consistently asked thoughtful and meaningful questions, demonstrating a genuine curiosity and eagerness to learn. His dedication to understanding the intricacies of Transact-SQL and his desire to delve deeper into the subject were commendable. I have no doubt that Harut will continue to excel in his pursuit of database knowledge and application."
+  },
+  {
+    "id": 2,
+    "name": "Andronik Mkrtychev",
+    "position": "Artificial Intelligence Research Engineer at Lockheed Martin",
+    "recommendation": "Harut was a key component to my generative AI workshop at TUMO. He helped convey complex topics from English to Armenian and worked diligently to make sure all of the students in the workshop understood the material. I was impresses with Harut's ability to learn quickly and teach material to other students. Harut did a phenomenal job coordinating the learning lab and making sure all of the students had everything they needed to succeed. He helped set up development environments, help with programming syntax and supported project demos and presentations. I would happily take the opportunity to work with Harut in the future."
+  },
+  {
+    "id": 3,
+    "name": "Kevin Wang",
+    "position": "Student at Harvard College | U.S. Presidential Scholar '22",
+    "recommendation": "I worked with Harut during my workshop at the TUMO Center for Creative Technologies; we taught a group of students about using the R coding language for data investigations and analysis. Throughout our time working together, Harut consistently impressed me with his exceptional skills in mentorship and translation. Harut demonstrated a remarkable ability to bridge language barriers between English and Armenian, helping students understand difficult concepts in their native language. Harut excelled as a mentor, with a genuine interest and commitment to helping students understand and master technical concepts — and helping them navigate challenges when working on their code. Harut’s skills and dedication played a major role in bolstering the problem-solving and analytical abilities of our students."
+  }
+]

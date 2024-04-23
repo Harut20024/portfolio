@@ -1,0 +1,28 @@
+/* At the top of your CSS file */
+@font-face {
+  font-family: 'Merriweather Black Italic';
+  src: url('/assets/Mulish/Mulish-Italic-VariableFont_wght.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 500; 
+}
+
+::selection {
+  background-color: #957290; 
+}
+
+
+* {
+  font-family: 'Merriweather Black Italic', Arial, sans-serif; /* Fallback to Arial if custom font fails */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main canvas {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "id": 0,
+    "name": "Ninja Game",
+    "descriptionl": "My first project focused on mastering object-oriented programming (OOP) and JavaScript through a ninja action game. As players advance, they unlock new features and collect items. The game features captivating animations and music for an immersive experience.",
+    "descriptionm": "In the Ninja Game, players step into the role of a stealthy ninja warrior. This game is an action-packed adventure where you defend against relentless knights. As the ninja, you have the ability to throw stars as weapons. An interesting twist is the elixir; consuming it enables you to jump higher, adding a strategic element to the gameplay. However, players must be cautious, as the knights have the ability to steal this precious elixir. The goal is to accumulate a certain score to triumph. The game is designed with engaging graphics and responsive controls, offering a challenging yet rewarding experience. Each level increases in difficulty, demanding quick reflexes and sharp decision-making. The immersive sound effects and dynamic animations make the game more enjoyable. Ultimately, it’s a test of agility and strategy, perfect for players who enjoy a good blend of action and tactics.",
+    "url": "https://harut20024.github.io/Ninja-Game/"
+  },
+  {
+    "id": 1,
+    "name": "Skyway Survivor",
+    "descriptionl": "I aimed to craft a game with an 80s arcade feel, using pixel-art graphics and authentic vibes. Players select airplanes, facing harder levels with retro music and a pause feature. The project combines dynamic gameplay, realistic animations, and nostalgia.",
+    "descriptionm": "Welcome to the Skyway Survivor Game, an exciting and fun platformer game that promises to keep you fun! This game, developed Game where you can Survive in space,and react to you victory In Skyway Survivor game you are pilot of Planes of World war 2,witch are in space,and you must survive and react the End to win,here you can choose your Plane and fly.there are 4 levels witch are harder in every level.",
+    "url": "https://harut20024.github.io/Skyway-Survivor/"
+  },
+  {
+    "id": 2,
+    "name": "Doodle Jump",
+    "descriptionl": "In this project, I sought to recreate the essence of the childhood favorite, Doodle Jump, replicating its core functionality and charm. My main aim and interest were to develop an automatically scrolling world that dynamically generates itself, offering players a continuously evolving playground.",
+    "descriptionm": "Doodle Jump is a captivating platform game that has charmed a wide range of players. The game's central character is a whimsical doodler who jumps from one platform to another, ascending higher with each leap. The challenge lies in the ever-changing platform heights and positions, requiring players to be quick and precise. The game is peppered with dynamic obstacles that add to the excitement. Players can discover and use various power-ups that enhance the gameplay, such as springs for higher jumps or jetpacks for swift ascents. The interactive sound effects and charming graphics contribute to its delightful atmosphere. Doodle Jump's intuitive controls make it easy to start but hard to master, appealing to both casual and serious gamers. It’s a game of endurance and skill, where the goal is to reach as high as possible, setting new records. The game’s simplicity, combined with its addictive nature, makes it a favorite among players of all ages.",
+    "url": "https://harut20024.github.io/DoodleJump/"
+  },
+  {
+    "id": 3,
+    "name": "GetMovie",
+    "descriptionl": "In this project, I focused on learning React to build a one-page website for movies. It features various filters for quick searching and boasts a fast user experience. Each movie has its own pop-up window providing detailed descriptions and video trailers, enhancing the overall functionality and user engagement.",
+    "descriptionm": "GetMovie is a comprehensive online platform designed for movie enthusiasts. It features a wide array of films, ranging from the latest blockbusters to classic cinema. The platform is user-friendly, allowing easy navigation and film selection. Users can explore movies based on genres, release dates, or popularity. Each film comes with detailed descriptions, ratings, and reviews, helping users make informed choices. The site also offers personalized recommendations based on viewing history. GetMovie is ideal for discovering new releases or revisiting beloved classics. It integrates social features, allowing users to share their favorite movies or create watchlists. The platform is updated regularly with new content, ensuring there’s always something new to explore. Whether it’s a cozy movie night or a cinematic exploration, GetMovie caters to all movie preferences.",
+    "url": "https://harut20024.github.io/GetMovie/"
+  },
+  {
+    "id": 4,
+    "name": "Durak Game",
+    "descriptionl": "In this game, my main goal was to develop an AI bot that plays strategically, constantly seeking ways to win through various algorithms. The gameplay is animated, with cards scrolling towards the opponent if they match on the table. Additionally, the bot expresses its reactions through emojis, adding a human-like touch to its actions.",
+    "descriptionm": "The Durak Game is a digital adaptation of the popular card game. It’s designed to offer both beginners and seasoned players an engaging experience. The game incorporates traditional rules with modern digital features. Players can choose from various difficulty levels, making it accessible to all skill levels. The interface is intuitive, with clear graphics and easy-to-understand controls. Durak Game offers a multiplayer mode, allowing players to compete against friends or online opponents. It includes a tutorial for beginners, explaining the rules and strategies. The game’s AI is sophisticated, providing a challenging experience even in single-player mode. Durak Game is more than just a card game; it’s a test of strategy, memory, and adaptability. With its blend of traditional gameplay and digital enhancements, it’s a must-try for card game enthusiasts.",
+    "url": "https://harut20024.github.io/Durak-/"
+  },
+  {
+    "id": 5,
+    "name": "Game Of Life",
+    "descriptionl": "In this enhanced version of the Game of Life, I incorporated AI behaviors for various entities like grass, grass-eaters, predators, and fire, with their interactions changing according to the seasons. This game is observational, allowing players to witness the outcome of each cycle. It represents an advancement from my initial project at Tumo, with the objective of making the simulation more captivating and dynamic.",
+    "descriptionm": "The Game of Life is a fascinating simulation that showcases the complexities of an automated ecosystem. Players observe as various entities, including grass, GrassEaters, Predators, and Bombs, interact in a virtual world. The game operates autonomously, with each entity following specific behavior patterns. Grass grows and spreads, GrassEaters consume it for survival, and Predators hunt GrassEaters. Bombs add an element of unpredictability, creating dynamic changes in the ecosystem. The game’s interface allows players to view the interactions in real-time. Players can adjust certain parameters to see how it affects the ecosystem. The Game of Life is not just a game but an educational tool that demonstrates the balance of nature. It’s a unique experience where players can learn about ecological relationships and survival strategies. The game’s simplicity is deceptive, as it reveals intricate patterns and dependencies within the ecosystem.",
+    "url": "https://harut20024.github.io/Game-Of-Life/"
+  },
+  {
+    "id": 6,
+    "name": "Translator",
+    "descriptionl": "In this project, I focused on mastering asynchronous functions to fetch data from APIs. I utilized a word API to build a translator, aiming to deepen my understanding of asynchronous operations and how to interact with APIs effectively.",
+    "descriptionm": "This project involved creating a webpage that serves as a language translator. The main feature is a form where users can select languages and input text to be translated. Upon submission, the JavaScript code processes the request, sending the text to a translation service. The result is then displayed on the same webpage, providing a seamless user experience. The translator supports multiple languages, catering to a global audience. The interface is clean and user-friendly, with clear instructions and responsive design. It’s a useful tool for quick translations, especially for travelers or students. The project showcases efficient integration of front-end and back-end technologies. It demonstrates practical application of APIs and JavaScript in creating a functional web application. The Translator is not just a utility tool; it’s a bridge connecting different languages and cultures.",
+    "url": "https://harut20024.github.io/Translator/"
+  },
+  {
+    "id": 7,
+    "name": "Chess Game ",
+    "descriptionl": "In this project, I developed a digital version of chess, designed for two players to take turns just like in the traditional game. My goal was to closely mimic the real chess experience, emphasizing strategy and thoughtful play.",
+    "descriptionm": "The online Chess Game is a digital rendition of the classic board game. It offers a virtual chess experience, maintaining the essence and complexity of the traditional game. The platform is designed to cater to both beginners and chess experts. It features an interactive tutorial for newcomers, explaining the rules and strategies. Players can choose to play against the computer or challenge other players online. The game’s AI is programmed to offer various levels of difficulty. The interface is clean and intuitive, with well-designed pieces and a clear board layout. Players have access to game history and can undo moves if needed. The Chess Game also includes a timer, adding an element of urgency to the gameplay. It’s a perfect blend of intellectual challenge and digital convenience, appealing to chess enthusiasts of all ages.",
+    "url": "https://harut20024.github.io/Chess/"
+  },
+  {
+    "id": 8,
+    "name": "Mermaid",
+    "descriptionl": "For my first project, I created a game inspired by Candy Crush, featuring dynamic movements, captivating graphics, and similar music. The goal was to replicate the engaging gameplay and visual appeal of Candy Crush.",
+    "descriptionm": "Mermaid is a vibrant and entertaining match-three puzzle game. It resembles the popular Candy Crush, with its own unique undersea theme. Players move various sea-themed objects to align them in rows or columns of three or more. Successful alignments result in the objects being cleared from the board. The game has multiple levels, each with its own challenges and objectives. Players must achieve a specific score within a time limit to progress. Power-ups and special items add an extra layer of strategy and excitement. The game features colorful graphics and enchanting sound effects, enhancing the underwater adventure. It’s not just about matching objects; it’s about planning moves and adapting strategies. Mermaid is an addictive and enjoyable game, suitable for all ages, offering hours of fun and mental stimulation.",
+    "url": "https://harut20024.github.io/Mermaid/"
+  },
+  {
+    "id": 9,
+    "name": "Fullstack Web-Site",
+    "descriptionl": "This was my first full-stack project, utilizing Node.js in the backend and pure HTML/CSS for the frontend. Through this project, I delved deeper into Node.js and Express, learning to create and implement CRUD (Create, Read, Update, Delete) operations.",
+    "descriptionm": "This project involved developing a comprehensive full-stack website. The front-end is designed using React, creating a dynamic and responsive user interface. The back-end is powered by Node.js, ensuring efficient server-side operations. The website features a combination of static and interactive pages. It showcases various web technologies, including HTML, CSS, and JavaScript. Users can navigate through different sections, each meticulously designed for optimal user experience. The back-end integration allows for functionalities like user authentication, data storage, and API interactions. The project demonstrates the synergy between front-end and back-end development. It’s a testament to the versatility and power of modern web development frameworks. This Fullstack Web-Site is not just a project; it’s a showcase of technical proficiency and design acumen.",
+    "url": "https://github.com/Harut20024/full-stack-website"
+  },
+  {
+    "id": 10,
+    "name": "Easy Learn",
+    "descriptionl": "This is my most impressive project, where I utilized frameworks to develop a comprehensive full-stack learning website. For the frontend, I chose Vue.js, and for the backend, I used Node.js with Express. MongoDB served as the database, enhancing the website's functionality and allowing for a more dynamic user experience.",
+    "descriptionm": "This comprehensive educational platform leverages the robust capabilities of MongoDB, Vue.js, and Node/Express to provide an engaging learning environment for HTML/CSS, SQL, MongoDB, and JavaScript fundamentals. Enhanced security is ensured through the implementation of middleware on both the server and client sides, safeguarding user data and interactions. The platform's REST API dynamically manages requests, preventing duplicate user registrations and unauthorized access, ensuring a secure and efficient learning experience. Additional educational resources and tutorials are made available, allowing users to deepen their understanding and skills in web development.",
+    "url": "https://github.com/Harut20024/full_stack"
+  }
+]
