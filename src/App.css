@@ -1,7 +1,7 @@
 /* At the top of your CSS file */
 @font-face {
   font-family: 'Merriweather Black Italic';
-  src: url('/assets/Mulish/Mulish-Italic-VariableFont_wght.ttf') format('truetype');
+  src: url('/assets/Mulish/Mulish-VariableFont_wght.ttf') format('truetype');
   font-style: italic;
   font-weight: 500; 
 }
@@ -12,7 +12,7 @@
 
 
 * {
-  font-family: 'Merriweather Black Italic', Arial, sans-serif; /* Fallback to Arial if custom font fails */
+  font-family: 'Merriweather Black Italic'; 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
