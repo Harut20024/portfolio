@@ -237,7 +237,7 @@ function Mainer() {
 
   useEffect(() => {
     if (startCounting) {
-      const maxWorkshopCount = 25;
+      const maxWorkshopCount = 30;
       const workshopInterval = setInterval(() => {
         if (workshopAssistantCount < maxWorkshopCount) {
           setWorkshopAssistantCount((prevCount) => prevCount + 1);

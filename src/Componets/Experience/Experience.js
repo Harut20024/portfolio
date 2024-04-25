@@ -62,8 +62,24 @@ function Experience() {
           <div id="skills">
             <span className="keyword">return</span> [
             <br />
-            <span className="string">"Problem Solving"</span>, {}
+            <span className="string">"Java Script"</span>, {}
+            <span className="string">"Node.js"</span>, {}
+            <span className="string">"Express.js"</span>, {}
+            <span className="string">"Vue.js"</span>, {}
+            <span className="string">"React.js"</span>, {}
+            <span className="string">"Object Oriented Programming"</span>, {}
+            <span className="string">"C"</span>, {}
+            <span className="string">"C++"</span>, {}
+            <span className="string">"SQL"</span>, {}
+            <span className="string">"MongoDB"</span>, {}
+            <span className="string">"CSS"</span>, {}
+            <span className="string">"Linux"</span>, {}
+            <span className="string">"Network"</span>, {}
+            <span className="string">"Git"</span>, {}
+            <span className="string">"GitHub"</span>
+            <span className="string">"REST API"</span>, {}
             <span className="string">"Computer architecture"</span>, {}
+            <span className="string">"Problem Solving"</span>, {}
             <span className="string">"Attention to details"</span>, {}
             <span className="string">"Mathematical skills"</span>, {}
             <span className="string">"TeamWork"</span>, {}
@@ -72,22 +88,6 @@ function Experience() {
             <span className="string">"Self-motivation"</span>, {}
             <span className="string">"Creativity"</span>, {}
             <span className="string">"Coaching"</span>, {}
-            <span className="string">"OOP"</span>, {}
-            <span className="string">"REST API"</span>, {}
-            <span className="string">"C"</span>, {}
-            <span className="string">"C++"</span>, {}
-            <span className="string">"Java Script"</span>, {}
-            <span className="string">"Node.js"</span>, {}
-            <span className="string">"Express.js"</span>, {}
-            <span className="string">"React.js"</span>, {}
-            <span className="string">"Vue.js"</span>, {}
-            <span className="string">"SQL"</span>, {}
-            <span className="string">"MongoDB"</span>, {}
-            <span className="string">"CSS"</span>, {}
-            <span className="string">"Linux"</span>, {}
-            <span className="string">"Network"</span>, {}
-            <span className="string">"Git"</span>, {}
-            <span className="string">"GitHub"</span>
             <br />
             ];
             <br />
