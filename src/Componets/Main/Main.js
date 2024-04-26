@@ -58,19 +58,6 @@ function Mainer() {
 
   const projectsContainerRef = useRef(null);
 
-  const scrollToProjects = () => {
-    if (projectsContainerRef.current) {
-      const offset = 100; 
-      const containerPosition = projectsContainerRef.current.getBoundingClientRect().top + window.pageYOffset;
-      const positionToScroll = containerPosition - offset; 
-      window.scrollTo({
-        top: positionToScroll,
-        behavior: "smooth"
-      });
-    }
-  };
-  
-
   const checkIfCircleContainerInView = () => {
     const circleContainer = document.querySelector(".circle-container");
     const rect = circleContainer.getBoundingClientRect();
@@ -82,12 +69,11 @@ function Mainer() {
 
   const disableBodyScroll = (disable) => {
     if (disable) {
-      document.body.style.overflow = 'hidden'; 
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto'; 
+      document.body.style.overflow = "auto";
     }
   };
-  
 
   const preloadImages = () => {
     images.forEach((src) => {
@@ -282,12 +268,25 @@ function Mainer() {
 
   const openModal = (project) => {
     setSelectedProject(project);
-    if(windowWidth > 1100) disableBodyScroll(true);  
+    disableBodyScroll(true);
+
+    requestAnimationFrame(() => {
+      const modalContent = document.querySelector(".modal-content");
+      if (modalContent) {
+        const modalTop =
+          modalContent.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+          top: modalTop,
+          behavior: "smooth",
+        });
+      }
+    });
   };
-  
+
   const closeModal = () => {
     setSelectedProject(null);
-    disableBodyScroll(false); 
+    disableBodyScroll(false);
   };
 
   function AnimatedRole() {
@@ -335,11 +334,13 @@ function Mainer() {
     return <span className="animated-role">{currentRole}</span>;
   }
 
-
-  const mainBackgroundStyle = (selectedProject && windowWidth > 1100) ? {
-    backgroundColor: "rgba(0, 0, 0, 0.75)",
-    transition: "background-color 0.5s ease" 
-  } : {};
+  const mainBackgroundStyle =
+    selectedProject && windowWidth > 1100
+      ? {
+          backgroundColor: "rgba(0, 0, 0, 0.75)",
+          transition: "background-color 0.5s ease",
+        }
+      : {};
 
   return (
     <main style={mainBackgroundStyle}>
@@ -409,7 +410,6 @@ function Mainer() {
               className="project"
               onClick={() => {
                 openModal({ ...project, src: images[index] });
-                if(windowWidth > 1100)scrollToProjects();
               }}
               style={{
                 height: expandedProjectId === project.id ? "auto" : "32.5em",

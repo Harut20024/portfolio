@@ -139,6 +139,7 @@ main {
   justify-content: center;
   gap: 20px;
   margin: 20px 0;
+  transition: max-height 0.5s ease;
   z-index: 1;
 }
 
