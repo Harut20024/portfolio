@@ -91,11 +91,22 @@ function Mainer() {
   }, []);
 
   const dataGraph = {
-    labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"],
+    labels: [
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+    ],
     datasets: [
       {
         label: "Contributions",
-        data: [36, 166, 30, 5, 59, 45, 59, 28],
+        data: [36, 166, 30, 5, 59, 45, 59, 36, 40, 21],
         borderColor: "#3f8a89",
         backgroundColor: "#65e7e0",
       },
@@ -223,7 +234,7 @@ function Mainer() {
 
   useEffect(() => {
     if (startCounting) {
-      const maxWorkshopCount = 30;
+      const maxWorkshopCount = 37;
       const workshopInterval = setInterval(() => {
         if (workshopAssistantCount < maxWorkshopCount) {
           setWorkshopAssistantCount((prevCount) => prevCount + 1);
@@ -238,7 +249,7 @@ function Mainer() {
 
   useEffect(() => {
     if (startCounting) {
-      const maxStudentCount = 300;
+      const maxStudentCount = 290;
       const studentInterval = setInterval(() => {
         if (numberOfStudentsCount < maxStudentCount) {
           setNumberOfStudentsCount((prevCount) => prevCount + 1);
