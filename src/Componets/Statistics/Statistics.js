@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import "./statistic.css";
+import Comments from "./Comments";
 
 const Statistics = ({
   windowWidth,
@@ -96,46 +97,55 @@ const Statistics = ({
           <div className="circle-number">{internationalAssistantsCount}</div>
         </div>
       </div>
-      <div id="testimonial-slider">
-        <h4>What People Say About Me</h4>
-        <div className="slider-nav">
-          <button className="nav-button prev" onClick={handlePrevClick}>
-            &lt;
-          </button>
-          <button className="nav-button next" onClick={handleNextClick}>
-            &gt;
-          </button>
-        </div>
-        <div className="testimonial-container">
-          <div className="testimonial-item">
-            <div className="testimonial-info">
-              <img
-                src={recImg[currentIndex]}
-                alt={recommendations[currentIndex].name}
-                className="testimonial-image"
-              />
-              <div className="testimonial-author">
-                <strong>{recommendations[currentIndex].name}</strong>
-                <span>{recommendations[currentIndex].position}</span>
+      {windowWidth < 1001 ? (
+        <div id="testimonial-sliders">
+          <h4>What People Say About Me</h4>
+          <div className="slider-nav">
+            <button className="nav-button prev" onClick={handlePrevClick}>
+              &lt;
+            </button>
+            <button className="nav-button next" onClick={handleNextClick}>
+              &gt;
+            </button>
+          </div>
+          <div className="testimonial-container">
+            <div className="testimonial-item">
+              <div className="testimonial-info">
+                <img
+                  src={recImg[currentIndex]}
+                  alt={recommendations[currentIndex].name}
+                  className="testimonial-image"
+                />
+                <div className="testimonial-author">
+                  <strong>{recommendations[currentIndex].name}</strong>
+                  <span>{recommendations[currentIndex].position}</span>
+                </div>
               </div>
+              <p className="testimonial-text">
+                {expandedIndex === currentIndex
+                  ? recommendations[currentIndex].recommendation
+                  : `${recommendations[currentIndex].recommendation.substring(
+                      0,
+                      322
+                    )}...`}
+                <span
+                  className="read-more"
+                  onClick={() => toggleExpanded(currentIndex)}
+                >
+                  {expandedIndex === currentIndex ? "Read less" : "Read more"}
+                </span>
+              </p>
             </div>
-            <p className="testimonial-text">
-              {expandedIndex === currentIndex
-                ? recommendations[currentIndex].recommendation
-                : `${recommendations[currentIndex].recommendation.substring(
-                    0,
-                    322
-                  )}...`}
-              <span
-                className="read-more"
-                onClick={() => toggleExpanded(currentIndex)}
-              >
-                {expandedIndex === currentIndex ? "Read less" : "Read more"}
-              </span>
-            </p>
           </div>
         </div>
-      </div>
+      ) : (
+        <Comments
+          recImg={recImg}
+          recommendations={recommendations}
+          expandedIndex={expandedIndex}
+          toggleExpanded={toggleExpanded}
+        />
+      )}
     </div>
   );
 };

@@ -1,0 +1,93 @@
+.testimonial-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-item {
+  height: auto;
+  padding: 4%;
+  box-shadow: 3px 4px 4px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease;
+  width: 45%;
+  margin: 1.2em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  align-self: flex-start;
+  margin-right: 50%; // Push to the left of the line
+}
+
+.right {
+  align-self: flex-end;
+  margin-left: 50%; // Push to the right of the line
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.testimonial-author {
+  text-align: left;
+}
+
+.testimonial-author strong,
+.testimonial-author span {
+  display: block;
+}
+
+.testimonial-text {
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.read-more {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.testimonial-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #957290;
+  z-index: 0;
+}
+
+@media (max-width:1000px) {
+  .testimonial-item {
+    width: 90%; // Adjust for smaller screens
+    align-self: center; // Center the items
+  }
+
+  .left,
+  .right {
+    align-self: center; // Center both on small screens
+    margin-left: 0; // Remove side margins for small screens
+    margin-right: 0;
+  }
+  .testimonial-text {
+    font-size: 13.5px;
+    margin-top: 10px;
+  }
+  .testimonial-container::after {
+    width: 0px;
+  }
+}
