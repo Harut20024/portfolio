@@ -97,9 +97,9 @@ const Statistics = ({
           <div className="circle-number">{internationalAssistantsCount}</div>
         </div>
       </div>
+      <h4>What People Say About Me</h4>
       {windowWidth < 1001 ? (
         <div id="testimonial-sliders">
-          <h4>What People Say About Me</h4>
           <div className="slider-nav">
             <button className="nav-button prev" onClick={handlePrevClick}>
               &lt;
