@@ -51,7 +51,7 @@
   {
     "id": 7,
     "name": "Chess Game ",
-    "descriptionl": "In this project, I developed a digital version of chess, designed for two players to take turns just like in the traditional game. My goal was to closely mimic the real chess experience, emphasizing strategy and thoughtful play.",
+    "descriptionl": "In this project, I developed a digital version of chess, designed for two players to take turns just like in the traditional game. My goal was to closely mimic the real chess experience,learn deep OOP and its concepts  .",
     "descriptionm": "The online Chess Game is a digital rendition of the classic board game. It offers a virtual chess experience, maintaining the essence and complexity of the traditional game. The platform is designed to cater to both beginners and chess experts. It features an interactive tutorial for newcomers, explaining the rules and strategies. Players can choose to play against the computer or challenge other players online. The game’s AI is programmed to offer various levels of difficulty. The interface is clean and intuitive, with well-designed pieces and a clear board layout. Players have access to game history and can undo moves if needed. The Chess Game also includes a timer, adding an element of urgency to the gameplay. It’s a perfect blend of intellectual challenge and digital convenience, appealing to chess enthusiasts of all ages.",
     "url": "https://harut20024.github.io/Chess/"
   },
