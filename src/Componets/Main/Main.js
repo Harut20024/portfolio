@@ -86,9 +86,6 @@ function Mainer() {
     });
   };
 
-  useEffect(() => {
-    preloadImages();
-  }, []);
 
   const dataGraph = {
     labels: [
@@ -204,7 +201,7 @@ function Mainer() {
 
     checkVisibility();
     window.addEventListener("scroll", handleScroll);
-
+    preloadImages();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

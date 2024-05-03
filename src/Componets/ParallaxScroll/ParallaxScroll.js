@@ -225,7 +225,6 @@ const ParallaxScroll = () => {
               stroke="#231f20"
               strokeMiterlimit="2"
               strokeWidth="0.5"
-              fontFamily="Roboto, sans-serif"
               fontSize={size}
               textAnchor="middle"
             >
