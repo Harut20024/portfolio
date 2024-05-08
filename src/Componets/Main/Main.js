@@ -86,7 +86,6 @@ function Mainer() {
     });
   };
 
-
   const dataGraph = {
     labels: [
       "Jul",
@@ -276,7 +275,7 @@ function Mainer() {
 
   const openModal = (project) => {
     setSelectedProject(project);
-    disableBodyScroll(true);
+    windowWidth > 1100 && disableBodyScroll(true);
 
     requestAnimationFrame(() => {
       const modalContent = document.querySelector(".modal-content");
