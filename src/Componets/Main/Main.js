@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from "react";
 import imageProfil from "../Images/profil.jpeg";
 import Experience from "../Experience/Experience";
@@ -42,12 +43,12 @@ function Mainer() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [workshopAssistantCount, setWorkshopAssistantCount] = useState(0);
   const [numberOfStudentsCount, setNumberOfStudentsCount] = useState(0);
-  const [internationalAssistantsCount, setInternationalAssistantsCount] =
-    useState(0);
+  const [interAssistantCount, setinterAssistantCount] = useState(0);
   const [startCounting, setStartCounting] = useState(false);
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const [expandedProjectId, setExpandedProjectId] = useState(null);
-
+  const paragraphRef = useRef(null);
+  const projectsContainerRef = useRef(null);
   const toggleDescription = (id) => {
     if (expandedProjectId === id) {
       setExpandedProjectId(null);
@@ -55,8 +56,6 @@ function Mainer() {
       setExpandedProjectId(id);
     }
   };
-
-  const projectsContainerRef = useRef(null);
 
   const checkIfCircleContainerInView = () => {
     const circleContainer = document.querySelector(".circle-container");
@@ -161,6 +160,7 @@ function Mainer() {
       },
     },
   };
+
   useEffect(() => {
     const handleScroll = () => {
       const mainDiv = document.getElementById("main");
@@ -172,9 +172,43 @@ function Mainer() {
         mainDiv.classList.add("close");
       }
     };
-
     window.addEventListener("scroll", handleScroll);
 
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const paragraph = paragraphRef.current;
+    const text = paragraph.textContent;
+
+    const newContent = text
+      .split("")
+      .map((char, index) => `<span key=${index}>${char}</span>`)
+      .join("");
+    paragraph.innerHTML = newContent;
+
+    const handleScroll = () => {
+      const paragraph = paragraphRef.current;
+      const rect = paragraph.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const paragraphOffsetTop = rect.top + scrollTop;
+      const scrollPosition = scrollTop + window.innerHeight / 1.3;
+      const spans = paragraph.querySelectorAll("span");
+      const progress =
+        (scrollPosition - paragraphOffsetTop) / (paragraph.clientHeight * 3);
+
+      spans.forEach((span, index) => {
+        const spanProgress = (index + 1) / spans.length;
+        if (progress > spanProgress) {
+          span.style.color = "#ff69b4";
+        } else {
+          span.style.color = "#ffffff";
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -262,8 +296,8 @@ function Mainer() {
     if (startCounting) {
       const maxInternationalCount = 3;
       const internationalInterval = setInterval(() => {
-        if (internationalAssistantsCount < maxInternationalCount) {
-          setInternationalAssistantsCount((prevCount) => prevCount + 1);
+        if (interAssistantCount < maxInternationalCount) {
+          setinterAssistantCount((prevCount) => prevCount + 1);
         } else {
           clearInterval(internationalInterval);
         }
@@ -271,7 +305,7 @@ function Mainer() {
 
       return () => clearInterval(internationalInterval);
     }
-  }, [internationalAssistantsCount, startCounting]);
+  }, [interAssistantCount, startCounting]);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -297,7 +331,6 @@ function Mainer() {
   };
 
   function AnimatedRole() {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const roles = ["Software Engineer", "Web Developer", "Freelancer"];
     const [currentRole, setCurrentRole] = useState("");
     const [index, setIndex] = useState(0);
@@ -358,7 +391,7 @@ function Mainer() {
           <h1>
             <AnimatedRole />
           </h1>
-          <p id="paragraph">
+          <p id="paragraph" ref={paragraphRef} className="karaoke-text">
             🌟 I found my interest in coding when I was 15. I've worked at Tumo,
             assisting students to discover and pursue their preferred areas of
             study. My experience in technology is marked by an early engagement
@@ -382,7 +415,7 @@ function Mainer() {
           options={options}
           workshopAssistantCount={workshopAssistantCount}
           numberOfStudentsCount={numberOfStudentsCount}
-          internationalAssistantsCount={internationalAssistantsCount}
+          interAssistantCount={interAssistantCount}
           recommendations={recommendations}
           recImg={recImg}
         />
