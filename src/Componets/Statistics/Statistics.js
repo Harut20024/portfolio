@@ -9,7 +9,7 @@ const Statistics = ({
   options,
   workshopAssistantCount,
   numberOfStudentsCount,
-  internationalAssistantsCount,
+  interAssistantCount,
   recommendations,
   recImg,
 }) => {
@@ -94,7 +94,7 @@ const Statistics = ({
         </div>
         <div className="circle circle3">
           <div className="circle-text">International workshop assistant</div>
-          <div className="circle-number">{internationalAssistantsCount}</div>
+          <div className="circle-number">{interAssistantCount}</div>
         </div>
       </div>
       <h4>What People Say About Me</h4>

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./comments.scss"; // Make sure your CSS is correctly linked
+import "./comments.scss";
 
 const Comments = ({
   recImg,
