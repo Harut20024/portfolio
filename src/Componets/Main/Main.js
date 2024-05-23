@@ -201,7 +201,7 @@ function Mainer() {
       spans.forEach((span, index) => {
         const spanProgress = (index + 1) / spans.length;
         if (progress > spanProgress) {
-          span.style.color = "#ff69b4";
+          span.style.color = "#69344e";
         } else {
           span.style.color = "#ffffff";
         }
