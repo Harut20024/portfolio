@@ -1,13 +1,12 @@
 @font-face {
   font-family: 'Merriweather Black Italic';
-  src: url('/assets/Mulish/Mulish-VariableFont_wght.ttf') format('truetype');
-  font-weight: 500; 
+  src: url('/assets/Mulish/Mulish-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 700; 
 }
 
 ::selection {
   background-color: #957290; 
 }
-
 
 * {
   font-family: 'Merriweather Black Italic'; 

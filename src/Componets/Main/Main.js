@@ -201,7 +201,7 @@ function Mainer() {
       spans.forEach((span, index) => {
         const spanProgress = (index + 1) / spans.length;
         if (progress > spanProgress) {
-          span.style.color = "#c2a6cb";
+          span.style.color = "#957290";
         } else {
           span.style.color = "#ffffff";
         }
@@ -279,14 +279,14 @@ function Mainer() {
 
   useEffect(() => {
     if (startCounting) {
-      const maxStudentCount = 290;
+      const maxStudentCount = 299;
       const studentInterval = setInterval(() => {
         if (numberOfStudentsCount < maxStudentCount) {
           setNumberOfStudentsCount((prevCount) => prevCount + 1);
         } else {
           clearInterval(studentInterval);
         }
-      }, 1);
+      }, 0.1);
 
       return () => clearInterval(studentInterval);
     }
