@@ -1,15 +1,18 @@
+/* App.css */
 @font-face {
-  font-family: 'Merriweather Black Italic';
-  src: url('/assets/Mulish/Mulish-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: 700; 
+  font-family: 'Mulish Italic Variable';
+  src: url('../public/assets/static/Mulish-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
 
 ::selection {
-  background-color: #957290; 
+  background-color: #957290;
 }
 
 * {
-  font-family: 'Merriweather Black Italic'; 
+  font-family: 'Mulish Italic Variable', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

@@ -7,28 +7,28 @@ Mulish is a variable font with this axis:
   wght
 
 This means all the styles are contained in these files:
-  Mulish/Mulish-VariableFont_wght.ttf
-  Mulish/Mulish-Italic-VariableFont_wght.ttf
+  Mulish-VariableFont_wght.ttf
+  Mulish-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
 in those cases you can use the static font files for Mulish:
-  Mulish/static/Mulish-ExtraLight.ttf
-  Mulish/static/Mulish-Light.ttf
-  Mulish/static/Mulish-Regular.ttf
-  Mulish/static/Mulish-Medium.ttf
-  Mulish/static/Mulish-SemiBold.ttf
-  Mulish/static/Mulish-Bold.ttf
-  Mulish/static/Mulish-ExtraBold.ttf
-  Mulish/static/Mulish-Black.ttf
-  Mulish/static/Mulish-ExtraLightItalic.ttf
-  Mulish/static/Mulish-LightItalic.ttf
-  Mulish/static/Mulish-Italic.ttf
-  Mulish/static/Mulish-MediumItalic.ttf
-  Mulish/static/Mulish-SemiBoldItalic.ttf
-  Mulish/static/Mulish-BoldItalic.ttf
-  Mulish/static/Mulish-ExtraBoldItalic.ttf
-  Mulish/static/Mulish-BlackItalic.ttf
+  static/Mulish-ExtraLight.ttf
+  static/Mulish-Light.ttf
+  static/Mulish-Regular.ttf
+  static/Mulish-Medium.ttf
+  static/Mulish-SemiBold.ttf
+  static/Mulish-Bold.ttf
+  static/Mulish-ExtraBold.ttf
+  static/Mulish-Black.ttf
+  static/Mulish-ExtraLightItalic.ttf
+  static/Mulish-LightItalic.ttf
+  static/Mulish-Italic.ttf
+  static/Mulish-MediumItalic.ttf
+  static/Mulish-SemiBoldItalic.ttf
+  static/Mulish-BoldItalic.ttf
+  static/Mulish-ExtraBoldItalic.ttf
+  static/Mulish-BlackItalic.ttf
 
 Get started
 -----------

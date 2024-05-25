@@ -42,9 +42,7 @@ const FlashlightEffect = () => {
           }}
         >
           {" "}
-          <h2> Now Let me show you more about my works</h2>
-          <br />
-          <h3>So let's start</h3>
+          <h2> Scroll down discover more!!!</h2>
         </div>
 
         <div

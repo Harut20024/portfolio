@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster");
+/* @import url("https://fonts.googleapis.com/css?family=Lobster"); */
 
 :root {
   --float-duration: 3s;
@@ -137,6 +137,137 @@ main {
   transition: color 0.3s ease;
 }
 
+/* //////////////////////////// */
+/* General styles */
+#projectShow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 12%;
+  flex-wrap: wrap;  
+}
+
+.leftShow,
+.rightShow {
+  width: 49%;
+}
+
+.browser-mockup,
+.vscode-mockup {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.browser-header,
+.vscode-header {
+  background: #0f1527;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.browser-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.browser-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.browser-button.red {
+  background: #ff5f56;
+}
+
+.browser-button.yellow {
+  background: #ffbd2e;
+}
+
+.browser-button.green {
+  background: #27c93f;
+}
+
+.browser-content {
+  padding: 20px;
+  height: 20rem;
+  background: white;
+  text-align: center;
+}
+
+.browser-content img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.browser-content h1 {
+  color: black;
+  font-size: 1rem;
+}
+
+.vscode-content {
+  padding: 20px;
+  height: 20rem;
+  background: #0f1527;
+}
+
+.vscode-title {
+  font-weight: bold;
+  color: white;
+}
+
+.vscode-content pre {
+  font-size: 0.9rem;
+  height: 18rem;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  display: flex;
+  text-align: left;
+}
+
+.vscode-content pre code {
+  color: #d4d4d4;
+  text-align: left;
+}
+
+@media (max-width: 1280px) {
+  .vscode-content pre {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 1180px) {
+  #projectShow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2.3%;
+    flex-wrap: wrap;  
+  }
+  .vscode-content pre {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #projectShow {
+    flex-direction: column;
+    padding: 0.5rem 2%;
+  }
+
+  .leftShow,
+  .rightShow {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .vscode-mockup {
+    margin-top: 20px;
+  }
+}
 
 /* //////////////////////////// */
 
@@ -294,7 +425,7 @@ footer h3 {
   margin: auto;
 }
 .animated-role {
-  border-right:  2px solid;
+  border-right: 2px solid;
   white-space: nowrap;
   overflow: hidden;
   animation: blinkCursor 0.75s steps(44) infinite;
