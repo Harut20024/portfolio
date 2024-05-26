@@ -138,17 +138,23 @@ main {
 }
 
 /* //////////////////////////// */
-/* General styles */
 #projectShow {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 12%;
-  flex-wrap: wrap;  
+  padding: 0.5rem 5%;
+  margin: 0 15%;
+  flex-wrap: nowrap;
 }
 
-.leftShow,
+.leftShow {
+  width: 70%;
+  border-right: 1px solid #ccc;
+  padding-right: 0.2rem;
+  box-sizing: border-box;
+}
+
 .rightShow {
-  width: 49%;
+  width: 30%;
 }
 
 .browser-mockup,
@@ -157,8 +163,7 @@ main {
   overflow: hidden;
 }
 
-.browser-header,
-.vscode-header {
+.browser-header {
   background: #0f1527;
   padding: 5px 10px;
   display: flex;
@@ -190,27 +195,27 @@ main {
 }
 
 .browser-content {
-  padding: 20px;
-  height: 20rem;
+  padding: 10px;
+  height: 18.5rem;
   background: white;
   text-align: center;
 }
 
 .browser-content img {
-  max-width: 150px;
+  max-width: 200px;
   height: auto;
   margin-bottom: 1rem;
 }
 
 .browser-content h1 {
   color: black;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .vscode-content {
-  padding: 20px;
+  padding: 10px 0;
   height: 20rem;
-  background: #0f1527;
+  background: #1e1e1e;
 }
 
 .vscode-title {
@@ -219,15 +224,14 @@ main {
 }
 
 .vscode-content pre {
-  font-size: 0.9rem;
-  height: 18rem;
-  background: #1e1e1e;
+  font-size: 0.6rem;
   color: #d4d4d4;
   padding: 10px;
   border-radius: 5px;
   overflow-x: auto;
   display: flex;
   text-align: left;
+  height: auto;
 }
 
 .vscode-content pre code {
@@ -237,35 +241,37 @@ main {
 
 @media (max-width: 1280px) {
   .vscode-content pre {
-    font-size: 0.8rem;
+    font-size: 0.55rem;
   }
 }
+
 @media (max-width: 1180px) {
   #projectShow {
-    display: flex;
-    justify-content: space-between;
     padding: 0.5rem 2.3%;
-    flex-wrap: wrap;  
-  }
-  .vscode-content pre {
-    font-size: 0.7rem;
   }
 }
-
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   #projectShow {
-    flex-direction: column;
-    padding: 0.5rem 2%;
+    padding: 0.5rem 2.3%;
   }
-
-  .leftShow,
-  .rightShow {
+  #projectShow {
+    padding: 0.1rem 1%;
+    margin: 0 3%;
+  }
+  .browser-content img {
+    max-width: 150px;}
+}
+@media (max-width: 550px) {
+  .leftShow {
     width: 100%;
-    margin-bottom: 10px;
+    border-right: 0;
   }
-
-  .vscode-mockup {
-    margin-top: 20px;
+  .rightShow {
+    width: 0%;
+  }
+  .browser-content h1 {
+    color: black;
+    font-size: 1.1rem;
   }
 }
 

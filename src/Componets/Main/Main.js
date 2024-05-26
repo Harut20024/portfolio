@@ -7,7 +7,7 @@ import data from "../../data.json";
 import Carousel from "../Carusel/Carousel";
 import Modal from "../Modal/Modal";
 import "./Main.css";
-import happyCat from "../Images/happy.png";
+import wowFace from "../Images/face.gif";
 import Gif from "../Images/hello.gif";
 import instagram from "../Images/media/insta.png";
 import facebook from "../Images/media/facebook.png";
@@ -40,7 +40,7 @@ ChartJS.register(
 
 function Mainer() {
   const [displayedGreeting, setDisplayedGreeting] = useState("");
-  const greeting = "oh you still here! let me show you my projects";
+  const greeting = "Oh you still here! let me show you my projects";
   const [selectedProject, setSelectedProject] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [workshopAssistantCount, setWorkshopAssistantCount] = useState(0);
@@ -168,7 +168,10 @@ function Mainer() {
       const projectShow = document.getElementById("projectShow");
       if (projectShow) {
         const rect = projectShow.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        const windowHeight = window.innerHeight;
+
+        // Check if at least half of the projectShow section is within the viewport
+        if (rect.top < windowHeight / 2 && rect.bottom >= windowHeight / 2) {
           let index = 0;
           setDisplayedGreeting("");
           const intervalId = setInterval(() => {
@@ -305,7 +308,7 @@ function Mainer() {
 
   useEffect(() => {
     if (startCounting) {
-      const maxStudentCount = 299;
+      const maxStudentCount = 300;
       const studentInterval = setInterval(() => {
         if (numberOfStudentsCount < maxStudentCount) {
           setNumberOfStudentsCount((prevCount) => prevCount + 1);
@@ -449,35 +452,6 @@ function Mainer() {
 
         <div id="projectShow">
           <div className="leftShow">
-            <div className="vscode-mockup">
-              <div className="vscode-header">
-                <div className="browser-buttons">
-                  <span className="browser-button red"></span>
-                  <span className="browser-button yellow"></span>
-                  <span className="browser-button green"></span>
-                </div>
-              </div>
-              <div className="vscode-content">
-                <pre>
-                  <code>
-                    {`<!DOCTYPE html>
-  <html>
-    <head>
-      <title>Document</title>
-    </head>
-    <body>
-      <img src={happyCat} alt="happyCat" />
-      <p>
-      ${displayedGreeting}
-      </p>
-    </body>
-  </html>`}
-                  </code>
-                </pre>
-              </div>
-            </div>
-          </div>
-          <div className="rightShow">
             <div className="browser-mockup">
               <div className="browser-header">
                 <div className="browser-buttons">
@@ -487,8 +461,32 @@ function Mainer() {
                 </div>
               </div>
               <div className="browser-content">
-                <img src={happyCat} alt="Cat" />
+                <img src={wowFace} alt="Cat" />
                 <h1>{displayedGreeting}</h1>
+              </div>
+            </div>
+          </div>
+          <div className="rightShow">
+            <div className="vscode-mockup">
+              <div className="vscode-header">
+              </div>
+              <div className="vscode-content">
+                <pre>
+                  <code>
+                    {`<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <img src={wowFace} alt="wowFace" />
+    <p>
+    ${displayedGreeting}
+    </p>
+  </body>
+</html>`}
+                  </code>
+                </pre>
               </div>
             </div>
           </div>
