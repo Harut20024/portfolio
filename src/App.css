@@ -1,18 +1,13 @@
 /* App.css */
-@font-face {
-  font-family: 'Mulish Italic Variable';
-  src: url('../public/assets/static/Mulish-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 ::selection {
   background-color: #957290;
 }
 
 * {
-  font-family: 'Mulish Italic Variable', sans-serif;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
