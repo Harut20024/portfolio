@@ -28,10 +28,6 @@ function App() {
     );
   }
 
-  // if (!isAuthenticated) {
-  //   return <EmailForm onAuthentication={handleAuthentication} />;
-  // }
-
   return (
     <div
       style={{

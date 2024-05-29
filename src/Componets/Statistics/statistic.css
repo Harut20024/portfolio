@@ -45,8 +45,8 @@
 }
 
 .circle {
-  width: 10vw;
-  height: 10vw;
+  width: 14vw;
+  height: 14vw;
   max-width: 200px;
   max-height: 200px;
   min-width: 100px;
@@ -78,7 +78,7 @@
 }
 
 .circle-text {
-  font-size: 0.9vw;
+  font-size: 1rem;
   margin-bottom: 2px;
 }
 
@@ -221,6 +221,11 @@
 }
 
 /* /////////// */
+@media (max-width: 950px) {
+  .circle-text {
+    font-size: 0.85rem;
+  }
+}
 @media (max-width: 800px) {
   #parag {
     font-size: 0.8em;
@@ -248,7 +253,7 @@
     animation-duration: 5s;
   }
   .circle-text {
-    font-size: 0.65em;
+    font-size: 0.6rem;
   }
 
   .circle-number {
@@ -293,12 +298,12 @@
     font-size: 1.5em;
   }
   .circle {
-    min-width: 80px;
-    min-height: 80px;
+    min-width: 90px;
+    min-height: 90px;
     margin: 0 3.1%;
   }
   .circle-text {
-    font-size: 0.58em;
+    font-size: 0.55em;
   }
   .circle-number {
     font-size: 1.3em;
@@ -318,23 +323,25 @@
     font-size: 0.9em;
     margin-bottom: 3%;
   }
-
+  .circle {
+    margin: 0 1.2%;
+  }
   .testimonial-author span {
     font-size: 0.55em;
     word-spacing: -1px;
   }
 }
-@media (max-width: 280px) {
+@media (max-width: 330px) {
   #statistic h1 {
     font-size: 1.5em;
   }
   .circle {
-    min-width: 70px;
-    min-height: 70px;
-    margin: 0 3%;
+    min-width: 74px;
+    min-height: 74px;
+    margin: 0 1%;
   }
   .circle-text {
-    font-size: 0.55em;
+    font-size: 0.52em;
   }
 
   .circle-number {

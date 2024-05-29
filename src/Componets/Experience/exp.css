@@ -152,16 +152,16 @@ pre {
 }
 @media (max-width: 800px) {
   #mainDiv {
-    height: 450px;
+    height: 500px;
     width: 100%;
     margin: 0;
   }
   #foldersContainer {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #rightDiv {
     padding: 5px;
-    font-size: 0.75em;
+    font-size: 0.8em;
     height: auto;
   }
 
@@ -176,7 +176,9 @@ pre {
   .folder {
     font-size: 0.7em;
   }
-
+  #mainDiv {
+    width: 100%;
+  }
   .under {
     margin-left: 5%;
   }
@@ -186,16 +188,16 @@ pre {
   }
 }
 @media (max-width: 700px) {
+
   #rightDiv {
     padding: 5px;
-    font-size: 0.7em;
     height: auto;
   }
 }
 @media (max-width: 500px) {
   #mainDiv {
-    font-size: 0.88em;
-    height: 410px;
+    font-size: 0.9em;
+    height: 480px;
   }
   #rightDiv {
     padding: 5px;
@@ -204,8 +206,7 @@ pre {
 }
 @media (max-width: 370px) {
   #mainDiv {
-    font-size: 0.75em;
-    height: 380px;
+    height: 500px;
   }
   #rightDiv {
     padding: 5px;
@@ -214,7 +215,7 @@ pre {
 }
 @media (max-width: 330px) {
   #mainDiv {
-    font-size: 0.7em;
+    height: 550px;
   }
   #rightDiv {
     padding: 5px;

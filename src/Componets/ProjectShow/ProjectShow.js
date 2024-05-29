@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import wowFace from "../Images/face.gif";
 
 const ProjectShow = ({ displayedGreeting }) => {
+  useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = wowFace;
+  }, []);
+
   return (
     <div id="projectShow">
       <div className="leftShow">
