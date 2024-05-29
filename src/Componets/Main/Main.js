@@ -17,6 +17,8 @@ import gmail from "../Images/media/gmail.png";
 import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
 import recommendations from "../../recomend.json";
 import Statistics from "../Statistics/Statistics";
+import EmailForm from "../EmailForm/EmailForm";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -39,6 +41,7 @@ ChartJS.register(
 );
 
 function Mainer() {
+  const [isEmailFormVisible, setIsEmailFormVisible] = useState(false);
   const [displayedGreeting, setDisplayedGreeting] = useState("");
   const greeting = "Oh you still here! let me show you my projects";
   const [selectedProject, setSelectedProject] = useState(null);
@@ -58,6 +61,7 @@ function Mainer() {
       setExpandedProjectId(id);
     }
   };
+  const [allowed, setAllowed] = useState(false);
 
   const checkIfCircleContainerInView = () => {
     const circleContainer = document.querySelector(".circle-container");
@@ -67,6 +71,31 @@ function Mainer() {
       rect.bottom <= window.innerHeight && rect.bottom >= 0;
     return isTopVisible && isBottomVisible;
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const paragraph = paragraphRef.current;
+      if (paragraph && !allowed) {
+        const rect = paragraph.getBoundingClientRect();
+        const isPastParagraph = rect.bottom <= window.innerHeight / 2; 
+  
+        if (isPastParagraph) {
+          setIsEmailFormVisible(true);
+          setAllowed(true);
+        }
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [allowed]);
+  
+  
+  const handleAuthentication = () => {
+    setIsEmailFormVisible(false);
+  };
+  
+  
 
   const disableBodyScroll = (disable) => {
     if (disable) {
@@ -413,6 +442,9 @@ function Mainer() {
 
   return (
     <main style={mainBackgroundStyle}>
+      {isEmailFormVisible && (
+        <EmailForm onAuthentication={handleAuthentication} />
+      )}
       <div id="main" className="close">
         <div id="about" className={`show ${isAboutVisible ? "visible" : ""}`}>
           <img src={imageProfil} alt="Profile" className="profile-image" />
@@ -434,7 +466,6 @@ function Mainer() {
           >
             Download CV
           </a>
-
           <Experience />
         </div>
 
@@ -468,8 +499,7 @@ function Mainer() {
           </div>
           <div className="rightShow">
             <div className="vscode-mockup">
-              <div className="vscode-header">
-              </div>
+              <div className="vscode-header"></div>
               <div className="vscode-content">
                 <pre>
                   <code>

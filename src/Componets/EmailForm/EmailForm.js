@@ -7,6 +7,7 @@ const EmailForm = ({ onAuthentication }) => {
   const [reason, setReason] = useState("");
   const [otherReason, setOtherReason] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const isClosed = false;
 
   const handleReasonChange = (e) => {
     setReason(e.target.value);
@@ -27,14 +28,21 @@ const EmailForm = ({ onAuthentication }) => {
       message: finalMessage,
     };
 
-    emailjs.send("service_122l67l", "template_8agf0u7", templateParams, "flxSq_5KpLSb6w2yY")
-      .then((response) => {
-        console.log("Email sent successfully!", response.status, response.text);
-        onAuthentication();
-      }, (error) => {
-        console.error("Failed to send email:", error);
-        setIsSubmitting(false);
-      });
+    emailjs
+      .send(
+        "service_122l67l",
+        "template_8agf0u7",
+        templateParams,
+        "flxSq_5KpLSb6w2yY"
+      )
+      .then(
+        () => {
+          onAuthentication();
+        },
+        () => {
+          setIsSubmitting(false);
+        }
+      );
   };
 
   const handleSkip = () => {
@@ -45,20 +53,41 @@ const EmailForm = ({ onAuthentication }) => {
       message: "Skipped - No reason provided",
     };
 
-    emailjs.send("service_122l67l", "template_8agf0u7", templateParams, "flxSq_5KpLSb6w2yY")
-      .then((response) => {
-        console.log("Email sent successfully!", response.status, response.text);
-        onAuthentication();
-      }, (error) => {
-        console.error("Failed to send email:", error);
-        setIsSubmitting(false);
-      });
+    emailjs
+      .send(
+        "service_122l67l",
+        "template_8agf0u7",
+        templateParams,
+        "flxSq_5KpLSb6w2yY"
+      )
+      .then(
+        (response) => {
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
+          onAuthentication();
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          setIsSubmitting(false);
+        }
+      );
   };
 
+  if (isClosed) return null;
+
   return (
-    <div className="form" style={{ textAlign: "center", margin: "auto" }}>
+    <div
+      className={`form ${isClosed ? "hidden" : ""}`}
+      style={{ textAlign: "center", margin: "auto" }}
+    >
       <form onSubmit={handleSubmit}>
-        <p>Please enter your email and reason to help me track visits to my portfolio site for development purposes.</p>
+        <p>
+          Please enter your email and reason to help me track visits to my
+          portfolio site for development purposes.
+        </p>
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -116,8 +145,17 @@ const EmailForm = ({ onAuthentication }) => {
             />
           </>
         )}
-        <button type="button" className="skip-button" onClick={handleSkip} disabled={isSubmitting}>or skip</button>
-        <button type="submit" disabled={isSubmitting}>Submit</button>
+        <button
+          type="button"
+          className="skip-button"
+          onClick={handleSkip}
+          disabled={isSubmitting}
+        >
+          or skip
+        </button>
+        <button type="submit" disabled={isSubmitting}>
+          Submit
+        </button>
       </form>
     </div>
   );

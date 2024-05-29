@@ -3,11 +3,9 @@ import "./App.css";
 import Mainer from "./Componets/Main/Main";
 import ParallaxScroll from "./Componets/ParallaxScroll/ParallaxScroll";
 import Loader from "./loader";
-import EmailForm from "./Componets/EmailForm/EmailForm";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,9 +13,7 @@ function App() {
     }, 2000);
   }, []);
 
-  const handleAuthentication = () => {
-    setIsAuthenticated(true);
-  };
+
 
   if (isLoading) {
     return (
@@ -32,9 +28,9 @@ function App() {
     );
   }
 
-  if (!isAuthenticated) {
-    return <EmailForm onAuthentication={handleAuthentication} />;
-  }
+  // if (!isAuthenticated) {
+  //   return <EmailForm onAuthentication={handleAuthentication} />;
+  // }
 
   return (
     <div
