@@ -24,8 +24,10 @@ const EmailForm = ({ onAuthentication }) => {
 
     const templateParams = {
       from_email: email,
-      to_name: "htarzyanh@gmail.com",
+      to_name: "Harut",
       message: finalMessage,
+      to_email: "htarzyanh@gmail.com",
+      subject: `New Visitor: ${email} - ${finalMessage}`,
     };
 
     emailjs
@@ -35,22 +37,44 @@ const EmailForm = ({ onAuthentication }) => {
         templateParams,
         "flxSq_5KpLSb6w2yY"
       )
-      .then(
-        () => {
-          onAuthentication();
-        },
-        () => {
-          setIsSubmitting(false);
-        }
-      );
+      .then(() => {
+        const thankYouParams = {
+          to_email: email,
+          from_name: "Harut",
+          subject: "Thank You for Visiting My Portfolio",
+          reason: finalMessage,
+          reply_to: "htarzyanh@gmail.com",
+        };
+
+        return emailjs.send(
+          "service_122l67l",
+          "template_grja6dv",
+          thankYouParams,
+          "flxSq_5KpLSb6w2yY"
+        );
+      })
+      .then(() => {
+        setIsSubmitting(false);
+        setEmail("");
+        setReason("");
+        setOtherReason("");
+        onAuthentication();
+      })
+      .catch((error) => {
+        alert("Email not found");
+        setIsSubmitting(false);
+      });
   };
 
   const handleSkip = () => {
     setIsSubmitting(true);
     const templateParams = {
       from_email: "Unknown",
-      to_name: "htarzyanh@gmail.com",
+      to_name: "Harut",
       message: "Skipped - No reason provided",
+      to_email: "htarzyanh@gmail.com",
+      subject: "Visitor Skipped Reason",
+      reply_to: "htarzyanh@gmail.com",
     };
 
     emailjs
@@ -60,20 +84,16 @@ const EmailForm = ({ onAuthentication }) => {
         templateParams,
         "flxSq_5KpLSb6w2yY"
       )
-      .then(
-        (response) => {
-          console.log(
-            "Email sent successfully!",
-            response.status,
-            response.text
-          );
-          onAuthentication();
-        },
-        (error) => {
-          console.error("Failed to send email:", error);
-          setIsSubmitting(false);
-        }
-      );
+      .then((response) => {
+        setIsSubmitting(false);
+        setEmail("");
+        setReason("");
+        setOtherReason("");
+        onAuthentication();
+      })
+      .catch(() => {
+        setIsSubmitting(false);
+      });
   };
 
   if (isClosed) return null;
