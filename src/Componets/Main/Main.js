@@ -7,17 +7,12 @@ import data from "../../data.json";
 import Carousel from "../Carusel/Carousel";
 import Modal from "../Modal/Modal";
 import "./Main.css";
-import wowFace from "../Images/face.gif";
-import Gif from "../Images/hello.gif";
-import instagram from "../Images/media/insta.png";
-import facebook from "../Images/media/facebook.png";
-import github from "../Images/media/github.png";
-import linkdin from "../Images/media/linkedin.png";
-import gmail from "../Images/media/gmail.png";
 import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
 import recommendations from "../../recomend.json";
 import Statistics from "../Statistics/Statistics";
 import EmailForm from "../EmailForm/EmailForm";
+import Footer from "../Footer/Footer";
+import ProjectShow from "../ProjectShow/ProjectShow";
 
 import {
   Chart as ChartJS,
@@ -77,25 +72,22 @@ function Mainer() {
       const paragraph = paragraphRef.current;
       if (paragraph && !allowed) {
         const rect = paragraph.getBoundingClientRect();
-        const isPastParagraph = rect.bottom <= window.innerHeight / 2; 
-  
+        const isPastParagraph = rect.bottom <= window.innerHeight / 2;
+
         if (isPastParagraph) {
           setIsEmailFormVisible(true);
           setAllowed(true);
         }
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [allowed]);
-  
-  
+
   const handleAuthentication = () => {
     setIsEmailFormVisible(false);
   };
-  
-  
 
   const disableBodyScroll = (disable) => {
     if (disable) {
@@ -480,48 +472,7 @@ function Mainer() {
           recImg={recImg}
         />
         {windowWidth > 1100 && <FlashlightEffect />}
-
-        <div id="projectShow">
-          <div className="leftShow">
-            <div className="browser-mockup">
-              <div className="browser-header">
-                <div className="browser-buttons">
-                  <span className="browser-button red"></span>
-                  <span className="browser-button yellow"></span>
-                  <span className="browser-button green"></span>
-                </div>
-              </div>
-              <div className="browser-content">
-                <img src={wowFace} alt="Cat" />
-                <h1>{displayedGreeting}</h1>
-              </div>
-            </div>
-          </div>
-          <div className="rightShow">
-            <div className="vscode-mockup">
-              <div className="vscode-header"></div>
-              <div className="vscode-content">
-                <pre>
-                  <code>
-                    {`<!DOCTYPE html>
-<html>
-  <head>
-    <title>Document</title>
-  </head>
-  <body>
-    <img src={wowFace} alt="wowFace" />
-    <p>
-    ${displayedGreeting}
-    </p>
-  </body>
-</html>`}
-                  </code>
-                </pre>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <ProjectShow displayedGreeting={displayedGreeting} />
         <div id="carusello">
           <Carousel
             items={data.map((item, index) => ({
@@ -532,6 +483,7 @@ function Mainer() {
             active={0}
           />
         </div>
+        
         {/* Projects Section */}
 
         <div ref={projectsContainerRef} className="projects-container">
@@ -589,62 +541,7 @@ function Mainer() {
             project={selectedProject}
           />
         )}
-        <footer>
-          <img id="gif" src={Gif} alt="Example" />
-          <div className="Media">
-            <a
-              href={"https://www.linkedin.com/in/tharzyan/"}
-              id="gmail"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={linkdin} alt="Profile" />
-            </a>
-            <a
-              href={"https://www.instagram.com/harut20024/"}
-              id="gmail"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={instagram} alt="Profile" />
-            </a>
-            <a
-              href={"https://github.com/Harut20024"}
-              id="gmail"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img id="git" src={github} alt="Profile" />
-            </a>
-            <a
-              href={"https://www.facebook.com/harutyun.tarzyan?locale=ru_RU"}
-              id="gmail"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={facebook} alt="Profile" />
-            </a>
-            <a
-              href={
-                "https://mail.google.com/mail/?view=cm&fs=1&to=htarzyanh@gmail.com"
-              }
-              id="gmail"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={gmail} alt="Profile" />
-            </a>
-          </div>
-          <h1>Thank you</h1>
-          <h3>
-            {" "}
-            for exploring my portfolio! I'm grateful for your interest in my
-            work and would love to hear your thoughts. Feedback is invaluable to
-            my professional growth, so please feel free to share any comments or
-            suggestions you might have. Reach out to me at Contact me your
-            insights are much appreciated!
-          </h3>
-        </footer>
+        <Footer />
       </div>
     </main>
   );

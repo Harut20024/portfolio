@@ -76,7 +76,7 @@ function Experience() {
             <span className="string">"Linux"</span>, {}
             <span className="string">"Network"</span>, {}
             <span className="string">"Git"</span>, {}
-            <span className="string">"GitHub"</span>
+            <span className="string">"GitHub"</span>, {}
             <span className="string">"REST API"</span>, {}
             <span className="string">"Computer architecture"</span>, {}
             <span className="string">"Problem Solving"</span>, {}
@@ -87,7 +87,7 @@ function Experience() {
             <span className="string">"debugging"</span>, {}
             <span className="string">"Self-motivation"</span>, {}
             <span className="string">"Creativity"</span>, {}
-            <span className="string">"Coaching"</span>, {}
+            <span className="string">"Coaching"</span> {}
             <br />
             ];
             <br />
