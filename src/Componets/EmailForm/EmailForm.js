@@ -165,6 +165,10 @@ const EmailForm = ({ onAuthentication }) => {
             />
           </>
         )}
+        
+        <button type="submit" disabled={isSubmitting}>
+          Submit
+        </button>
         <button
           type="button"
           className="skip-button"
@@ -172,9 +176,6 @@ const EmailForm = ({ onAuthentication }) => {
           disabled={isSubmitting}
         >
           or skip
-        </button>
-        <button type="submit" disabled={isSubmitting}>
-          Submit
         </button>
       </form>
     </div>
