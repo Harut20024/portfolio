@@ -81,7 +81,6 @@
     "name": "Chat with AI",
     "descriptionl": "I'm learning Python basics and how to create a chat application. I'm using Vue.js for the frontend, Flask for the backend, and MongoDB for the database. I'm also learning how to work with WebSockets and plan to deploy the application on AWS.",
     "descriptionm": "Chat with AI is a comprehensive project where I am learning the fundamentals of Python and building a full-featured chat application.\n\nThe project involves several key components: the frontend is developed using Vue.js, providing a responsive and interactive user interface where users can send and receive messages in real-time. The backend is powered by Flask, a lightweight Python web framework, which handles HTTP requests, manages user sessions, and supports the chat functionality. The database is MongoDB, chosen for its flexibility and scalability, which stores user data and chat messages.\n\nTo enable real-time communication between the client and server, I am implementing WebSockets, allowing instant message updates without the need for page refreshes. The final goal is to deploy the application on AWS, setting up an EC2 instance and configuring the environment for smooth cloud operations.\n\nThis project not only aims to enhance my technical skills but also provides a practical experience in full-stack development and cloud deployment.",
-    "url": "http://184.73.22.237:8080/"
+    "url": "https://github.com/Harut20024/Chat"
   }
-  
 ]
