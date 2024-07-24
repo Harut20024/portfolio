@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from "react";
 import imageProfil from "../Images/profil.jpeg";
-import Experience from "../Experience/Experience";
+import Terminal from "../Terminal/Terminal";
 import { images, recImg } from "../Images/Images";
 import data from "../../data.json";
 import Carousel from "../Carusel/Carousel";
@@ -458,7 +458,7 @@ function Mainer() {
           >
             Download CV
           </a>
-          <Experience />
+          <Terminal />
         </div>
 
         <Statistics
@@ -483,7 +483,7 @@ function Mainer() {
             active={0}
           />
         </div>
-        
+
         {/* Projects Section */}
 
         <div ref={projectsContainerRef} className="projects-container">

@@ -1,0 +1,111 @@
+/* Terminal.css */
+.terminal-container {
+  background-color: #1e1e1e;
+  color: #c5c8c6;
+  padding: 20px;
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+}
+
+.terminal-output {
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.terminal-input-line {
+  display: flex;
+  text-align: left;
+  width: 100%;
+}
+
+.terminal-prompt {
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  color: #c5c8c6;
+  outline: none;
+  flex: 1;
+  font-size: 1em;
+}
+
+.terminal-command .terminal-prompt {
+  color: #4caf50;
+}
+
+.terminal-error {
+  color: #ff0000;
+}
+
+.terminal-response {
+  color: #c5c8c6;
+}
+
+.terminal-window {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-window-controls {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: #1e1e1e;
+}
+
+.terminal-window-control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.terminal-window-control.red {
+  background-color: #ff5f56;
+}
+
+.terminal-window-control.yellow {
+  background-color: #ffbd2e;
+}
+
+.terminal-window-control.green {
+  background-color: #27c93f;
+}
+
+@media (max-width: 768px) {
+  .terminal-container {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .terminal-input-line {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .terminal-prompt {
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+
+  .terminal-input {
+    font-size: 0.9em;
+  }
+
+  .terminal-window {
+    width: 95%;
+    margin: 10px auto;
+  }
+}

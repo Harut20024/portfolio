@@ -24,7 +24,7 @@
     "react-scroll-parallax": "^3.4.5",
     "react-spring": "^9.7.3",
     "react-transition-group": "^4.4.5",
-    "sass": "^1.69.5",
+    "sass": "^1.77.8",
     "text-animations-react": "^0.1.8",
     "web-vitals": "^2.1.4"
   },
