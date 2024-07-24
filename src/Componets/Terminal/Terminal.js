@@ -39,7 +39,7 @@ clear (clear window)
     Experience: {
       readMe: 
     ` this.Job = 'TUMO',
-      Time: (2023 - "Present"),
+      Time: (2023 - 2024),
       Position: ('learning coach')
       `,
     },
