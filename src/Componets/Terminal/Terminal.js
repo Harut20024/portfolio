@@ -28,13 +28,34 @@ clear (clear window)
     ];`,
     },
     Skills: {
-      readMe: `"Java Script", "Node.js", "Express.js", "Vue.js", "React.js",
-            "Object Oriented Programming", "C", "C++", "SQL", "MongoDB", 
-            "CSS", "Linux", "Network", "Git", "GitHub", "REST API", 
-            "Computer architecture", "Problem Solving", "Attention to details", 
-            "Mathematical skills", "TeamWork", "Communication", "debugging", 
-            "Self-motivation", "Creativity", "Coaching"
-        `,
+      readMe: 
+      `
+"Java Script"
+"Node.js"
+"Express.js"
+"Vue.js"
+"React.js"
+"C", "C++"
+"SQL"
+"MongoDB"
+"CSS"
+"Linux"
+"Network"
+"Git"
+"GitHub"
+"Salesforce"
+"Computer architecture"
+"Object Oriented Programming"
+"REST API"
+"debugging", 
+"Problem Solving"
+"Attention to details" 
+"Mathematical skills"
+"TeamWork"
+"Communication"
+"Self-motivation"
+"Creativity"
+"Coaching" `,
     },
     Experience: {
       readMe: ` Job = 'TUMO',
