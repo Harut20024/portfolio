@@ -38,16 +38,16 @@ clear (clear window)
     },
     Experience: {
       readMe: 
-    ` this.Job = 'TUMO',
-      Time: (2023 - 2024),
+    ` Job = 'TUMO',
+      period: (2023 - 2024),
       Position: ('learning coach')
       `,
     },
     Education: {
       readMe: 
-     `this.School = 'Foton' - (2013-2020),
-      this.School = 'TUMO' - (2015-2020),
-      this.university = 'NPUA' - (2020 - "Present") `,
+     `School = 'Foton' - (2013-2020),
+      School = 'TUMO' - (2015-2020),
+      university = 'NPUA' - (2020 - "Present") `,
     },
   };
 
