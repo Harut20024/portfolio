@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Terminal.css";
 
 const Terminal = () => {
-  const initialMessage = `If you want to see information about me, write commands:
-cd (go into or out from folder)
-cat (read file)
-ls (see files)
-clear (clear window)
-`;
+  const initialMessage = ``;
   const [currentPath, setCurrentPath] = useState([]);
   const [output, setOutput] = useState([
     { text: initialMessage, type: "info" },
@@ -28,8 +23,7 @@ clear (clear window)
     ];`,
     },
     Skills: {
-      readMe: 
-      `
+      readMe: `
 "Java Script"
 "Node.js"
 "Express.js"
@@ -95,8 +89,13 @@ clear (clear window)
           setCurrentPath((prevPath) => prevPath.slice(0, -1));
         } else {
           const currentDir = getCurrentDirectory();
-          if (currentDir[arg]) {
+          if (currentDir[arg] && typeof currentDir[arg] === "object") {
             setCurrentPath((prevPath) => [...prevPath, arg]);
+          } else if (currentDir[arg] && typeof currentDir[arg] === "string") {
+            setOutput((prevOutput) => [
+              ...prevOutput,
+              { text: `cd: ${arg} is not a directory`, type: "error" },
+            ]);
           } else {
             setOutput((prevOutput) => [
               ...prevOutput,
@@ -108,10 +107,17 @@ clear (clear window)
       case "cat":
         const currentDirCat = getCurrentDirectory();
         if (currentDirCat && currentDirCat[arg]) {
-          setOutput((prevOutput) => [
-            ...prevOutput,
-            { text: currentDirCat[arg], type: "response" },
-          ]);
+          if (typeof currentDirCat[arg] === "string") {
+            setOutput((prevOutput) => [
+              ...prevOutput,
+              { text: currentDirCat[arg], type: "response" },
+            ]);
+          } else {
+            setOutput((prevOutput) => [
+              ...prevOutput,
+              { text: `cat: ${arg} is a directory`, type: "error" },
+            ]);
+          }
         } else {
           setOutput((prevOutput) => [
             ...prevOutput,
@@ -121,6 +127,9 @@ clear (clear window)
         break;
       case "clear":
         setOutput([]);
+        break;
+      case "":
+        setOutput((prevOutput) => [...prevOutput, { text: `` }]);
         break;
       default:
         setOutput((prevOutput) => [
@@ -209,6 +218,7 @@ clear (clear window)
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="terminal-input"
+              placeholder="Type your command here..."
             />
           </div>
         </form>

@@ -11,6 +11,7 @@ import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
 import recommendations from "../../recomend.json";
 import Statistics from "../Statistics/Statistics";
 import EmailForm from "../EmailForm/EmailForm";
+import Experience from "../Experience/Experience";
 import Footer from "../Footer/Footer";
 import ProjectShow from "../ProjectShow/ProjectShow";
 
@@ -45,6 +46,7 @@ function Mainer() {
   const [numberOfStudentsCount, setNumberOfStudentsCount] = useState(0);
   const [interAssistantCount, setinterAssistantCount] = useState(0);
   const [startCounting, setStartCounting] = useState(false);
+  const [useTerminal, setUseTerminal] = useState(true);
   const [isAboutVisible, setIsAboutVisible] = useState(false);
   const [expandedProjectId, setExpandedProjectId] = useState(null);
   const paragraphRef = useRef(null);
@@ -458,7 +460,32 @@ function Mainer() {
           >
             Download CV
           </a>
-          <Terminal />
+          <br />
+          <br />
+          <div>
+            If you want to see information about me, write commands in terminal:
+            <p className="terminalinfo">
+              <br />
+              cat - read file
+              <br />
+              ls - see files/folders,
+              <br />
+              clear - clear terminal
+              <br />
+              cd - go into/out from folder,
+              <br />
+              or{" "}
+              <span
+                className="clickable-text"
+                onClick={() => setUseTerminal((prev) => !prev)}
+              >
+                click here
+              </span>{" "}
+              to see all information about me
+            </p>
+          </div>
+
+          {useTerminal ? <Terminal /> : <Experience />}
         </div>
 
         <Statistics

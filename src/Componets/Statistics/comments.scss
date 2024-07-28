@@ -50,13 +50,12 @@
 }
 
 .testimonial-text {
-  font-size: 19px;
   margin-top: 10px;
 }
 
 .read-more {
   text-decoration: none;
-  color: blue;
+  color: #007bff;
   cursor: pointer;
 }
 
@@ -74,7 +73,6 @@
 @media (max-width:1000px) {
   .testimonial-item {
     width: 90%; // Adjust for smaller screens
-    align-self: center; // Center the items
   }
 
   .left,
@@ -84,7 +82,6 @@
     margin-right: 0;
   }
   .testimonial-text {
-    font-size: 13.5px;
     margin-top: 10px;
   }
   .testimonial-container::after {

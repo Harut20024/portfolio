@@ -5,6 +5,16 @@
   background-color: #957290;
 }
 
+:root {
+  --font-size-xsmall: 0.6rem;
+  --font-size-small: 0.8rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.2rem;
+  --font-size-xlarge: 1.5rem;
+  --font-size-2xlarge: 2rem;
+  --font-size-3xlarge: 3rem;
+}
+
 * {
   font-family: 'Mulish', sans-serif;
   font-weight: 700;

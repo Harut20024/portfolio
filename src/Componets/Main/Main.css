@@ -1,4 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css?family=Lobster"); */
 
 :root {
   --float-duration: 3s;
@@ -65,7 +64,7 @@ main {
   transform: translateY(50px);
 }
 .download-cv-button {
-  font-size: 1.5em;
+  font-size: var(--font-size-xlarge);
   display: inline-block;
   background-color: #007bff;
   color: white;
@@ -87,7 +86,7 @@ main {
 }
 
 #about h1 {
-  font-size: 3rem;
+  font-size: var(--font-size-3xlarge);
 }
 @keyframes shine {
   0% {
@@ -96,6 +95,11 @@ main {
   100% {
     background-position: 40vw;
   }
+}
+.clickable-text {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .profile-image {
@@ -121,7 +125,7 @@ main {
 }
 
 #paragraph {
-  font-size: 1.45em;
+  font-size: var(--font-size-large);
   padding: 5%;
   margin-bottom: 4%;
   padding: 10px;
@@ -132,7 +136,11 @@ main {
   position: relative;
   overflow: hidden;
 }
-
+.terminalinfo {
+  padding: 10px;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-medium);
+}
 .karaoke-text span {
   transition: color 0.3s ease;
 }
@@ -209,7 +217,7 @@ main {
 
 .browser-content h1 {
   color: black;
-  font-size: 1.3rem;
+  font-size: var(--font-size-large);
 }
 
 .vscode-content {
@@ -224,7 +232,7 @@ main {
 }
 
 .vscode-content pre {
-  font-size: 0.6rem;
+  font-size: var(--font-size-xsmall);
   color: #d4d4d4;
   padding: 10px;
   border-radius: 5px;
@@ -259,7 +267,8 @@ main {
     margin: 0 3%;
   }
   .browser-content img {
-    max-width: 150px;}
+    max-width: 150px;
+  }
 }
 @media (max-width: 550px) {
   .leftShow {
@@ -271,7 +280,7 @@ main {
   }
   .browser-content h1 {
     color: black;
-    font-size: 1.1rem;
+    font-size: var(--font-size-large);
   }
 }
 
@@ -371,7 +380,7 @@ main {
   font-weight: bold;
 }
 .read-more {
-  display: block;
+  display: inline;
   cursor: pointer;
   color: #007bff;
   font-weight: bold;
@@ -385,6 +394,11 @@ main {
   margin: 0;
   color: #666;
   font-size: 1.1em;
+  display: inline-block;
+}
+.read-more::before {
+  content: "\A";
+  white-space: pre;
 }
 
 .link {
@@ -411,17 +425,15 @@ main {
 
 @media (max-width: 1350px) {
   #paragraph {
-    font-size: 1.2em;
     padding-left: 8%;
     padding-right: 8%;
   }
 }
 @media (max-width: 1100px) {
-  #about h1 {
-    font-size: 2rem;
+  .terminalinfo {
+    font-size: var(--font-size-small);
   }
   #paragraph {
-    font-size: 1.14em;
     padding-left: 4%;
     padding-right: 4%;
   }
@@ -443,10 +455,7 @@ main {
     padding-right: 10%;
   }
   #about h1 {
-    font-size: 1.5rem;
-  }
-  #paragraph {
-    font-size: 1em;
+    font-size: var(--font-size-2xlarge);
   }
 }
 @media (max-width: 700px) {
@@ -462,9 +471,12 @@ main {
     width: calc(100% / 2 - 10px);
   }
   #paragraph {
-    font-size: 0.72em;
+    font-size: var(--font-size-small);
     padding: 1%;
     padding-top: 6px;
+  }
+  .terminalinfo{
+    text-align: left;
   }
 }
 
@@ -482,7 +494,6 @@ main {
     width: auto;
     height: 4em;
   }
-
 }
 .textAnim-container {
   display: flex;
@@ -493,7 +504,6 @@ main {
   font-size: 2vw;
 }
 @media (max-width: 800px) {
-  
   .textAnim-container {
     margin-bottom: -13%;
   }
@@ -509,8 +519,10 @@ main {
     margin-bottom: -20%;
     font-size: 5vw;
   }
+  #about h1 {
+    font-size: var(--font-size-xlarge);
+  }
 }
-
 
 /* //////////////////////////// */
 
