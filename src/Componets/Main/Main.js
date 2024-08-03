@@ -481,7 +481,7 @@ function Mainer() {
               >
                 click here
               </span>{" "}
-              to see all information about me
+              to see all information
             </p>
           </div>
 

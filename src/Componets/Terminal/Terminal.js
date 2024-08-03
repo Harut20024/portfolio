@@ -182,48 +182,56 @@ const Terminal = () => {
   };
 
   return (
-    <div className="terminal-window">
-      <div className="terminal-window-controls">
-        <span className="terminal-window-control red"></span>
-        <span className="terminal-window-control yellow"></span>
-        <span className="terminal-window-control green"></span>
-      </div>
-      <div className="terminal-container">
-        <div className="terminal-output">
-          {output.map((line, index) => (
-            <div
-              key={index}
-              className={
-                line.type === "command"
-                  ? "terminal-command"
-                  : line.type === "error"
-                  ? "terminal-error"
-                  : line.type === "info"
-                  ? "terminal-info"
-                  : "terminal-response"
-              }
-            >
-              {line.type === "command" && (
-                <span className="terminal-prompt">{line.prompt}</span>
-              )}
-              {line.text}
+    <>
+      <div className="terminal-window">
+        <div className="mac-device">
+          <div className="screen">
+            <div className="terminal-window-controls">
+              <span className="terminal-window-control red"></span>
+              <span className="terminal-window-control yellow"></span>
+              <span className="terminal-window-control green"></span>
             </div>
-          ))}
-        </div>
-        <form onSubmit={handleSubmit}>
-          <div className="terminal-input-line">
-            <span className="terminal-prompt">{getPrompt()}</span>
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              className="terminal-input"
-              placeholder="Type your command here..."
-            />
+            <div className="terminal-container">
+              <div className="terminal-output">
+                {output.map((line, index) => (
+                  <div
+                    key={index}
+                    className={
+                      line.type === "command"
+                        ? "terminal-command"
+                        : line.type === "error"
+                        ? "terminal-error"
+                        : line.type === "info"
+                        ? "terminal-info"
+                        : "terminal-response"
+                    }
+                  >
+                    {line.type === "command" && (
+                      <span className="terminal-prompt">{line.prompt}</span>
+                    )}
+                    {line.text}
+                  </div>
+                ))}
+              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="terminal-input-line">
+                  <span className="terminal-prompt">{getPrompt()}</span>
+                  <input
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    className="terminal-input"
+                    placeholder="Type your command here..."
+                  />
+                </div>
+              </form>
+            </div>
           </div>
-        </form>
+        </div>
+        <div className="icon"></div>
       </div>
-    </div>
+        <div className="holder"></div>
+    </>
   );
 };
 

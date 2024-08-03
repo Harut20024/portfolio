@@ -108,7 +108,7 @@ const EmailForm = ({ onAuthentication }) => {
           Please enter your email and reason to help me track visits to my
           portfolio site for development purposes.
         </p>
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email"></label>
         <input
           type="email"
           id="email"
