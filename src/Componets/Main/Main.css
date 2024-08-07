@@ -100,7 +100,16 @@ main {
   color: #007bff;
   cursor: pointer;
   text-decoration: underline;
+  border-radius: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
 }
+
+.clickable-text:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
 
 .profile-image {
   width: 25vw;

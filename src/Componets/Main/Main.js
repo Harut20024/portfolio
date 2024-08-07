@@ -14,7 +14,7 @@ import EmailForm from "../EmailForm/EmailForm";
 import Experience from "../Experience/Experience";
 import Footer from "../Footer/Footer";
 import ProjectShow from "../ProjectShow/ProjectShow";
-
+import UserIP from "./UserIP";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -436,6 +436,7 @@ function Mainer() {
 
   return (
     <main style={mainBackgroundStyle}>
+      <UserIP />
       {isEmailFormVisible && (
         <EmailForm onAuthentication={handleAuthentication} />
       )}
