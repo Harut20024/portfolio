@@ -3,22 +3,33 @@ import emailjs from 'emailjs-com';
 
 const UserIP = () => {
   const [ip, setIp] = useState('');
+  const [location, setLocation] = useState('');
   const emailSentRef = useRef(false);  
 
   useEffect(() => {
-    const fetchIP = async () => {
+    const fetchIPAndLocation = async () => {
       try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        const data = await response.json();
-        setIp(data.ip);
+        // Fetching the IP address
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+        setIp(ipData.ip);
+
+        // Fetching the geolocation data using ipinfo.io or ipstack
+        const locationResponse = await fetch(`https://ipinfo.io/${ipData.ip}/geo`);
+        const locationData = await locationResponse.json();
+        
+        // Extracting latitude and longitude
+        const [latitude, longitude] = locationData.loc.split(',');
+
+        setLocation(`City: ${locationData.city}, Region: ${locationData.region}, Country: ${locationData.country}, Latitude: ${latitude}, Longitude: ${longitude}`);
 
         if (!emailSentRef.current) {
           const templateParams = {
             from_email: 'website@yourdomain.com',
             to_name: 'Harut',
-            message: `Visitor IP: ${data.ip}`,
+            message: `Visitor IP: ${ipData.ip}\nLocation: City: ${locationData.city}, Region: ${locationData.region}, Country: ${locationData.country}\nCoordinates: Latitude: ${latitude}, Longitude: ${longitude}`,
             to_email: 'htarzyanh@gmail.com',
-            subject: `New Visitor IP: ${data.ip}`,
+            subject: `New Visitor IP: ${ipData.ip}`,
           };
 
           await emailjs.send(
@@ -35,7 +46,7 @@ const UserIP = () => {
       }
     };
 
-    fetchIP();
+    fetchIPAndLocation();
   }, []); 
 
   return null;
