@@ -12,9 +12,6 @@ function App() {
       setIsLoading(false);
     }, 2000);
   }, []);
-
-
-
   if (isLoading) {
     return (
       <div
