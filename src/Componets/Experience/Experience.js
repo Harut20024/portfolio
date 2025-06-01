@@ -62,19 +62,11 @@ function Experience() {
           <div id="skills">
             <span className="keyword">return</span> [
             <br />
-            <span className="string">"Java Script"</span>, {}
-            <span className="string">"Node.js"</span>, {}
-            <span className="string">"Express.js"</span>, {}
-            <span className="string">"Vue.js"</span>, {}
-            <span className="string">"React.js"</span>, {}
-            <span className="string">"Object Oriented Programming"</span>, {}
-            <span className="string">"C"</span>, {}
-            <span className="string">"C++"</span>, {}
+            <span className="string">"Java"</span>, {}
             <span className="string">"SQL"</span>, {}
-            <span className="string">"MongoDB"</span>, {}
+            <span className="string">"Java Script"</span>, {}
             <span className="string">"CSS"</span>, {}
             <span className="string">"Linux"</span>, {}
-            <span className="string">"Network"</span>, {}
             <span className="string">"Git"</span>, {}
             <span className="string">"GitHub"</span>, {}
             <span className="string">"REST API"</span>, {}
@@ -86,7 +78,6 @@ function Experience() {
             <span className="string">"Communication"</span>, {}
             <span className="string">"debugging"</span>, {}
             <span className="string">"Self-motivation"</span>, {}
-            <span className="string">"Creativity"</span>, {}
             <span className="string">"Coaching"</span> {}
             <br />
             ];
@@ -104,11 +95,23 @@ function Experience() {
             <span className="property"></span>{" "}
             <span className="propertyName">Time : </span>({" "}
             <span className="number">2023</span> -{" "}
-            <span className="string">"Present"</span> )
+            <span className="number">2024</span> )
             <br />
             <span className="property"></span>{" "}
             <span className="propertyName">Position : </span>({" "}
             <span className="string">'learning coach' </span>) ;
+            <br />
+            <span className="property">this.</span>
+            <span className="propertyName">Job</span> ={" "}
+            <span className="string"> ' BostonGene ' </span> <br />
+            <span className="property"></span>{" "}
+            <span className="propertyName">Time : </span>({" "}
+            <span className="number">2024</span> -{" "}
+            <span className="number">2025</span> )
+            <br />
+            <span className="property"></span>{" "}
+            <span className="propertyName">Position : </span>({" "}
+            <span className="string">'Java developer' </span>) ;
             <br />
             <span className="keyword">{"]"}</span> <br />
             {"}"}
