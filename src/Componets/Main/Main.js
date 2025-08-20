@@ -49,7 +49,6 @@ function Mainer() {
     const [useTerminal, setUseTerminal] = useState(true);
     const [isAboutVisible, setIsAboutVisible] = useState(false);
     const [expandedProjectId, setExpandedProjectId] = useState(null);
-    const paragraphRef = useRef(null);
     const projectsContainerRef = useRef(null);
     const toggleDescription = (id) => {
         if (expandedProjectId === id) {
@@ -68,24 +67,6 @@ function Mainer() {
             rect.bottom <= window.innerHeight && rect.bottom >= 0;
         return isTopVisible && isBottomVisible;
     };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const paragraph = paragraphRef.current;
-            if (paragraph && !allowed) {
-                const rect = paragraph.getBoundingClientRect();
-                const isPastParagraph = rect.bottom <= window.innerHeight / 2;
-
-                if (isPastParagraph) {
-                    setIsEmailFormVisible(true);
-                    setAllowed(true);
-                }
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [allowed]);
 
     const handleAuthentication = () => {
         setIsEmailFormVisible(false);
@@ -229,40 +210,6 @@ function Mainer() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    useEffect(() => {
-        const paragraph = paragraphRef.current;
-        const text = paragraph.textContent;
-
-        const newContent = text
-            .split("")
-            .map((char, index) => `<span key=${index}>${char}</span>`)
-            .join("");
-        paragraph.innerHTML = newContent;
-
-        const handleScroll = () => {
-            const paragraph = paragraphRef.current;
-            const rect = paragraph.getBoundingClientRect();
-            const scrollTop =
-                window.pageYOffset || document.documentElement.scrollTop;
-            const paragraphOffsetTop = rect.top + scrollTop;
-            const scrollPosition = scrollTop + window.innerHeight / 1.3;
-            const spans = paragraph.querySelectorAll("span");
-            const progress =
-                (scrollPosition - paragraphOffsetTop) / (paragraph.clientHeight * 3);
-
-            spans.forEach((span, index) => {
-                const spanProgress = (index + 1) / spans.length;
-                if (progress > spanProgress) {
-                    span.style.color = "#957290";
-                } else {
-                    span.style.color = "#ffffff";
-                }
-            });
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -383,7 +330,7 @@ function Mainer() {
     };
 
     function AnimatedRole() {
-        const roles = ["Software Engineer", "Web Developer", "Freelancer"];
+        const roles = ["Software Engineer", "Java Backend Developer", "Microservices Builder", "Problem Solver"];
         const [currentRole, setCurrentRole] = useState("");
         const [index, setIndex] = useState(0);
         const [subIndex, setSubIndex] = useState(0);
@@ -447,10 +394,11 @@ function Mainer() {
                     <h1>
                         <AnimatedRole/>
                     </h1>
-                    <p id="paragraph" ref={paragraphRef} className="karaoke-text">I’m a Java developer with experience
-                        in backend development, mainly using Spring Boot and PostgreSQL. I’m always looking for ways to
-                        improve my coding skills and find more efficient solutions. I’ve also worked as a Tumo learning
-                        coach, where I taught kids and helped them learn new skills.</p>
+                    <p id="paragraph" className="karaoke-text">I’m a software engineer with
+                        experience in backend development. I work with Java, Spring Boot, and PostgreSQL, and I create
+                        microservices from scratch. I also know JavaScript, CI/CD, Docker, and have knowledge of
+                        Kubernetes. I enjoy improving my code and finding better solutions. I have also taught students
+                        and shared my experience as a software engineer.</p>
                     <a
                         href={`${process.env.PUBLIC_URL}/Resume.pdf`}
                         download="Harut_CV_Resume.pdf"
@@ -461,26 +409,49 @@ function Mainer() {
                     <br/>
                     <br/>
                     <div>
-                        If you want to see information about me, write commands in terminal:
-                        <p className="terminalinfo">
-                            <br/>
-                            cat - read file
-                            <br/>
-                            ls - see files/folders,
-                            <br/>
-                            clear - clear terminal
-                            <br/>
-                            cd - go into/out from folder,
-                            <br/>
-                            or{" "}
-                            <span
-                                className="clickable-text"
-                                onClick={() => setUseTerminal((prev) => !prev)}
-                            >
-                click here
-              </span>{" "}
-                            to see all information
-                        </p>
+                        If you want to see information about me, write commands in terminal:<br/><br/>
+                        <div className="terminalinfo">
+                            <table className="terminal-table" role="table" aria-label="Terminal commands">
+                                <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><code>cat</code></td>
+                                    <td>Read file</td>
+                                </tr>
+                                <tr>
+                                    <td><code>ls</code></td>
+                                    <td>See files/folders</td>
+                                </tr>
+                                <tr>
+                                    <td><code>clear</code></td>
+                                    <td>Clear terminal</td>
+                                </tr>
+                                <tr>
+                                    <td><code>cd</code></td>
+                                    <td>Go into/out from folder</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <p className="terminal-hint">
+                                or{" "}
+                                <span
+                                    className="clickable-text"
+                                    onClick={() => setUseTerminal((prev) => !prev)}
+                                    tabIndex={0}
+                                    onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setUseTerminal((p) => !p)}
+                                    aria-label="Click to see all information"
+                                >
+      click here
+    </span>{" "}
+                                to see all information
+                            </p>
+                        </div>
                     </div>
 
                     {useTerminal ? <Terminal/> : <Experience/>}

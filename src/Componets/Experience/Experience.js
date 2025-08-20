@@ -39,7 +39,6 @@ function Experience() {
             <br />
             <span className="property">this.</span>
             <span className="propertyName">number</span> ={" "}
-            <span className="number">(+374)94-472-452</span>;
             <br />
             <span className="property">this.</span>
             <span className="propertyName">languages</span> = {"["}
@@ -63,21 +62,23 @@ function Experience() {
             <span className="keyword">return</span> [
             <br />
             <span className="string">"Java"</span>, {}
-            <span className="string">"SQL"</span>, {}
-            <span className="string">"Java Script"</span>, {}
-            <span className="string">"CSS"</span>, {}
+            <span className="string">"Spring Boot"</span>, {}
+            <span className="string">"Docker"</span>, {}
+            <span className="string">"Microservices Building"</span>, {}
+            <span className="string">"PL/SQL"</span>, {}
             <span className="string">"Linux"</span>, {}
-            <span className="string">"Git"</span>, {}
-            <span className="string">"GitHub"</span>, {}
-            <span className="string">"REST API"</span>, {}
-            <span className="string">"Computer architecture"</span>, {}
+              <span className="string">"Git"</span>, {}
+              <span className="string">"GitHub"</span>, {}
+              <span className="string">"REST API"</span>, {}
+              <span className="string">"Node.js"</span>, {}
+              <span className="string">"React"</span>, {}
+              <span className="string">"Vue.js"</span>, {}
+              <span className="string">"Computer architecture"</span>, {}
             <span className="string">"Problem Solving"</span>, {}
             <span className="string">"Attention to details"</span>, {}
-            <span className="string">"Mathematical skills"</span>, {}
             <span className="string">"TeamWork"</span>, {}
             <span className="string">"Communication"</span>, {}
             <span className="string">"debugging"</span>, {}
-            <span className="string">"Self-motivation"</span>, {}
             <span className="string">"Coaching"</span> {}
             <br />
             ];
@@ -100,7 +101,7 @@ function Experience() {
             <span className="property"></span>{" "}
             <span className="propertyName">Position : </span>({" "}
             <span className="string">'learning coach' </span>) ;
-            <br />
+            <br /><br />
             <span className="property">this.</span>
             <span className="propertyName">Job</span> ={" "}
             <span className="string"> ' BostonGene ' </span> <br />
@@ -111,7 +112,7 @@ function Experience() {
             <br />
             <span className="property"></span>{" "}
             <span className="propertyName">Position : </span>({" "}
-            <span className="string">'Java developer' </span>) ;
+            <span className="string">"Software Engineer"</span>) ;
             <br />
             <span className="keyword">{"]"}</span> <br />
             {"}"}
@@ -136,7 +137,7 @@ function Experience() {
             <span className="propertyName">university</span> ={" "}
             <span className="string">'NPUA' </span>- (
             <span className="number">2020</span>-{" "}
-            <span className="string">"Present"</span>);
+            <span className="number">"2026"</span>);
             <br />
             <span className="keyword">{"]"}</span> <br />
             {"}"}
