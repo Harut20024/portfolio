@@ -42,18 +42,11 @@
     "url": "https://harut20024.github.io/Game-Of-Life/"
   },
   {
-    "id": 6,
-    "name": "Translator",
-    "descriptionl": "In this project, I focused on mastering asynchronous functions to fetch data from APIs. I utilized a word API to build a translator, aiming to deepen my understanding of asynchronous operations and how to interact with APIs effectively.",
-    "descriptionm": "This project involved creating a webpage that serves as a language translator. The main feature is a form where users can select languages and input text to be translated. Upon submission, the JavaScript code processes the request, sending the text to a translation service. The result is then displayed on the same webpage, providing a seamless user experience. The translator supports multiple languages, catering to a global audience. The interface is clean and user-friendly, with clear instructions and responsive design. It’s a useful tool for quick translations, especially for travelers or students. The project showcases efficient integration of front-end and back-end technologies. It demonstrates practical application of APIs and JavaScript in creating a functional web application. The Translator is not just a utility tool; it’s a bridge connecting different languages and cultures.",
-    "url": "https://harut20024.github.io/Translator/"
-  },
-  {
     "id": 7,
-    "name": "Chess Game ",
-    "descriptionl": "In this project, I developed a digital version of chess, designed for two players to take turns just like in the traditional game. My goal was to closely mimic the real chess experience,learn deep OOP and its concepts  .",
-    "descriptionm": "The online Chess Game is a digital rendition of the classic board game. It offers a virtual chess experience, maintaining the essence and complexity of the traditional game. The platform is designed to cater to both beginners and chess experts. It features an interactive tutorial for newcomers, explaining the rules and strategies. Players can choose to play against the computer or challenge other players online. The game’s AI is programmed to offer various levels of difficulty. The interface is clean and intuitive, with well-designed pieces and a clear board layout. Players have access to game history and can undo moves if needed. The Chess Game also includes a timer, adding an element of urgency to the gameplay. It’s a perfect blend of intellectual challenge and digital convenience, appealing to chess enthusiasts of all ages.",
-    "url": "https://harut20024.github.io/Chess/"
+    "name": "PowerFind (Java Backend Project)",
+    "descriptionl": "PowerFind is a demo backend project created to showcase my Java developer skills. It simulates a smart system for finding and reserving powerbank charging stations. I built it with Spring Boot, PostgreSQL, Kafka, Prometheus, Grafana, and Docker, practicing layered architecture, API design, and monitoring.",
+    "descriptionm": "This project demonstrates a complete backend system written in Java with Spring Boot. It follows a layered architecture with controllers, services, repositories, and models connected to a PostgreSQL database. Features include REST APIs (documented with OpenAPI), role-based access control with API keys, exception handling with @ControllerAdvice, auditing using AOP, and API routing through Spring Cloud Gateway. Kafka is used for event-driven communication, and the system is monitored with Prometheus and Grafana. CI/CD is automated with GitHub Actions, which builds and pushes Docker images on each commit. Logs are centralized with Loki and Promtail, and integration tests ensure reliable interaction with the database and services. This project shows my skills in backend development, DevOps tools, and real-world system design.",
+    "url": "https://github.com/Harut20024/PowerFind"
   },
   {
     "id": 8,
@@ -64,23 +57,8 @@
   },
   {
     "id": 9,
-    "name": "Fullstack Web-Site",
-    "descriptionl": "This was my first full-stack project, utilizing Node.js in the backend and pure HTML/CSS for the frontend. Through this project, I delved deeper into Node.js and Express, learning to create and implement CRUD (Create, Read, Update, Delete) operations.",
-    "descriptionm": "This project involved developing a comprehensive full-stack website. The front-end is designed using React, creating a dynamic and responsive user interface. The back-end is powered by Node.js, ensuring efficient server-side operations. The website features a combination of static and interactive pages. It showcases various web technologies, including HTML, CSS, and JavaScript. Users can navigate through different sections, each meticulously designed for optimal user experience. The back-end integration allows for functionalities like user authentication, data storage, and API interactions. The project demonstrates the synergy between front-end and back-end development. It’s a testament to the versatility and power of modern web development frameworks. This Fullstack Web-Site is not just a project; it’s a showcase of technical proficiency and design acumen.",
-    "url": "https://github.com/Harut20024/full-stack-website"
-  },
-  {
-    "id": 10,
     "name": "Easy Learn",
     "descriptionl": "This is my most impressive project, where I utilized frameworks to develop a comprehensive full-stack learning website. For the frontend, I chose Vue.js, and for the backend, I used Node.js with Express. MongoDB served as the database, enhancing the website's functionality and allowing for a more dynamic user experience.",
     "descriptionm": "This comprehensive educational platform leverages the robust capabilities of MongoDB, Vue.js, and Node/Express to provide an engaging learning environment for HTML/CSS, SQL, MongoDB, and JavaScript fundamentals. Enhanced security is ensured through the implementation of middleware on both the server and client sides, safeguarding user data and interactions. The platform's REST API dynamically manages requests, preventing duplicate user registrations and unauthorized access, ensuring a secure and efficient learning experience. Additional educational resources and tutorials are made available, allowing users to deepen their understanding and skills in web development.",
     "url": "https://github.com/Harut20024/full_stack"
-  },
-  {
-    "id": 11,
-    "name": "Chat with AI",
-    "descriptionl": "I'm learning Python basics and how to create a chat application. I'm using Vue.js for the frontend, Flask for the backend, and MongoDB for the database. I'm also learning how to work with WebSockets and plan to deploy the application on AWS.",
-    "descriptionm": "Chat with AI is a comprehensive project where I am learning the fundamentals of Python and building a full-featured chat application.\n\nThe project involves several key components: the frontend is developed using Vue.js, providing a responsive and interactive user interface where users can send and receive messages in real-time. The backend is powered by Flask, a lightweight Python web framework, which handles HTTP requests, manages user sessions, and supports the chat functionality. The database is MongoDB, chosen for its flexibility and scalability, which stores user data and chat messages.\n\nTo enable real-time communication between the client and server, I am implementing WebSockets, allowing instant message updates without the need for page refreshes. The final goal is to deploy the application on AWS, setting up an EC2 instance and configuring the environment for smooth cloud operations.\n\nThis project not only aims to enhance my technical skills but also provides a practical experience in full-stack development and cloud deployment.",
-    "url": "https://github.com/Harut20024/Chat"
-  }
-]
+  }]

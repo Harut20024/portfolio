@@ -7,7 +7,6 @@ import data from "../../data.json";
 import Carousel from "../Carusel/Carousel";
 import Modal from "../Modal/Modal";
 import "./Main.css";
-import FlashlightEffect from "../FlashlightEffect/FlashlightEffect";
 import recommendations from "../../recomend.json";
 import Statistics from "../Statistics/Statistics";
 import EmailForm from "../EmailForm/EmailForm";
@@ -45,8 +44,8 @@ function Mainer() {
     const [workshopAssistantCount, setWorkshopAssistantCount] = useState(0);
     const [numberOfStudentsCount, setNumberOfStudentsCount] = useState(0);
     const [interAssistantCount, setinterAssistantCount] = useState(0);
-    const [startCounting, setStartCounting] = useState(false);
-    const [useTerminal, setUseTerminal] = useState(true);
+    const [startCounting] = useState(false);
+    const [useTerminal, setUseTerminal] = useState(false);
     const [isAboutVisible, setIsAboutVisible] = useState(false);
     const [expandedProjectId, setExpandedProjectId] = useState(null);
     const projectsContainerRef = useRef(null);
@@ -56,16 +55,6 @@ function Mainer() {
         } else {
             setExpandedProjectId(id);
         }
-    };
-    const [allowed, setAllowed] = useState(false);
-
-    const checkIfCircleContainerInView = () => {
-        const circleContainer = document.querySelector(".circle-container");
-        const rect = circleContainer.getBoundingClientRect();
-        const isTopVisible = rect.top >= 50 && rect.top <= window.innerHeight * 4;
-        const isBottomVisible =
-            rect.bottom <= window.innerHeight && rect.bottom >= 0;
-        return isTopVisible && isBottomVisible;
     };
 
     const handleAuthentication = () => {
@@ -250,18 +239,6 @@ function Mainer() {
     }, []);
 
     useEffect(() => {
-        const onScroll = () => {
-            if (checkIfCircleContainerInView()) {
-                setStartCounting(true);
-                window.removeEventListener("scroll", onScroll);
-            }
-        };
-
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
-
-    useEffect(() => {
         if (startCounting) {
             const maxWorkshopCount = 37;
             const workshopInterval = setInterval(() => {
@@ -394,11 +371,13 @@ function Mainer() {
                     <h1>
                         <AnimatedRole/>
                     </h1>
-                    <p id="paragraph" className="karaoke-text">I’m a software engineer with
-                        experience in backend development. I work with Java, Spring Boot, and PostgreSQL, and I create
-                        microservices from scratch. I also know JavaScript, CI/CD, Docker, and have knowledge of
-                        Kubernetes. I enjoy improving my code and finding better solutions. I have also taught students
-                        and shared my experience as a software engineer.</p>
+                    <p id="paragraph" className="karaoke-text">
+                        I’m a software engineer with experience in backend development.
+                        I work with Java, Spring Boot, and PostgreSQL, and I create microservices from scratch.
+                        I also know JavaScript, CI/CD, Docker, and have knowledge of Kubernetes.
+                        I enjoy improving my code and finding better solutions.
+                        I have also taught students and shared my experience as a software engineer.
+                    </p>
                     <a
                         href={`${process.env.PUBLIC_URL}/Resume.pdf`}
                         download="Harut_CV_Resume.pdf"
@@ -406,55 +385,77 @@ function Mainer() {
                     >
                         Download CV
                     </a>
-                    <br/>
-                    <br/>
-                    <div>
-                        If you want to see information about me, write commands in terminal:<br/><br/>
-                        <div className="terminalinfo">
-                            <table className="terminal-table" role="table" aria-label="Terminal commands">
-                                <thead>
-                                <tr>
-                                    <th>Command</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td><code>cat</code></td>
-                                    <td>Read file</td>
-                                </tr>
-                                <tr>
-                                    <td><code>ls</code></td>
-                                    <td>See files/folders</td>
-                                </tr>
-                                <tr>
-                                    <td><code>clear</code></td>
-                                    <td>Clear terminal</td>
-                                </tr>
-                                <tr>
-                                    <td><code>cd</code></td>
-                                    <td>Go into/out from folder</td>
-                                </tr>
-                                </tbody>
-                            </table>
 
+                    <br/><br/>
+
+                    {/* Show commands only when not inside "see all information" */}
+                    {!useTerminal && (
+                        <div>
+                            If you want to see information about me, write commands in terminal:<br/><br/>
+                            <div className="terminalinfo">
+                                <table className="terminal-table" role="table" aria-label="Terminal commands">
+                                    <thead>
+                                    <tr>
+                                        <th>Command</th>
+                                        <th>Description</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><code>cat</code></td>
+                                        <td>Read file</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>ls</code></td>
+                                        <td>See files/folders</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>clear</code></td>
+                                        <td>Clear terminal</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>cd</code></td>
+                                        <td>Go into/out from folder</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <p className="terminal-hint">
+                                    or{" "}
+                                    <span
+                                        className="clickable-text"
+                                        onClick={() => setUseTerminal(true)}
+                                        tabIndex={0}
+                                        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setUseTerminal(true)}
+                                        aria-label="Click to see all information"
+                                    >
+            click here
+          </span>{" "}
+                                    to see all information
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Toggle between Experience and Terminal */}
+                    {useTerminal ? (
+                        <div>
+                            <Experience/>
                             <p className="terminal-hint">
-                                or{" "}
-                                <span
-                                    className="clickable-text"
-                                    onClick={() => setUseTerminal((prev) => !prev)}
-                                    tabIndex={0}
-                                    onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setUseTerminal((p) => !p)}
-                                    aria-label="Click to see all information"
-                                >
-      click here
-    </span>{" "}
-                                to see all information
+        <span
+            className="clickable-text"
+            onClick={() => setUseTerminal(false)}
+            tabIndex={0}
+            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setUseTerminal(false)}
+            aria-label="Go back to terminal commands"
+        >
+          ← Go back to commands
+        </span>
                             </p>
                         </div>
-                    </div>
-
-                    {useTerminal ? <Terminal/> : <Experience/>}
+                    ) : (
+                        <Terminal/>
+                    )}
                 </div>
 
                 <Statistics
@@ -467,7 +468,6 @@ function Mainer() {
                     recommendations={recommendations}
                     recImg={recImg}
                 />
-                {windowWidth > 1100 && <FlashlightEffect/>}
                 <ProjectShow displayedGreeting={displayedGreeting}/>
                 <div id="carusello">
                     <Carousel

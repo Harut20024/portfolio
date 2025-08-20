@@ -4,7 +4,6 @@ import "./comments.scss";
 const Comments = ({
   recImg,
   recommendations,
-  currentIndex,
   expandedIndex,
   toggleExpanded
 }) => {

@@ -138,7 +138,6 @@ main {
 
 #paragraph {
     font-size: var(--font-size-large);
-    padding: 5%;
     margin-bottom: 4%;
     padding: 10px;
     line-height: 1.6;
@@ -163,20 +162,19 @@ main {
 #projectShow {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 5%;
-    margin: 0 15%;
+    margin: 0 9rem;
     flex-wrap: nowrap;
 }
 
 .leftShow {
-    width: 70%;
+    width: 100%;
     border-right: 1px solid #ccc;
     padding-right: 0.2rem;
     box-sizing: border-box;
 }
 
 .rightShow {
-    width: 30%;
+    width: 50%;
 }
 
 .browser-mockup,
@@ -269,19 +267,11 @@ main {
 
 @media (max-width: 1180px) {
     #projectShow {
-        padding: 0.5rem 2.3%;
+        padding: 0;
     }
 }
 
 @media (max-width: 1000px) {
-    #projectShow {
-        padding: 0.5rem 2.3%;
-    }
-
-    #projectShow {
-        padding: 0.1rem 1%;
-        margin: 0 3%;
-    }
 
     .browser-content img {
         max-width: 150px;
@@ -445,7 +435,6 @@ main {
 }
 
 
-
 .terminalinfo {
     padding: 10px;
     margin-bottom: 1rem;
@@ -459,7 +448,7 @@ main {
     color: #e6e6f0;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     table-layout: fixed;
 }
 
@@ -473,11 +462,11 @@ main {
     background: #0f1527;
     font-weight: 600;
     font-size: calc(var(--font-size-medium) * 0.95);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .terminalinfo .terminal-table tbody td {
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     vertical-align: middle;
     word-wrap: break-word;
 }
@@ -487,8 +476,8 @@ main {
 }
 
 .terminalinfo .terminal-table code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-    background: rgba(255,255,255,0.06);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    background: rgba(255, 255, 255, 0.06);
     padding: 2px 6px;
     border-radius: 6px;
     display: inline-block;
@@ -524,6 +513,7 @@ main {
     .terminalinfo .terminal-table thead {
         display: none;
     }
+
     .terminalinfo .terminal-table,
     .terminalinfo .terminal-table tbody,
     .terminalinfo .terminal-table tr,
@@ -531,13 +521,15 @@ main {
         display: block;
         width: 100%;
     }
+
     .terminalinfo .terminal-table tr {
         background: #0d0c2b;
         margin-bottom: 10px;
-        border: 1px solid rgba(255,255,255,0.06);
+        border: 1px solid rgba(255, 255, 255, 0.06);
         border-radius: 10px;
         overflow: hidden;
     }
+
     .terminalinfo .terminal-table td {
         border: 0;
         padding: 10px 12px;
@@ -663,6 +655,16 @@ main {
 
     #about h1 {
         font-size: var(--font-size-xlarge);
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .project {
+        width: 100%;
+        max-width: none;
+        font-size: 0.9em;
     }
 }
 
