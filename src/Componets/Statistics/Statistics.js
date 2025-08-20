@@ -91,7 +91,6 @@ const Statistics = ({windowWidth, recommendations, recImg}) => {
                         <span className="badge">PostgreSQL</span>
                         <span className="badge">GitLab CI/CD</span>
                         <span className="badge">Docker</span>
-                        <span className="badge">Kubernetes</span>
                         <span className="badge">Salesforce</span>
                         <span className="badge">Apex</span>
                         <span className="badge">React</span>

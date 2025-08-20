@@ -12,7 +12,6 @@ import Statistics from "../Statistics/Statistics";
 import EmailForm from "../EmailForm/EmailForm";
 import Experience from "../Experience/Experience";
 import Footer from "../Footer/Footer";
-import ProjectShow from "../ProjectShow/ProjectShow";
 import UserIP from "./UserIP";
 import {
     Chart as ChartJS,
@@ -37,8 +36,6 @@ ChartJS.register(
 
 function Mainer() {
     const [isEmailFormVisible, setIsEmailFormVisible] = useState(false);
-    const [displayedGreeting, setDisplayedGreeting] = useState("");
-    const greeting = "Oh you still here! let me show you my projects";
     const [selectedProject, setSelectedProject] = useState(null);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [workshopAssistantCount, setWorkshopAssistantCount] = useState(0);
@@ -155,33 +152,6 @@ function Mainer() {
             },
         },
     };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const projectShow = document.getElementById("projectShow");
-            if (projectShow) {
-                const rect = projectShow.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
-
-                // Check if at least half of the projectShow section is within the viewport
-                if (rect.top < windowHeight / 2 && rect.bottom >= windowHeight / 2) {
-                    let index = 0;
-                    setDisplayedGreeting("");
-                    const intervalId = setInterval(() => {
-                        setDisplayedGreeting(greeting.slice(0, index + 1));
-                        index++;
-                        if (index >= greeting.length) {
-                            clearInterval(intervalId);
-                        }
-                    }, 80);
-                    window.removeEventListener("scroll", handleScroll);
-                }
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -468,7 +438,6 @@ function Mainer() {
                     recommendations={recommendations}
                     recImg={recImg}
                 />
-                <ProjectShow displayedGreeting={displayedGreeting}/>
                 <div id="carusello">
                     <Carousel
                         items={data.map((item, index) => ({
